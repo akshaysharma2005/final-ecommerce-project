@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Intelligence Platform — Executive Cockpit</title>
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Geologica (Vantage) + Instrument Sans (Ribbon) + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome & Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@200..600,0,0..100&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- ApexCharts CDN -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -20,19 +20,17 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-brand">
-                <div class="brand-logo">
-                    <i class="fa-solid fa-chart-line-up"></i>
-                </div>
+                <div class="wordmark__slashes" aria-hidden="true"><span></span><span></span><span></span></div>
                 <div class="brand-text">
                     <h2>NEXUS<span>.AI</span></h2>
-                    <p>E-Commerce Intelligence</p>
+                    <p>Spatial Telemetry &amp; Revenue</p>
                 </div>
             </div>
 
             <nav class="sidebar-nav">
-                <div class="nav-section-title">ANALYTICS ENGINES</div>
+                <div class="nav-section-title">Analytics engines</div>
                 <button class="nav-item active" data-tab="tab-overview">
-                    <i class="fa-solid fa-grid-2"></i>
+                    <i class="fa-solid fa-gauge-high"></i>
                     <span>Executive Cockpit</span>
                 </button>
                 <button class="nav-item" data-tab="tab-revenue">
@@ -48,7 +46,7 @@
                     <span>Marketing & CAC</span>
                 </button>
 
-                <div class="nav-section-title">PREDICTIVE ML & AI</div>
+                <div class="nav-section-title">Predictive ML & AI</div>
                 <button class="nav-item" data-tab="tab-churn">
                     <i class="fa-solid fa-user-xmark"></i>
                     <span>Churn Prediction (ML)</span>
@@ -62,7 +60,7 @@
                     <span>Sales Forecasting (12M)</span>
                 </button>
 
-                <div class="nav-section-title">EXECUTIVE STRATEGY</div>
+                <div class="nav-section-title">Executive strategy</div>
                 <button class="nav-item" data-tab="tab-strategy">
                     <i class="fa-solid fa-chess-knight"></i>
                     <span>Strategic Roadmap</span>
@@ -77,6 +75,9 @@
                         <small>99,441 Real Orders Analyzed</small>
                     </div>
                 </div>
+                <a href="/login" class="btn-lock-session" title="Return to 3D Login Console">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
             </div>
         </aside>
 
@@ -152,7 +153,7 @@
                         </div>
 
                         <div class="kpi-card card-glow-emerald">
-                            <div class="kpi-icon-wrap"><i class="fa-solid fa-shield-check"></i></div>
+                            <div class="kpi-icon-wrap"><i class="fa-solid fa-coins"></i></div>
                             <div class="kpi-data">
                                 <span class="kpi-label">Net Realized Revenue</span>
                                 <h3 id="kpi-net-rev" class="kpi-val">R$ 15.40M</h3>
@@ -488,7 +489,7 @@
                         <div class="chart-card">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <i class="fa-solid fa-brain-circuit"></i>
+                                    <i class="fa-solid fa-microchip"></i>
                                     <h4>Top Feature Importance Driving Customer Churn</h4>
                                 </div>
                             </div>
@@ -520,7 +521,7 @@
 
                                     <div class="sim-input-row">
                                         <div class="sim-group">
-                                            <label>Review Score: <span id="val-sim-review" class="slider-badge">⭐ 4.5</span></label>
+                                            <label>Review Score: <span id="val-sim-review" class="slider-badge">4.5 / 5.0</span></label>
                                             <input type="range" id="sim-review" min="1.0" max="5.0" value="4.5" step="0.5" class="custom-slider">
                                         </div>
                                         <div class="sim-group">
@@ -582,7 +583,7 @@
                         <div class="chart-card">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <i class="fa-solid fa-chart-scatter"></i>
+                                    <i class="fa-solid fa-braille"></i>
                                     <h4>PCA Dimensionality Projection (Customer Personas)</h4>
                                 </div>
                             </div>
@@ -592,7 +593,7 @@
                         <div class="chart-card">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <i class="fa-solid fa-chart-radar"></i>
+                                    <i class="fa-solid fa-compass-drafting"></i>
                                     <h4>Persona Behavioral Profiles</h4>
                                 </div>
                             </div>

@@ -53,3 +53,8 @@ data/processed/analytics_member4/customer_ml_features.csv
 # Logs
 # =========================
 *.log
+
+# =========================
+# Reference Design Assets
+# =========================
+hallmark-main/
