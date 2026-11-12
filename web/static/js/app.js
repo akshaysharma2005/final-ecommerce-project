@@ -165,29 +165,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     type: "line",
                     toolbar: { show: false },
                     background: "transparent",
-                    fontFamily: '"Instrument Sans", sans-serif'
+                    fontFamily: '"Red Hat Text", sans-serif'
                 },
-                theme: { mode: "dark" },
+                theme: { mode: "light" },
                 stroke: { width: [0, 3], curve: "smooth", dashArray: [0, 5] },
-                colors: ["#cbf644", "#f3ba6d"],
+                colors: ["#f56738", "#1e1b18"],
                 plotOptions: {
                     bar: { borderRadius: 4, columnWidth: "50%" }
                 },
                 dataLabels: { enabled: false },
                 xaxis: {
                     categories: categories,
-                    labels: { style: { colors: "#94A3B8", fontSize: "11px" }, rotate: -45 },
+                    labels: { style: { colors: "#6f675e", fontSize: "11px" }, rotate: -45 },
                     axisBorder: { show: false },
                     axisTicks: { show: false }
                 },
                 yaxis: {
                     labels: {
-                        style: { colors: "#94A3B8" },
+                        style: { colors: "#6f675e" },
                         formatter: val => `R$ ${(val / 1e3).toFixed(0)}k`
                     }
                 },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)", strokeDashArray: 4 },
-                legend: { position: "top", horizontalAlign: "right", labels: { colors: "#F8FAFC" } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)", strokeDashArray: 4 },
+                legend: { position: "top", horizontalAlign: "right", labels: { colors: "#1e1b18" } },
                 tooltip: {
                     theme: "dark",
                     y: { formatter: val => `R$ ${Number(val).toLocaleString(undefined, {minimumFractionDigits: 2})}` }
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     toolbar: { show: false },
                     background: "transparent"
                 },
-                theme: { mode: "dark" },
+                theme: { mode: "light" },
                 dataLabels: { enabled: false },
                 colors: [({ value }) => value >= 0 ? "#10B981" : "#EF4444"],
                 plotOptions: {
@@ -221,14 +221,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     }
                 },
-                xaxis: { categories: categories, labels: { style: { colors: "#94A3B8" }, rotate: -45 } },
+                xaxis: { categories: categories, labels: { style: { colors: "#6f675e" }, rotate: -45 } },
                 yaxis: {
                     labels: {
-                        style: { colors: "#94A3B8" },
+                        style: { colors: "#6f675e" },
                         formatter: val => `${val.toFixed(0)}%`
                     }
                 },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" },
                 tooltip: {
                     theme: "dark",
                     y: {
@@ -302,20 +302,20 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach((p, index) => {
                 const tr = document.createElement("tr");
                 const returnBadge = p.return_rate_pct > 5.0 ? 
-                    `<span class="tag-pill" style="color: #F87171; background: rgba(239, 68, 68, 0.15);">${p.return_rate_pct.toFixed(1)}%</span>` :
+                    `<span class="tag-pill" style="color: #c94038; background: #fbeae9;">${p.return_rate_pct.toFixed(1)}%</span>` :
                     `<span class="tag-pill">${p.return_rate_pct.toFixed(1)}%</span>`;
 
                 tr.innerHTML = `
                     <td class="table-rank">#${index + 1}</td>
                     <td>
-                        <div style="font-weight: 600; color: white;">${formatCategory(p.category)}</div>
+                        <div style="font-weight: 600; color: var(--color-ink);">${formatCategory(p.category)}</div>
                         <span class="product-code">${p.product_id.substring(0, 8)}...</span>
                     </td>
                     <td>${Number(p.total_orders).toLocaleString()}</td>
                     <td>${Number(p.total_units_sold).toLocaleString()}</td>
                     <td><strong>R$ ${Number(p.total_revenue).toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></td>
                     <td>${returnBadge}</td>
-                    <td style="color: #34D399; font-weight: 600;">R$ ${Number(p.net_profit_contribution).toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+                    <td style="color: #2d7a4f; font-weight: 600;">R$ ${Number(p.net_profit_contribution).toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -343,22 +343,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     toolbar: { show: false },
                     background: "transparent"
                 },
-                theme: { mode: "dark" },
+                theme: { mode: "light" },
                 plotOptions: {
                     bar: { horizontal: true, borderRadius: 4, barHeight: "65%" }
                 },
                 dataLabels: {
                     enabled: true,
                     formatter: val => val >= 1e6 ? `R$ ${(val / 1e6).toFixed(2)}M` : `R$ ${(val / 1e3).toFixed(0)}k`,
-                    style: { fontSize: "10.5px", fontWeight: 600, colors: ["#121c03"] }
+                    style: { fontSize: "10.5px", fontWeight: 600, colors: ["#1e1b18"] }
                 },
-                colors: ["#cbf644"],
+                colors: ["#f56738"],
                 xaxis: {
                     categories: categories,
-                    labels: { formatter: val => `R$ ${(val / 1e3).toFixed(0)}k`, style: { colors: "#94A3B8" } }
+                    labels: { formatter: val => `R$ ${(val / 1e3).toFixed(0)}k`, style: { colors: "#6f675e" } }
                 },
-                yaxis: { labels: { style: { colors: "#F8FAFC", fontSize: "11px" } } },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" },
+                yaxis: { labels: { style: { colors: "#1e1b18", fontSize: "11px" } } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" },
                 tooltip: { y: { formatter: val => `R$ ${Number(val).toLocaleString()}` } }
             };
 
@@ -373,12 +373,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     { name: "Gross Revenue", data: revenues }
                 ],
                 chart: { height: 340, type: "bar", toolbar: { show: false }, background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#10B981", "#cbf644"],
+                theme: { mode: "light" },
+                colors: ["#2d7a4f", "#f56738"],
                 plotOptions: { bar: { borderRadius: 4, columnWidth: "55%" } },
-                xaxis: { categories: categories, labels: { style: { colors: "#94A3B8" }, rotate: -35 } },
-                yaxis: { labels: { formatter: val => `R$ ${(val/1e3).toFixed(0)}k`, style: { colors: "#94A3B8" } } },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                xaxis: { categories: categories, labels: { style: { colors: "#6f675e" }, rotate: -35 } },
+                yaxis: { labels: { formatter: val => `R$ ${(val/1e3).toFixed(0)}k`, style: { colors: "#6f675e" } } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
             };
             if (state.charts.profitFreight) state.charts.profitFreight.destroy();
             state.charts.profitFreight = new ApexCharts(document.getElementById("chart-cat-profit-freight"), optionsProfitFreight);
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>R$ ${Number(c.aov).toFixed(2)}</td>
                     <td>R$ ${Number(c.gross_profit).toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
                     <td>${c.return_rate_pct.toFixed(2)}%</td>
-                    <td style="color: #34D399; font-weight: 600;">R$ ${Number(c.net_profit).toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+                    <td style="color: #2d7a4f; font-weight: 600;">R$ ${Number(c.net_profit).toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
                     <td>${quadrant}</td>
                 `;
                 tbody.appendChild(tr);
@@ -426,8 +426,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 series: revenues,
                 labels: labels,
                 chart: { height: 330, type: "donut", background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#cbf644", "#f3ba6d", "#67e8f9", "#8aa0b8", "#f87171"],
+                theme: { mode: "light" },
+                colors: ["#f56738", "#1e1b18", "#67e8f9", "#8aa0b8", "#f87171"],
                 plotOptions: {
                     pie: {
                         donut: {
@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 total: {
                                     show: true,
                                     label: "Total GMV",
-                                    color: "#808ba6",
+                                    color: "#6f675e",
                                     formatter: w => {
                                         const sum = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
                                         return sum >= 1e6 ? `R$ ${(sum / 1e6).toFixed(2)}M` : `R$ ${(sum / 1e3).toFixed(0)}k`;
@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 },
                 dataLabels: { enabled: false },
-                legend: { position: "bottom", labels: { colors: "#F8FAFC" } },
+                legend: { position: "bottom", labels: { colors: "#1e1b18" } },
                 stroke: { width: 0 }
             };
 
@@ -459,18 +459,18 @@ document.addEventListener("DOMContentLoaded", () => {
             // Regional AOV in Revenue Tab
             const optionsRegAOV = {
                 series: [{ name: "Regional AOV (BRL)", data: aovs }],
-                chart: { height: 330, type: "bar", toolbar: { show: false }, background: "transparent", fontFamily: '"Instrument Sans", sans-serif' },
-                theme: { mode: "dark" },
-                colors: ["#cbf644"],
+                chart: { height: 330, type: "bar", toolbar: { show: false }, background: "transparent", fontFamily: '"Red Hat Text", sans-serif' },
+                theme: { mode: "light" },
+                colors: ["#f56738"],
                 plotOptions: { bar: { borderRadius: 4, columnWidth: "45%" } },
                 dataLabels: {
                     enabled: true,
                     formatter: val => `R$ ${Number(val).toFixed(0)}`,
-                    style: { fontSize: "11px", fontWeight: 600, colors: ["#121c03"] }
+                    style: { fontSize: "11px", fontWeight: 600, colors: ["#1e1b18"] }
                 },
-                xaxis: { categories: labels, labels: { style: { colors: "#808ba6" } } },
-                yaxis: { labels: { formatter: val => `R$ ${val.toFixed(0)}`, style: { colors: "#808ba6" } } },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                xaxis: { categories: labels, labels: { style: { colors: "#6f675e" } } },
+                yaxis: { labels: { formatter: val => `R$ ${val.toFixed(0)}`, style: { colors: "#6f675e" } } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
             };
             if (state.charts.regAOV) state.charts.regAOV.destroy();
             state.charts.regAOV = new ApexCharts(document.getElementById("chart-regional-aov"), optionsRegAOV);
@@ -499,12 +499,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     { name: "Attributed Revenue", data: revs }
                 ],
                 chart: { height: 330, type: "bar", toolbar: { show: false }, background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#EF4444", "#10B981"],
+                theme: { mode: "light" },
+                colors: ["#c94038", "#2d7a4f"],
                 plotOptions: { bar: { borderRadius: 4, columnWidth: "50%" } },
-                xaxis: { categories: channels, labels: { style: { colors: "#94A3B8" } } },
-                yaxis: { labels: { formatter: val => `R$ ${(val/1e3).toFixed(0)}k`, style: { colors: "#94A3B8" } } },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                xaxis: { categories: channels, labels: { style: { colors: "#6f675e" } } },
+                yaxis: { labels: { formatter: val => `R$ ${(val/1e3).toFixed(0)}k`, style: { colors: "#6f675e" } } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
             };
             if (state.charts.mktSpend) state.charts.mktSpend.destroy();
             state.charts.mktSpend = new ApexCharts(document.getElementById("chart-mkt-spend-rev"), optionsMktSpend);
@@ -517,16 +517,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     { name: "ROAS (x)", type: "line", data: roas }
                 ],
                 chart: { height: 330, type: "line", toolbar: { show: false }, background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#F59E0B", "#10B981"],
+                theme: { mode: "light" },
+                colors: ["#f56738", "#2d7a4f"],
                 plotOptions: { bar: { borderRadius: 4, columnWidth: "40%" } },
                 stroke: { width: [0, 3] },
-                xaxis: { categories: channels, labels: { style: { colors: "#94A3B8" } } },
+                xaxis: { categories: channels, labels: { style: { colors: "#6f675e" } } },
                 yaxis: [
                     { title: { text: "CAC (BRL)" }, labels: { formatter: val => `R$ ${val.toFixed(1)}` } },
                     { opposite: true, title: { text: "ROAS Multiplier" }, labels: { formatter: val => `${val.toFixed(1)}x` } }
                 ],
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
             };
             if (state.charts.mktCacRoas) state.charts.mktCacRoas.destroy();
             state.charts.mktCacRoas = new ApexCharts(document.getElementById("chart-mkt-cac-roas"), optionsCacRoas);
@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td><strong>R$ ${rev.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></td>
                     <td style="color: #F87171;">R$ ${cac.toFixed(2)}</td>
                     <td>R$ ${aov.toFixed(2)}</td>
-                    <td style="color: #34D399; font-weight: 700;">${rVal.toFixed(1)}x</td>
+                    <td style="color: #2d7a4f; font-weight: 700;">${rVal.toFixed(1)}x</td>
                     <td>+${roi.toFixed(1)}%</td>
                 `;
                 tbody.appendChild(tr);
@@ -583,9 +583,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 series: values,
                 labels: categories,
                 chart: { height: 330, type: "pie", background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#cbf644", "#EF4444", "#F59E0B", "#8B5CF6", "#10B981", "#64748B"],
-                legend: { position: "bottom", labels: { colors: "#F8FAFC" } },
+                theme: { mode: "light" },
+                colors: ["#f56738", "#c94038", "#a57d5a", "#4e7b94", "#2d7a4f", "#6f675e"],
+                legend: { position: "bottom", labels: { colors: "#1e1b18" } },
                 stroke: { width: 0 },
                 tooltip: { y: { formatter: val => `${val}% of refunds` } }
             };
@@ -614,20 +614,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 const feats = data.feature_importances.slice(0, 8);
                 const optionsFeat = {
                     series: [{ name: "Importance", data: feats.map(f => f.importance) }],
-                    chart: { height: 340, type: "bar", toolbar: { show: false }, background: "transparent", fontFamily: '"Instrument Sans", sans-serif' },
-                    theme: { mode: "dark" },
+                    chart: { height: 340, type: "bar", toolbar: { show: false }, background: "transparent", fontFamily: '"Red Hat Text", sans-serif' },
+                    theme: { mode: "light" },
                     plotOptions: { bar: { horizontal: true, borderRadius: 4, barHeight: "65%" } },
-                    colors: ["#f3ba6d"],
+                    colors: ["#f56738"],
                     dataLabels: {
                         enabled: true,
                         formatter: val => Number(val).toFixed(4),
                         style: {
-                            colors: [({ dataPointIndex }) => dataPointIndex === 0 ? "#121c03" : "#f1f4f8"]
+                            colors: [({ dataPointIndex }) => dataPointIndex === 0 ? "#1e1b18" : "#1e1b18"]
                         }
                     },
                     xaxis: { categories: feats.map(f => formatCategory(f.feature)), labels: { style: { colors: "#7c899c" } } },
-                    yaxis: { labels: { style: { colors: "#f1f4f8" } } },
-                    grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                    yaxis: { labels: { style: { colors: "#1e1b18" } } },
+                    grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
                 };
                 if (state.charts.churnFeats) state.charts.churnFeats.destroy();
                 state.charts.churnFeats = new ApexCharts(document.getElementById("chart-churn-features"), optionsFeat);
@@ -647,11 +647,11 @@ document.addEventListener("DOMContentLoaded", () => {
             plotOptions: {
                 radialBar: {
                     hollow: { size: "60%" },
-                    track: { background: "rgba(255, 255, 255, 0.07)" },
+                    track: { background: "rgba(30, 27, 24, 0.09)" },
                     dataLabels: {
                         name: { show: false },
                         value: {
-                            color: "#cbf644",
+                            color: "#f56738",
                             fontSize: "22px",
                             fontWeight: 700,
                             offsetY: 6,
@@ -660,7 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             },
-            colors: ["#cbf644"]
+            colors: ["#f56738"]
         };
         gaugeChart = new ApexCharts(document.getElementById("chart-sim-gauge"), optionsGauge);
         gaugeChart.render();
@@ -760,11 +760,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const optionsScatter = {
                     series: seriesData,
                     chart: { height: 350, type: "scatter", toolbar: { show: false }, background: "transparent", fontFamily: '"Wix Madefor Text", sans-serif' },
-                    theme: { mode: "dark" },
-                    colors: ["#cbf644", "#f43f5e", "#10b981", "#f59e0b"],
-                    xaxis: { tickAmount: 6, labels: { style: { colors: "#808ba6" }, formatter: val => Number(val).toFixed(1) }, title: { text: "PCA Dimension 1" } },
-                    yaxis: { tickAmount: 6, labels: { style: { colors: "#808ba6" }, formatter: val => Number(val).toFixed(1) }, title: { text: "PCA Dimension 2" } },
-                    grid: { borderColor: "rgba(255, 255, 255, 0.07)" }
+                    theme: { mode: "light" },
+                    colors: ["#f56738", "#c94038", "#2d7a4f", "#4e7b94"],
+                    xaxis: { tickAmount: 6, labels: { style: { colors: "#6f675e" }, formatter: val => Number(val).toFixed(1) }, title: { text: "PCA Dimension 1" } },
+                    yaxis: { tickAmount: 6, labels: { style: { colors: "#6f675e" }, formatter: val => Number(val).toFixed(1) }, title: { text: "PCA Dimension 2" } },
+                    grid: { borderColor: "rgba(30, 27, 24, 0.09)" }
                 };
                 if (state.charts.pcaScatter) state.charts.pcaScatter.destroy();
                 state.charts.pcaScatter = new ApexCharts(document.getElementById("chart-pca-scatter"), optionsScatter);
@@ -784,9 +784,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 })),
                 chart: { height: 350, type: "radar", toolbar: { show: false }, background: "transparent" },
-                theme: { mode: "dark" },
+                theme: { mode: "light" },
                 labels: ["Spending Level", "Frequency", "Satisfaction", "Installment Usage", "Recency (Inactivity)"],
-                colors: ["#cbf644", "#EF4444", "#10B981", "#F59E0B"],
+                colors: ["#f56738", "#c94038", "#2d7a4f", "#4e7b94"],
                 stroke: { width: 2 },
                 fill: { opacity: 0.15 },
                 markers: { size: 0 }
@@ -831,13 +831,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     { name: "Lower 95% Confidence Band", type: "line", data: lowers }
                 ],
                 chart: { height: 380, type: "line", toolbar: { show: false }, background: "transparent" },
-                theme: { mode: "dark" },
-                colors: ["#F8FAFC", "#cbf644", "#60A5FA", "#60A5FA"],
+                theme: { mode: "light" },
+                colors: ["#1e1b18", "#f56738", "#4e7b94", "#4e7b94"],
                 stroke: { width: [3, 3.5, 1, 1], curve: "smooth", dashArray: [0, 0, 4, 4] },
-                xaxis: { categories: allPeriods, labels: { style: { colors: "#94A3B8" }, rotate: -45 } },
-                yaxis: { labels: { formatter: val => `R$ ${(val / 1e3).toFixed(0)}k`, style: { colors: "#94A3B8" } } },
-                grid: { borderColor: "rgba(255, 255, 255, 0.07)" },
-                legend: { position: "top", horizontalAlign: "right", labels: { colors: "#F8FAFC" } },
+                xaxis: { categories: allPeriods, labels: { style: { colors: "#6f675e" }, rotate: -45 } },
+                yaxis: { labels: { formatter: val => `R$ ${(val / 1e3).toFixed(0)}k`, style: { colors: "#6f675e" } } },
+                grid: { borderColor: "rgba(30, 27, 24, 0.09)" },
+                legend: { position: "top", horizontalAlign: "right", labels: { colors: "#1e1b18" } },
                 tooltip: { y: { formatter: val => val ? `R$ ${Number(val).toLocaleString(undefined, {minimumFractionDigits: 2})}` : '' } }
             };
 
