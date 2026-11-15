@@ -1063,6 +1063,112 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================================================================
+   WORLD MONITOR TELEMETRY EXTENSIONS (Furrow Manila & Ink Aesthetic)
+   ===================================================================== */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-inner);
+  width: fit-content;
+  white-space: nowrap;
+}
+.badge-status.normal, .badge-status.low, .badge-status.nominal, .badge-status.operational {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  border: 1px solid rgba(45, 122, 79, 0.3);
+}
+.badge-status.elevated, .badge-status.warning, .badge-status.moderate {
+  background: var(--color-accent-soft);
+  color: #b53f16;
+  border: 1px solid rgba(245, 103, 56, 0.35);
+}
+.badge-status.critical, .badge-status.high, .badge-status.danger {
+  background: var(--color-error-soft);
+  color: var(--color-error);
+  border: 1px solid rgba(201, 64, 56, 0.35);
+}
+.badge-status.cyan, .badge-status.info {
+  background: #eaf1f5;
+  color: var(--color-cyan);
+  border: 1px solid rgba(78, 123, 148, 0.35);
+}
+
+.incident-stream {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.incident-item {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-inner);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out);
+}
+.incident-item:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+.incident-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+.incident-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.incident-title-wrap h5 {
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  font-weight: 600;
+  margin: 0;
+}
+.incident-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--color-muted);
+}
+.incident-body {
+  font-size: var(--text-xs);
+  color: var(--color-ink-2);
+  line-height: 1.5;
+  margin-bottom: var(--space-xs);
+}
+.incident-mitigation {
+  background: var(--color-paper-3);
+  border-left: 3px solid var(--color-accent);
+  padding: 6px 10px;
+  font-size: var(--text-2xs);
+  color: var(--color-ink);
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-code {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  color: var(--color-ink);
+  background: var(--color-paper-3);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(30, 27, 24, 0.1);
+}
+
+/* =====================================================================
    RESPONSIVE BREAKPOINTS
    ===================================================================== */
 @media (max-width: 1200px) {
