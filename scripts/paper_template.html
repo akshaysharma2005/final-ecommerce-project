@@ -13,13 +13,14 @@
 
   body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 9.10pt;
-    line-height: 1.22;
-    color: #111;
+    font-size: 9.15pt;
+    line-height: 1.30;
+    color: #1a1a1a;
     margin: 0;
     padding: 0;
     text-align: justify;
-    text-justify: inter-word;
+    letter-spacing: normal;
+    word-spacing: normal;
   }
 
   .title-block {
@@ -31,7 +32,7 @@
   .paper-title {
     font-size: 16pt;
     font-weight: bold;
-    line-height: 1.18;
+    line-height: 1.20;
     margin: 0 0 5px 0;
     letter-spacing: -0.2px;
   }
@@ -44,47 +45,56 @@
   }
 
   .authors-grid {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 6px auto;
-    max-width: 98%;
+    margin: 0 auto 8px auto;
+    max-width: 96%;
     text-align: center;
+  }
+
+  .author-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
   }
 
   .author-col {
     flex: 1;
-    padding: 0 4px;
+    padding: 0 8px;
+    max-width: 48%;
   }
 
   .author-name {
-    font-size: 9.4pt;
+    font-size: 9.6pt;
     font-weight: bold;
+    color: #111;
   }
 
   .author-affil {
-    font-size: 8.0pt;
-    line-height: 1.20;
-    color: #222;
+    font-size: 8.2pt;
+    line-height: 1.24;
+    color: #333;
+    margin-top: 2px;
   }
 
   .guide-block {
     text-align: center;
-    margin-top: 5px;
-    padding-top: 4px;
-    border-top: 0.5pt dashed #888;
-    font-size: 8.2pt;
+    margin-top: 6px;
+    padding: 5px 10px;
+    border-top: 0.5pt dashed #777;
+    border-bottom: 0.5pt dashed #777;
+    font-size: 8.4pt;
     color: #222;
+    background: #fbfbfb;
   }
 
   .two-column {
     column-count: 2;
-    column-gap: 0.22in;
+    column-gap: 0.28in;
   }
 
   .abstract-box {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     font-size: 8.7pt;
-    line-height: 1.21;
+    line-height: 1.25;
     text-align: justify;
   }
 
@@ -111,8 +121,8 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    margin: 10px 0 5px 0;
-    letter-spacing: 0.4px;
+    margin: 11px 0 5px 0;
+    letter-spacing: 0.3px;
     border-bottom: 0.5pt solid #333;
     padding-bottom: 2px;
   }
@@ -121,18 +131,18 @@
     font-size: 9.1pt;
     font-weight: bold;
     font-style: italic;
-    margin: 7px 0 3px 0;
+    margin: 8px 0 3px 0;
   }
 
   .sub-sub-head {
     font-size: 8.8pt;
     font-style: italic;
     font-weight: bold;
-    margin: 5px 0 2px 0;
+    margin: 6px 0 2px 0;
   }
 
   p {
-    margin: 0 0 5px 0;
+    margin: 0 0 6px 0;
     text-indent: 1.2em;
   }
 
@@ -141,24 +151,24 @@
   }
 
   ul, ol {
-    margin: 3px 0 6px 16px;
+    margin: 4px 0 7px 16px;
     padding: 0;
-    font-size: 8.85pt;
+    font-size: 8.9pt;
   }
 
   li {
-    margin-bottom: 2.5px;
-    line-height: 1.20;
+    margin-bottom: 3px;
+    line-height: 1.24;
   }
 
   .figure-box {
     break-inside: avoid;
-    margin: 7px 0;
+    margin: 10px 0 8px 0;
     text-align: center;
   }
 
   .figure-box img {
-    max-height: 1.6in;
+    max-height: 1.55in;
     max-width: 100%;
     width: auto;
     height: auto;
@@ -169,15 +179,15 @@
   }
 
   .figure-box.full-width img {
-    max-height: 1.9in;
+    max-height: 1.85in;
     max-width: 95%;
   }
 
   .caption {
-    font-size: 7.9pt;
-    line-height: 1.18;
+    font-size: 8.0pt;
+    line-height: 1.22;
     text-align: justify;
-    margin-top: 3.5px;
+    margin-top: 4px;
     color: #222;
   }
 
@@ -187,30 +197,30 @@
 
   .full-width {
     column-span: all;
-    margin: 8px 0;
+    margin: 9px 0;
   }
 
   .table-wrapper {
     break-inside: avoid;
-    margin: 7px 0;
+    margin: 9px 0 8px 0;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 7.8pt;
-    line-height: 1.15;
+    font-size: 7.9pt;
+    line-height: 1.22;
     margin: 0 auto;
   }
 
   th, td {
-    border: 0.5pt solid #333;
-    padding: 2.5px 3.5px;
+    border: 0.5pt solid #444;
+    padding: 3.5px 5px;
     text-align: left;
   }
 
   th {
-    background-color: #f1f3f5;
+    background-color: #f2f4f6;
     font-weight: bold;
     text-align: center;
   }
@@ -226,18 +236,24 @@
   .math-block {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    margin: 4px 0;
-    font-size: 8.9pt;
+    margin: 7px auto;
+    padding: 4px 6px;
+    background: #fcfcfc;
+    border: 0.5pt solid #ddd;
+    border-radius: 3px;
+    font-size: 8.8pt;
+    line-height: 1.35;
+    word-break: normal;
+    box-sizing: border-box;
   }
 
   .algorithm-box {
     border: 0.5pt solid #333;
-    padding: 5px 7px;
-    margin: 6px 0;
+    padding: 6px 8px;
+    margin: 7px 0;
     background: #fafafa;
     font-size: 8.2pt;
-    line-height: 1.18;
+    line-height: 1.22;
     break-inside: avoid;
   }
 
@@ -252,14 +268,14 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 7.8pt;
-    line-height: 1.16;
+    font-size: 7.9pt;
+    line-height: 1.22;
   }
 
   .ref-list li {
-    margin-bottom: 3px;
-    text-indent: -1.4em;
-    padding-left: 1.4em;
+    margin-bottom: 3.5px;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
   }
 </style>
 </head>
@@ -270,36 +286,24 @@
   <div class="paper-subtitle">Integrating Dimensional Data Warehousing, Ablated Predictive Machine Learning, Geospatial Economics, and Real-Time Global Telemetry</div>
 
   <div class="authors-grid">
-    <div class="author-col">
-      <div class="author-name">Gajjala Srithika</div>
-      <div class="author-affil">
-        Reg. No: 23BCE7911<br>
-        SCOPE, VIT-AP University<br>
-        Amaravati, Andhra Pradesh, India
+    <div class="author-row">
+      <div class="author-col">
+        <div class="author-name">Gajjala Srithika</div>
+        <div class="author-affil">Reg. No: 23BCE7911 &bull; School of Computer Science &amp; Engineering (SCOPE)<br>VIT-AP University, Amaravati, Andhra Pradesh, India</div>
+      </div>
+      <div class="author-col">
+        <div class="author-name">Papasani Suhitha</div>
+        <div class="author-affil">Reg. No: 23BCE7826 &bull; School of Computer Science &amp; Engineering (SCOPE)<br>VIT-AP University, Amaravati, Andhra Pradesh, India</div>
       </div>
     </div>
-    <div class="author-col">
-      <div class="author-name">Papasani Suhitha</div>
-      <div class="author-affil">
-        Reg. No: 23BCE7826<br>
-        SCOPE, VIT-AP University<br>
-        Amaravati, Andhra Pradesh, India
+    <div class="author-row" style="margin-top: 6px;">
+      <div class="author-col">
+        <div class="author-name">Ala Venkata Veera Ritwik</div>
+        <div class="author-affil">Reg. No: 23BCE9633 &bull; School of Computer Science &amp; Engineering (SCOPE)<br>VIT-AP University, Amaravati, Andhra Pradesh, India</div>
       </div>
-    </div>
-    <div class="author-col">
-      <div class="author-name">Ala Venkata Veera Ritwik</div>
-      <div class="author-affil">
-        Reg. No: 23BCE9633<br>
-        SCOPE, VIT-AP University<br>
-        Amaravati, Andhra Pradesh, India
-      </div>
-    </div>
-    <div class="author-col">
-      <div class="author-name">Akshay Sharma</div>
-      <div class="author-affil">
-        Reg. No: 23BCE9668<br>
-        SCOPE, VIT-AP University<br>
-        Amaravati, Andhra Pradesh, India
+      <div class="author-col">
+        <div class="author-name">Akshay Sharma</div>
+        <div class="author-affil">Reg. No: 23BCE9668 &bull; School of Computer Science &amp; Engineering (SCOPE)<br>VIT-AP University, Amaravati, Andhra Pradesh, India</div>
       </div>
     </div>
   </div>
@@ -316,7 +320,7 @@
     <div class="abstract-title">Abstract&mdash;</div>
     Modern enterprise e-commerce platforms operate at the volatile intersection of localized delivery logistics, fluctuating customer behavioral patterns, and severe macroeconomic supply chain shocks. Conventional analytics pipelines suffer from a fundamental architectural trilemma: transactional data silos impede real-time multi-dimensional querying, predictive machine learning models succumb to subtle temporal target leakage during customer churn formulation, and tactical decision-makers remain isolated from systemic global supply chain telemetry. To resolve these compounding challenges, this paper presents <b>NEXUS.AI</b>, an end-to-end enterprise intelligence architecture that tightly couples a high-throughput PostgreSQL star-schema data warehouse (7 dimension tables, 6 fact/aggregate tables) with predictive machine learning engines, geospatial economic diagnostics, and external macroeconomic shock monitoring. 
     
-    Trained and validated on over 100,000 real-world commercial transactions from the Brazilian market (2016&ndash;2018), our platform resolves the pervasive target leakage flaw in historical churn classification. Specifically, we execute a rigorous <b>Dual-Model Comparative Ablation Study</b> demonstrating that while including post-hoc temporal duration (<i>tenure_days</i>) yields an artificially inflated 99.28% accuracy and 0.9998 ROC-AUC (dominated by 98.81% Gini importance), an ablated pre-attrition model strictly excluding tenure achieves <b>84.18% accuracy</b> and an <b>0.8624 ROC-AUC</b>. This ablation isolates true operational causality, establishing freight ratio (34.20% importance) and review sentiment (16.50% importance) as decisive predictors of customer abandonment. Unsupervised customer clustering ($k=4$, silhouette score 0.612) segregates customer lifetime values across Champions (R$ 812.40 mean spend), Loyal High-Value, At-Risk Defectors, and Dormant Bargain Hunters. Longitudinal demand forecasting using a multiplicative Holt-Winters triple exponential smoothing architecture achieves a 7.82% Mean Absolute Percentage Error (MAPE), accurately tracking extreme seasonal promotional spikes (+240% GMV surges during Black Friday). 
+    Trained and validated on over 100,000 real-world commercial transactions from the Brazilian market (2016&ndash;2018), our platform resolves the pervasive target leakage flaw in historical churn classification. Specifically, we execute a rigorous <b>Dual-Model Comparative Ablation Study</b> demonstrating that while including post-hoc temporal duration (<i>tenure_days</i>) yields an artificially inflated 99.28% accuracy and 0.9998 ROC-AUC (dominated by 98.81% Gini importance), an ablated pre-attrition model strictly excluding tenure achieves <b>84.18% accuracy</b> and an <b>0.8624 ROC-AUC</b>. This ablation isolates true operational causality, establishing freight ratio (34.20% importance) and review sentiment (16.50% importance) as decisive predictors of customer abandonment. Unsupervised customer clustering (<i>k</i> = 4, silhouette score 0.612) segregates customer lifetime values across Champions (R$ 812.40 mean spend), Loyal High-Value, At-Risk Defectors, and Dormant Bargain Hunters. Longitudinal demand forecasting using a multiplicative Holt-Winters triple exponential smoothing architecture achieves a 7.82% Mean Absolute Percentage Error (MAPE), accurately tracking extreme seasonal promotional spikes (+240% GMV surges during Black Friday). 
     
     Furthermore, NEXUS.AI incorporates an external <b>Global Telemetry Engine</b> monitoring maritime chokepoints (Suez, Panama, Cape reroutes), cross-market Consumer Price Index (CPI) inflation rates, and digital infrastructure incidents, orchestrating epoch-specific operational roadmaps across historical business phases (2016 Seed, 2017 Hyper-Scale, 2018 Consolidation, and All-Time Synthesis). The system is rendered via an interactive 3D cartographic fieldbook interface utilizing WebGL contour shaders and is deployed globally on a serverless edge architecture (sub-45ms TTFB). Empirical query benchmarks demonstrate a 7.2&times; latency reduction over unindexed flat stores, providing an authoritative, academically rigorous blueprint for resilient enterprise intelligence.
     
@@ -340,22 +344,18 @@
   </ul>
 
   <div class="sub-head">B. Methodological Flaw: Target Leakage in Churn Prediction</div>
-  <p>Customer churn prediction serves as a cornerstone of retail lifecycle management. Formally, let a customer $i$ be monitored over a temporal observation horizon $[t_0, t_N]$. In historical e-commerce studies utilizing public transaction records [1], customer churn is conventionally defined using a static inactivity threshold:</p>
-  <div class="math-block">
-    $y_i = \begin{cases} 1, & \text{if } (t_{\text{obs}} - t_{i,\text{last}}) > \tau \\ 0, & \text{otherwise} \end{cases}$
-  </div>
-  <p class="no-indent">where $t_{i,\text{last}}$ denotes the timestamp of customer $i$'s final recorded purchase, $t_{\text{obs}}$ represents the terminal boundary of the dataset, and $\tau$ denotes the churn inactivity window (typically 90 days). The critical methodological vulnerability arises when feature engineering pipelines compute customer lifetime tenure as:</p>
-  <div class="math-block">
-    $T_{i,\text{tenure}} = t_{i,\text{last}} - t_{i,\text{first}}$
-  </div>
-  <p class="no-indent">Because single-order or rapidly departing customers exhibit $t_{i,\text{last}} \approx t_{i,\text{first}}$, their tenure evaluates to $T_{i,\text{tenure}} \to 0$. Conversely, loyal repeat customers who purchase late in the observation window inherently possess large values of $T_{i,\text{tenure}}$. Consequently, $T_{i,\text{tenure}}$ acts as an algebraic proxy for the ground truth label $y_i$. Including this temporal duration in supervised gradient boosted trees causes the split-selection algorithm to greedily partition the decision space on $T_{i,\text{tenure}}$, yielding Gini importance metrics exceeding 98% and generating near-perfect ROC-AUC scores (0.9998) [15]. In production, however, a newly active customer's future order timestamp is unknowable. Deploying such a model leads to catastrophic misclassification of active customers. A central contribution of this paper is the formal formulation and empirical execution of a <b>Dual-Model Behavioral Feature Ablation Study</b> that eliminates this target leakage and uncovers true behavioral drivers.</p>
+  <p>Customer churn prediction serves as a cornerstone of retail lifecycle management. Formally, let a customer <i>i</i> be monitored over a temporal observation horizon [<i>t</i><sub>0</sub>, <i>t<sub>N</sub></i>]. In historical e-commerce studies utilizing public transaction records [1], customer churn is conventionally defined using a static inactivity threshold:</p>
+  <div class="math-block"><i>y<sub>i</sub></i> = &nbsp; <b>1</b>, &nbsp; if (<i>t</i><sub>obs</sub> &minus; <i>t</i><sub><i>i</i>,last</sub>) &gt; &tau; &nbsp; (<i>churned</i>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>0</b>, &nbsp; otherwise &nbsp; (<i>retained</i>)</div>
+  <p class="no-indent">where <i>t</i><sub><i>i</i>,last</sub> denotes the timestamp of customer <i>i</i>'s final recorded purchase, <i>t</i><sub>obs</sub> represents the terminal boundary of the dataset, and &tau; denotes the churn inactivity window (typically 90 days). The critical methodological vulnerability arises when feature engineering pipelines compute customer lifetime tenure as:</p>
+  <div class="math-block"><i>T</i><sub><i>i</i>,tenure</sub> = <i>t</i><sub><i>i</i>,last</sub> &minus; <i>t</i><sub><i>i</i>,first</sub></div>
+  <p class="no-indent">Because single-order or rapidly departing customers exhibit <i>t</i><sub><i>i</i>,last</sub> &approx; <i>t</i><sub><i>i</i>,first</sub>, their tenure evaluates to <i>T</i><sub><i>i</i>,tenure</sub> &rarr; 0. Conversely, loyal repeat customers who purchase late in the observation window inherently possess large values of <i>T</i><sub><i>i</i>,tenure</sub>. Consequently, <i>T</i><sub><i>i</i>,tenure</sub> acts as an algebraic proxy for the ground truth label <i>y<sub>i</sub></i>. Including this temporal duration in supervised gradient boosted trees causes the split-selection algorithm to greedily partition the decision space on <i>T</i><sub><i>i</i>,tenure</sub>, yielding Gini importance metrics exceeding 98% and generating near-perfect ROC-AUC scores (0.9998) [15]. In production, however, a newly active customer's future order timestamp is unknowable. Deploying such a model leads to catastrophic misclassification of active customers. A central contribution of this paper is the formal formulation and empirical execution of a <b>Dual-Model Behavioral Feature Ablation Study</b> that eliminates this target leakage and uncovers true behavioral drivers.</p>
 
   <div class="sub-head">C. Research Contributions</div>
   <p>To overcome these challenges, this paper presents <b>NEXUS.AI</b>, an enterprise analytics and predictive intelligence platform. Our primary contributions are:</p>
   <ul>
     <li><b>Architectural Integration of Five-Tier Pipeline</b>: We engineer an end-to-end architecture unifying ingestion, a 13-table PostgreSQL star schema warehouse, predictive machine learning, real-time global macroeconomic telemetry, and an interactive 3D cartographic fieldbook user interface.</li>
     <li><b>Empirical Resolution of Target Leakage via Dual-Model Ablation</b>: We benchmark a post-hoc diagnostic baseline (Model A: 99.28% accuracy, 0.9998 AUC) against a rigorously ablated pre-attrition behavioral model (Model B: 84.18% accuracy, 0.8624 AUC), proving that freight ratio (34.2%) and review scores (16.5%) govern genuine churn causality.</li>
-    <li><b>Multi-Dimensional Customer Segmentation &amp; Demand Forecasting</b>: We formulate an unsupervised RFM clustering framework ($k=4$) alongside a multiplicative Holt-Winters triple exponential smoothing model (7.82% MAPE) capable of capturing seasonal promotional shocks (+240% Black Friday surges).</li>
+    <li><b>Multi-Dimensional Customer Segmentation &amp; Demand Forecasting</b>: We formulate an unsupervised RFM clustering framework (<i>k</i> = 4) alongside a multiplicative Holt-Winters triple exponential smoothing model (7.82% MAPE) capable of capturing seasonal promotional shocks (+240% Black Friday surges).</li>
     <li><b>Geospatial Logistics Disparity &amp; Channel Attribution</b>: We quantify the regional economic penalty across Brazilian federative units, identifying an 18.53% freight burden in the North versus 13.14% in the Southeast, while modeling multi-touch attribution isolating email marketing as the primary ROAS driver (22.50&times;).</li>
     <li><b>Macroeconomic Telemetry &amp; Epoch Strategic Roadmaps</b>: We introduce real-time telemetry tracking maritime chokepoints, inflation radar, and country risk, dynamically parameterizing operational executive strategies across four operational epochs (2016 Seed, 2017 Hyper-Scale, 2018 Retention, All-Time Synthesis).</li>
   </ul>
@@ -375,7 +375,7 @@
   <p>Despite algorithmic sophistication, literature in e-commerce churn prediction frequently suffers from subtle data leakage [14], [16]. De Caigny et al. [13] noted that tabular feature stores constructed without strict temporal point-in-time constraints inadvertently ingest post-event behavioral artifacts. In e-commerce datasets spanning bounded observation periods (such as the 2016&ndash;2018 Olist corpus [1]), computing customer lifetime tenure directly from the first and last recorded transactions creates a mathematical identity with the churn label. As proved in Section IV, our work explicitly addresses this literature void by introducing a formal feature ablation protocol that isolates operational predictors from temporal artifacts.</p>
 
   <div class="sub-head">C. Customer Lifetime Value and Unsupervised Behavioral Segmentation</div>
-  <p>Customer segmentation in retail analytics has long utilized the Recency, Frequency, and Monetary (RFM) paradigm introduced by Bult and Wansbeek and popularized by Fader et al. [6]. In their seminal work on probability models in marketing, Fader, Hardie, and Lee formulated the Pareto/NBD and BG/NBD models to estimate active customer counts and predict repeat purchasing behavior in non-contractual retail settings [6]. While probabilistic models provide robust aggregate forecasting, modern digital commerce requires granular clustering to enable automated personalization. Unsupervised machine learning algorithms, specifically Hartigan and Wong's $k$-means clustering [12], have become central to algorithmic customer segmentation. Coupling standard RFM metrics with logarithmic scaling, Z-score normalization, and Principal Component Analysis (PCA) enables robust partitioning of heterogeneous customer bases into actionable cohorts [12].</p>
+  <p>Customer segmentation in retail analytics has long utilized the Recency, Frequency, and Monetary (RFM) paradigm introduced by Bult and Wansbeek and popularized by Fader et al. [6]. In their seminal work on probability models in marketing, Fader, Hardie, and Lee formulated the Pareto/NBD and BG/NBD models to estimate active customer counts and predict repeat purchasing behavior in non-contractual retail settings [6]. While probabilistic models provide robust aggregate forecasting, modern digital commerce requires granular clustering to enable automated personalization. Unsupervised machine learning algorithms, specifically Hartigan and Wong's <i>k</i>-means clustering [12], have become central to algorithmic customer segmentation. Coupling standard RFM metrics with logarithmic scaling, Z-score normalization, and Principal Component Analysis (PCA) enables robust partitioning of heterogeneous customer bases into actionable cohorts [12].</p>
 
   <div class="sub-head">D. Time-Series Demand Forecasting in High-Volatility Retail</div>
   <p>Retail demand forecasting is challenged by high volatility, price elasticities, and non-linear calendar seasonality. Classical time-series forecasting has historically been anchored by Box-Jenkins Autoregressive Integrated Moving Average (ARIMA) models and exponential smoothing techniques [9], [10]. Gardner [9] synthesized decades of exponential smoothing literature, establishing Holt-Winters triple exponential smoothing as the premier heuristic for capturing simultaneous linear trend and multiplicative seasonal cycles. Hyndman and Athanasopoulos [10] formalized state-space representations of Holt-Winters models, demonstrating their superior parameter stability over complex deep neural networks when operating on aggregated monthly and weekly enterprise demand streams. In emerging market retail environments, extreme promotional calendar shocks (e.g., Brazilian Black Friday, where order volumes surge by 200% to 300% within a 72-hour window) introduce severe demand discontinuities. Calibrating Holt-Winters multiplicative seasonal indices enables enterprise planning engines to maintain forecast stability across both steady-state operations and severe demand surges [9], [10].</p>
@@ -624,63 +624,53 @@
   <div class="sub-head">C. ETL Pipeline and Geospatial Feature Engineering</div>
   <p>The ingestion engine executes comprehensive extract, transform, and load (ETL) routines to prepare raw transaction logs for dimensional warehousing and downstream machine learning. We engineer specialized geospatial and behavioral features:</p>
   <ul>
-    <li><b>Haversine Great-Circle Distance</b>: To quantify the physical logistics friction separating sellers and consumers, we compute the Haversine distance between customer coordinates $(\phi_c, \lambda_c)$ and seller coordinates $(\phi_s, \lambda_s)$:
-      <div class="math-block">
-        $d = 2R \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta \phi}{2}\right) + \cos(\phi_c)\cos(\phi_s)\sin^2\left(\frac{\Delta \lambda}{2}\right)}\right)$
-      </div>
-      where $R = 6,371\text{ km}$ denotes Earth's mean radius, $\Delta \phi = \phi_s - \phi_c$, and $\Delta \lambda = \lambda_s - \lambda_c$.</li>
-    <li><b>Freight Ratio Burden ($F_r$)</b>: Measures shipping overhead relative to total cart expenditure:
-      <div class="math-block">
-        $F_r = \frac{\text{freight\_value}}{\text{item\_price} + \text{freight\_value}}$
-      </div>
-      Orders where $F_r > 0.20$ exhibit significantly higher post-purchase dissatisfaction and review score degradation.</li>
-    <li><b>Carrier Fulfillment Velocity &amp; Delivery Delay</b>: We compute carrier delivery velocity as $v_{\text{delivery}} = \frac{d}{\Delta t_{\text{transit}}}$ (km/day) and delivery delay variance as $\Delta t_{\text{delay}} = t_{\text{delivered}} - t_{\text{estimated}}$, isolating shipments that failed carrier service level agreements (SLAs).</li>
+    <li><b>Haversine Great-Circle Distance</b>: To quantify the physical logistics friction separating sellers and consumers, we compute the Haversine distance between customer coordinates (&phi;<sub><i>c</i></sub>, &lambda;<sub><i>c</i></sub>) and seller coordinates (&phi;<sub><i>s</i></sub>, &lambda;<sub><i>s</i></sub>):
+      <div class="math-block"><i>d</i> = 2<i>R</i> &middot; arcsin(&radic;[sin<sup>2</sup>(&Delta;&phi; / 2) + cos(&phi;<sub>c</sub>)cos(&phi;<sub>s</sub>)sin<sup>2</sup>(&Delta;&lambda; / 2)])</div>
+      where <i>R</i> = 6,371 km denotes Earth's mean radius, &Delta;&phi; = &phi;<sub><i>s</i></sub> &minus; &phi;<sub><i>c</i></sub>, and &Delta;&lambda; = &lambda;<sub><i>s</i></sub> &minus; &lambda;<sub><i>c</i></sub>.</li>
+    <li><b>Freight Ratio Burden (<i>F<sub>r</sub></i>)</b>: Measures shipping overhead relative to total cart expenditure:
+      <div class="math-block"><i>F<sub>r</sub></i> = freight_value / (item_price + freight_value)</div>
+      Orders where <i>F<sub>r</sub></i> &gt; 0.20 exhibit significantly higher post-purchase dissatisfaction and review score degradation.</li>
+    <li><b>Carrier Fulfillment Velocity &amp; Delivery Delay</b>: We compute carrier delivery velocity as <i>v</i><sub>delivery</sub> = <i>d</i> / &Delta;<i>t</i><sub>transit</sub> (km/day) and delivery delay variance as &Delta;<i>t</i><sub>delay</sub> = <i>t</i><sub>delivered</sub> &minus; <i>t</i><sub>estimated</sub>, isolating shipments that failed carrier service level agreements (SLAs).</li>
   </ul>
 
   <div class="algorithm-box">
     <div class="algorithm-title">Algorithm 1: End-to-End Dimensional Staging and Feature Pipeline</div>
-    <b>Input:</b> Raw Olist transactional relational CSV streams $\mathcal{D}_{\text{raw}}$.<br>
-    <b>Output:</b> Populated Star Schema Database $\mathcal{W}$ and Pre-Attrition Feature Store $\mathcal{X}$.<br>
+    <b>Input:</b> Raw Olist transactional relational CSV streams <b>D</b><sub>raw</sub>.<br>
+    <b>Output:</b> Populated Star Schema Database <b>W</b> and Pre-Attrition Feature Store <b>X</b>.<br>
     1: <b>Initialize</b> PostgreSQL dimensional schema tables and surrogate key sequences.<br>
-    2: <b>For each</b> raw record in $\mathcal{D}_{\text{raw}}$ <b>do</b>:<br>
+    2: <b>For each</b> raw record in <b>D</b><sub>raw</sub> <b>do</b>:<br>
     3: &nbsp;&nbsp;Normalize timestamps to BRT; sanitize categorical strings and Portuguese accents.<br>
-    4: &nbsp;&nbsp;Compute Haversine distance $d(c, s)$, freight ratio $F_r$, and transit latency $\Delta t$.<br>
+    4: &nbsp;&nbsp;Compute Haversine distance <i>d</i>(<i>c</i>, <i>s</i>), freight ratio <i>F<sub>r</sub></i>, and transit latency &Delta;<i>t</i>.<br>
     5: &nbsp;&nbsp;Upsert dimension tables (<code>dim_customers</code>, <code>dim_sellers</code>, <code>dim_products</code>, <code>dim_geography</code>, <code>dim_date</code>).<br>
     6: &nbsp;&nbsp;Insert atomic facts into <code>fact_orders</code>, <code>fact_order_items</code>, <code>fact_order_payments</code>, <code>fact_order_reviews</code>.<br>
     7: <b>End For</b><br>
     8: Compute daily aggregations and populate <code>fact_daily_sales</code>.<br>
-    9: Construct pre-attrition customer feature matrix $\mathcal{X}$ strictly excluding post-hoc tenure metrics.<br>
-    10: <b>Return</b> $\mathcal{W}, \mathcal{X}$.
+    9: Construct pre-attrition customer feature matrix <b>X</b> strictly excluding post-hoc tenure metrics.<br>
+    10: <b>Return</b> <b>W</b>, <b>X</b>.
   </div>
 
   <h2 class="section-head">IV. Machine Learning Methodology and Dual-Model Ablation Study</h2>
   <p class="no-indent">This section formalizes the predictive intelligence core of NEXUS.AI, focusing on customer churn classification, behavioral feature ablation, unsupervised RFM customer segmentation, and longitudinal revenue demand forecasting.</p>
 
   <div class="sub-head">A. Churn Prediction Formalization &amp; The Target Leakage Problem</div>
-  <p>In retail analytics, customer retention directly governs long-term enterprise profitability. In contractual settings (e.g., SaaS subscriptions), churn is explicitly signaled by contract cancellation. In non-contractual e-commerce environments, customer departure is silent. We formalize binary churn classification over an observation horizon $[t_0, t_N]$. For each customer $i \in \{1, \dots, N\}$, the binary ground truth target is defined as:</p>
-  <div class="math-block">
-    $y_i = \begin{cases} 1, & \text{if } (t_{\text{obs}} - t_{i,\text{last}}) > \tau \\ 0, & \text{otherwise} \end{cases}$
-  </div>
-  <p class="no-indent">where $\tau = 90\text{ days}$. As introduced in Section I, standard e-commerce feature stores compute customer tenure as $T_{i,\text{tenure}} = t_{i,\text{last}} - t_{i,\text{first}}$.</p>
+  <p>In retail analytics, customer retention directly governs long-term enterprise profitability. In contractual settings (e.g., SaaS subscriptions), churn is explicitly signaled by contract cancellation. In non-contractual e-commerce environments, customer departure is silent. We formalize binary churn classification over an observation horizon [<i>t</i><sub>0</sub>, <i>t<sub>N</sub></i>]. For each customer <i>i</i> &isin; {1, ..., <i>N</i>}, the binary ground truth target is defined as:</p>
+  <div class="math-block"><i>y<sub>i</sub></i> = &nbsp; <b>1</b>, &nbsp; if (<i>t</i><sub>obs</sub> &minus; <i>t</i><sub><i>i</i>,last</sub>) &gt; &tau; &nbsp; (<i>churned</i>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>0</b>, &nbsp; otherwise &nbsp; (<i>retained</i>)</div>
+  <p class="no-indent">where <b>&tau; = 90 days</b>. As introduced in Section I, standard e-commerce feature stores compute customer tenure as <i>T</i><sub><i>i</i>,tenure</sub> = <i>t</i><sub><i>i</i>,last</sub> &minus; <i>t</i><sub><i>i</i>,first</sub>.</p>
 
-  <p><b>Proof of Information Leakage:</b> Consider customer $i$ who places exactly one order at timestamp $t_{i,1}$. For this customer, $t_{i,\text{last}} = t_{i,\text{first}} = t_{i,1}$. Consequently, $T_{i,\text{tenure}} = 0$. If $t_{\text{obs}} - t_{i,1} > \tau$, customer $i$ is labeled $y_i = 1$. In our empirical dataset, single-order customers constitute 96.9% of the population. For almost all single-order customers who placed an order prior to the cutoff threshold, $T_{i,\text{tenure}} \equiv 0$ strictly implies $y_i = 1$. Conversely, customers who placed repeat orders late in the dataset exhibit $T_{i,\text{tenure}} \gg 0$, which strictly implies $y_i = 0$. By including $T_{i,\text{tenure}}$ in the feature vector, supervised tree-based algorithms learn a simple partition:</p>
-  <div class="math-block">
-    $f(x_i) \approx \begin{cases} 1, & \text{if } T_{i,\text{tenure}} < \epsilon \\ 0, & \text{if } T_{i,\text{tenure}} \ge \epsilon \end{cases}$
-  </div>
-  <p class="no-indent">This trivial heuristic achieves a deceptive 99.28% classification accuracy and a 0.9998 ROC-AUC. However, when deployed in production to evaluate a customer who has just made their first purchase today ($t_{\text{now}}$), their tenure is naturally $T = 0$, causing the leaked model to erroneously classify every new customer as irrevocably churned. To resolve this, we formulate an empirical ablation study.</p>
+  <p><b>Proof of Information Leakage:</b> Consider customer <i>i</i> who places exactly one order at timestamp <i>t</i><sub><i>i</i>,1</sub>. For this customer, <i>t</i><sub><i>i</i>,last</sub> = <i>t</i><sub><i>i</i>,first</sub> = <i>t</i><sub><i>i</i>,1</sub>. Consequently, <i>T</i><sub><i>i</i>,tenure</sub> = 0. If <i>t</i><sub>obs</sub> &minus; <i>t</i><sub><i>i</i>,1</sub> &gt; &tau;, customer <i>i</i> is labeled <i>y<sub>i</sub></i> = 1. In our empirical dataset, single-order customers constitute 96.9% of the population. For almost all single-order customers who placed an order prior to the cutoff threshold, <i>T</i><sub><i>i</i>,tenure</sub> &equiv; 0 strictly implies <i>y<sub>i</sub></i> = 1. Conversely, customers who placed repeat orders late in the dataset exhibit <i>T</i><sub><i>i</i>,tenure</sub> &gg; 0, which strictly implies <i>y<sub>i</sub></i> = 0. By including <i>T</i><sub><i>i</i>,tenure</sub> in the feature vector, supervised tree-based algorithms learn a simple partition:</p>
+  <div class="math-block"><i>f</i>(<i>x<sub>i</sub></i>) &approx; &nbsp; <b>1</b> if <i>T</i><sub><i>i</i>,tenure</sub> &lt; &epsilon;;&nbsp;&nbsp; <b>0</b> if <i>T</i><sub><i>i</i>,tenure</sub> &ge; &epsilon;</div>
+  <p class="no-indent">This trivial heuristic achieves a deceptive 99.28% classification accuracy and a 0.9998 ROC-AUC. However, when deployed in production to evaluate a customer who has just made their first purchase today (<i>t</i><sub>now</sub>), their tenure is naturally <i>T</i> = 0, causing the leaked model to erroneously classify every new customer as irrevocably churned. To resolve this, we formulate an empirical ablation study.</p>
 
   <div class="sub-head">B. Dual-Model Ablation Protocol</div>
   <p>We configure two distinct gradient boosted classification pipelines under identical hyperparameter conditions:</p>
   <ul>
-    <li><b>Model A (Post-Hoc Diagnostic Baseline)</b>: Trained on the full feature space $\mathcal{X}_A = \{T_{\text{tenure}}, \text{recency}, \text{frequency}, \text{monetary}, F_r, \text{review\_score}, \text{installments}, \dots\}$. This represents the flawed historical baseline found across published e-commerce benchmarks.</li>
-    <li><b>Model B (Pre-Attrition Behavioral Classifier)</b>: Strictly ablates $T_{\text{tenure}}$, training on $\mathcal{X}_B = \mathcal{X}_A \setminus \{T_{\text{tenure}}\}$. Model B forces the decision trees to identify genuine behavioral, operational, and logistics markers of customer abandonment.</li>
+    <li><b>Model A (Post-Hoc Diagnostic Baseline)</b>: Trained on the full feature space <b>X</b><sub><i>A</i></sub> = {<i>T</i><sub>tenure</sub>, recency, frequency, monetary, <i>F<sub>r</sub></i>, review_score, installments, ...}. This represents the flawed historical baseline found across published e-commerce benchmarks.</li>
+    <li><b>Model B (Pre-Attrition Behavioral Classifier)</b>: Strictly ablates <i>T</i><sub>tenure</sub>, training on <b>X</b><sub><i>B</i></sub> = <b>X</b><sub><i>A</i></sub> &setminus; {<i>T</i><sub>tenure</sub>}. Model B forces the decision trees to identify genuine behavioral, operational, and logistics markers of customer abandonment.</li>
   </ul>
 
   <p>Both models are trained using XGBoost with an objective optimizing the regularized logistic loss:</p>
-  <div class="math-block">
-    $\mathcal{L}^{(t)} = \sum_{i=1}^n \left[ g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i) \right] + \gamma T + \frac{1}{2} \lambda \sum_{j=1}^T w_j^2 + \alpha \sum_{j=1}^T |w_j|$
-  </div>
-  <p class="no-indent">where $g_i = \partial_{\hat{y}^{(t-1)}} l(y_i, \hat{y}^{(t-1)})$ and $h_i = \partial^2_{\hat{y}^{(t-1)}} l(y_i, \hat{y}^{(t-1)})$ represent the first- and second-order gradient statistics. Hyperparameters were tuned via 5-fold stratified cross-validation: maximum tree depth $d_{\text{max}} = 5$, learning rate $\eta = 0.05$, subsample ratio $0.85$, column sample by tree $0.80$, $\lambda = 1.5$, and $\alpha = 0.5$.</p>
+  <div class="math-block"><i>L</i><sup>(<i>t</i>)</sup> = &sum;<sub><i>i</i>=1</sub><sup><i>n</i></sup> [<i>g<sub>i</sub> f<sub>t</sub></i>(<i>x<sub>i</sub></i>) + &frac12; <i>h<sub>i</sub> f<sub>t</sub></i><sup>2</sup>(<i>x<sub>i</sub></i>)] + &gamma;<i>T</i> + &frac12;&lambda;&sum;<sub><i>j</i>=1</sub><sup><i>T</i></sup> <i>w<sub>j</sub></i><sup>2</sup> + &alpha;&sum;<sub><i>j</i>=1</sub><sup><i>T</i></sup> |<i>w<sub>j</sub></i>|</div>
+  <p class="no-indent">where <i>g<sub>i</sub></i> = &part;<sub><i>&#375;</i><sup>(<i>t</i>&minus;1)</sup></sub> <i>l</i>(<i>y<sub>i</sub></i>, <i>&#375;</i><sup>(<i>t</i>&minus;1)</sup>) and <i>h<sub>i</sub></i> = &part;<sup>2</sup><sub><i>&#375;</i><sup>(<i>t</i>&minus;1)</sup></sub> <i>l</i>(<i>y<sub>i</sub></i>, <i>&#375;</i><sup>(<i>t</i>&minus;1)</sup>) represent the first- and second-order gradient statistics. Hyperparameters were tuned via 5-fold stratified cross-validation: maximum tree depth <i>d</i><sub>max</sub> = 5, learning rate &eta; = 0.05, subsample ratio 0.85, column sample by tree 0.80, &lambda; = 1.5, and &alpha; = 0.5.</p>
 
   <div class="figure-box full-width">
     <img src="__FIG_DIR__/fig3_churn_roc_feature_importance.png" alt="Dual Churn ROC Curves and Model B Behavioral Feature Importance">
@@ -768,49 +758,38 @@
   </div>
 
   <div class="sub-head">C. SHAP Interpretability and Causal Driver Discovery</div>
-  <p>To inspect the decision logic of Model B, we employ TreeSHAP [15] to compute exact Shapley value attributions for each feature. For a model prediction $f(x)$, the Shapley value $\phi_j$ represents the marginal contribution of feature $j$ across all possible feature subsets:</p>
-  <div class="math-block">
-    $\phi_j(f, x) = \sum_{S \subseteq \mathcal{F} \setminus \{j\}} \frac{|S|!(|\mathcal{F}| - |S| - 1)!}{|\mathcal{F}|!} \left[ f_x(S \cup \{j\}) - f_x(S) \right]$
-  </div>
+  <p>To inspect the decision logic of Model B, we employ TreeSHAP [15] to compute exact Shapley value attributions for each feature. For a model prediction <i>f</i>(<i>x</i>), the Shapley value &phi;<sub><i>j</i></sub> represents the marginal contribution of feature <i>j</i> across all possible feature subsets:</p>
+  <div class="math-block">&phi;<sub><i>j</i></sub>(<i>f</i>, <i>x</i>) = &sum;<sub><i>S</i> &sube; <i>F</i> &setminus; {<i>j</i>}</sub> [|<i>S</i>|! (|<i>F</i>| &minus; |<i>S</i>| &minus; 1)! / |<i>F</i>|!] &middot; [<i>f<sub>x</sub></i>(<i>S</i> &cup; {<i>j</i>}) &minus; <i>f<sub>x</sub></i>(<i>S</i>)]</div>
   <p class="no-indent">Fig. 3(b) displays the Gini feature importance profile. In Model A, <i>tenure_days</i> absorbed 98.81% of tree splits, rendering other features statistically invisible. In contrast, Model B reveals that customer churn is fundamentally governed by logistics economics and fulfillment quality:</p>
   <ul>
-    <li><b>Freight Ratio ($F_r$, 34.20% Importance)</b>: SHAP dependence plots indicate a sharp non-linear inflection at $F_r = 0.20$. When shipping charges exceed 20% of cart value, customer churn probability surges by 42.6%.</li>
+    <li><b>Freight Ratio (<i>F<sub>r</sub></i>, 34.20% Importance)</b>: SHAP dependence plots indicate a sharp non-linear inflection at <i>F<sub>r</sub></i> = 0.20. When shipping charges exceed 20% of cart value, customer churn probability surges by 42.6%.</li>
     <li><b>Average Review Score (16.50% Importance)</b>: Customers awarding 1 or 2 stars due to transit delays exhibit a 78.4% churn probability within the subsequent 60-day cycle.</li>
     <li><b>Payment Installments (14.80% Importance)</b>: Higher installment counts correlate with customer retention, signaling higher purchase commitment and credit card affinity over one-off Boleto payments.</li>
     <li><b>Monetary Total (12.10% Importance)</b>: High-ticket purchases exhibit lower churn rates, reflecting elevated brand trust.</li>
   </ul>
 
   <div class="sub-head">D. Unsupervised Customer Segmentation (RFM + K-Means)</div>
-  <p>To enable cohort-specific lifecycle marketing, we implement unsupervised customer segmentation. For each customer $i$, we compute standardized RFM features: Recency ($R_i$), Frequency ($F_i$), and Monetary Total ($M_i$). Features undergo logarithmic transformation $\tilde{x} = \ln(x + 1)$ to normalize heavy right-skewed tails, followed by standard Z-score scaling. We apply $k$-means clustering, which minimizes the within-cluster sum of squares (WCSS):</p>
-  <div class="math-block">
-    $J = \sum_{k=1}^K \sum_{x_i \in \mathcal{C}_k} \| x_i - \mu_k \|^2$
-  </div>
-  <p class="no-indent">To identify the optimal cluster count $K$, we execute an elbow heuristic sweep alongside silhouette coefficient analysis across $K \in [2, 10]$ (Fig. 4(a)). The inflection point at $K = 4$ yields an optimal balance between intra-cluster cohesion and inter-cluster separation, achieving a silhouette score of 0.612.</p>
+  <p>To enable cohort-specific lifecycle marketing, we implement unsupervised customer segmentation. For each customer <i>i</i>, we compute standardized RFM features: Recency (<i>R<sub>i</sub></i>), Frequency (<i>F<sub>i</sub></i>), and Monetary Total (<i>M<sub>i</sub></i>). Features undergo logarithmic transformation <i>x&#771;</i> = ln(<i>x</i> + 1) to normalize heavy right-skewed tails, followed by standard Z-score scaling. We apply <i>k</i>-means clustering, which minimizes the within-cluster sum of squares (WCSS):</p>
+  <div class="math-block"><i>J</i> = &sum;<sub><i>k</i>=1</sub><sup><i>K</i></sup> &sum;<sub><i>x<sub>i</sub></i> &isin; <i>C<sub>k</sub></i></sub> ||<i>x<sub>i</sub></i> &minus; &mu;<sub><i>k</i></sub>||<sup>2</sup></div>
+  <p class="no-indent">To identify the optimal cluster count <i>K</i>, we execute an elbow heuristic sweep alongside silhouette coefficient analysis across <i>K</i> &isin; [2, 10] (Fig. 4(a)). The inflection point at <i>K</i> = 4 yields an optimal balance between intra-cluster cohesion and inter-cluster separation, achieving a silhouette score of 0.612.</p>
 
   <div class="figure-box">
     <img src="__FIG_DIR__/fig4_kmeans_pca_elbow.png" alt="K-Means Clustering: Elbow Heuristic and PCA Visualization">
-    <div class="caption"><span class="caption-title">Fig. 4.</span> Algorithmic Customer Segmentation: (a) Within-Cluster Sum of Squares (WCSS) elbow curve and silhouette scores indicating optimal partition at $K=4$; (b) 2D Principal Component Analysis (PCA) projection illustrating distinct spatial separation among the 4 customer cohorts.</div>
+    <div class="caption"><span class="caption-title">Fig. 4.</span> Algorithmic Customer Segmentation: (a) Within-Cluster Sum of Squares (WCSS) elbow curve and silhouette scores indicating optimal partition at <i>k</i> = 4; (b) 2D Principal Component Analysis (PCA) projection illustrating distinct spatial separation among the 4 customer cohorts.</div>
   </div>
 
   <p>Fig. 4(b) visualizes the clusters projected onto the first two principal components (explaining 74.2% of total variance). The four behavioral cohorts are characterized as follows:</p>
   <ul>
-    <li><b>Cluster 0: Champions (12.4% of population, R$ 812.40 mean GMV)</b>: High frequency, low recency ($< 45\text{ days}$), and large monetary spend. These customers represent the primary revenue engine and exhibit $< 5\%$ churn probability.</li>
+    <li><b>Cluster 0: Champions (12.4% of population, R$ 812.40 mean GMV)</b>: High frequency, low recency (&lt; 45 days), and large monetary spend. These customers represent the primary revenue engine and exhibit &lt; 5% churn probability.</li>
     <li><b>Cluster 1: Loyal High-Value (23.8% of population, R$ 348.10 mean GMV)</b>: Consistent repeat purchasers with moderate recency and strong credit card installment usage.</li>
-    <li><b>Cluster 2: At-Risk Defectors (28.6% of population, R$ 142.50 mean GMV)</b>: High recency ($> 180\text{ days}$), declining review scores, and elevated freight ratios. Target of automated retention campaigns.</li>
+    <li><b>Cluster 2: At-Risk Defectors (28.6% of population, R$ 142.50 mean GMV)</b>: High recency (&gt; 180 days), declining review scores, and elevated freight ratios. Target of automated retention campaigns.</li>
     <li><b>Cluster 3: Dormant Bargain Hunters (35.2% of population, R$ 68.20 mean GMV)</b>: Single-purchase customers attracted exclusively by deep promotional discounts, predominantly utilizing Boleto payments.</li>
   </ul>
 
   <div class="sub-head">E. Longitudinal Demand Forecasting (Holt-Winters Multiplicative)</div>
-  <p>To support inventory procurement and carrier capacity planning, NEXUS.AI incorporates longitudinal revenue demand forecasting. Historical e-commerce sales exhibit simultaneous linear growth trends and multiplicative monthly seasonal cycles. We configure Holt-Winters Triple Exponential Smoothing [9], [10] with multiplicative seasonality across a 12-month period ($m = 12$):</p>
-  <div class="math-block">
-    $\begin{aligned}
-    L_t &= \alpha \frac{Y_t}{S_{t-m}} + (1 - \alpha)(L_{t-1} + b_{t-1}) \\
-    b_t &= \beta (L_t - L_{t-1}) + (1 - \beta)b_{t-1} \\
-    S_t &= \gamma \frac{Y_t}{L_t} + (1 - \gamma)S_{t-m} \\
-    \hat{Y}_{t+h} &= (L_t + h b_t) S_{t-m + (h \bmod m)}
-    \end{aligned}$
-  </div>
-  <p class="no-indent">where $L_t$, $b_t$, and $S_t$ represent the smoothed level, trend, and seasonal components, respectively. Parameters were calibrated using the Nelder-Mead simplex algorithm minimizing Mean Squared Error (MSE), yielding optimal smoothing weights: $\alpha = 0.42$, $\beta = 0.15$, and $\gamma = 0.38$.</p>
+  <p>To support inventory procurement and carrier capacity planning, NEXUS.AI incorporates longitudinal revenue demand forecasting. Historical e-commerce sales exhibit simultaneous linear growth trends and multiplicative monthly seasonal cycles. We configure Holt-Winters Triple Exponential Smoothing [9], [10] with multiplicative seasonality across a 12-month period (<i>m</i> = 12):</p>
+  <div class="math-block"><i>L<sub>t</sub></i> = &alpha;(<i>Y<sub>t</sub></i> / <i>S</i><sub><i>t</i>&minus;<i>m</i></sub>) + (1 &minus; &alpha;)(<i>L</i><sub><i>t</i>&minus;1</sub> + <i>b</i><sub><i>t</i>&minus;1</sub>)<br><i>b<sub>t</sub></i> = &beta;(<i>L<sub>t</sub></i> &minus; <i>L</i><sub><i>t</i>&minus;1</sub>) + (1 &minus; &beta;)<i>b</i><sub><i>t</i>&minus;1</sub><br><i>S<sub>t</sub></i> = &gamma;(<i>Y<sub>t</sub></i> / <i>L<sub>t</sub></i>) + (1 &minus; &gamma;)<i>S</i><sub><i>t</i>&minus;<i>m</i></sub><br><i>&#374;</i><sub><i>t</i>+<i>h</i></sub> = (<i>L<sub>t</sub></i> + <i>h b<sub>t</sub></i>) &middot; <i>S</i><sub><i>t</i>&minus;<i>m</i>+(<i>h</i> mod <i>m</i>)</sub></div>
+  <p class="no-indent">where <i>L<sub>t</sub></i>, <i>b<sub>t</sub></i>, and <i>S<sub>t</sub></i> represent the smoothed level, trend, and seasonal components, respectively. Parameters were calibrated using the Nelder-Mead simplex algorithm minimizing Mean Squared Error (MSE), yielding optimal smoothing weights: &alpha; = 0.42, &beta; = 0.15, and &gamma; = 0.38.</p>
 
   <div class="figure-box full-width">
     <img src="__FIG_DIR__/fig5_revenue_forecasting.png" alt="Holt-Winters Multiplicative Demand Forecast">
@@ -827,7 +806,7 @@
 
   <div class="figure-box">
     <img src="__FIG_DIR__/fig6_regional_economics.png" alt="Regional E-Commerce Economics: GMV Share and Freight Burden">
-    <div class="caption"><span class="caption-title">Fig. 6.</span> Brazilian Regional E-Commerce Disparity: (a) Total Gross Merchandise Value (GMV) by macro-region, highlighting Southeast hegemony (68.4% of national sales); (b) Average freight cost ratio burden ($F_r$) across regions, illustrating the severe freight penalty imposed on Northern (18.53%) and Northeastern (17.20%) consumers relative to the Southeast (13.14%).</div>
+    <div class="caption"><span class="caption-title">Fig. 6.</span> Brazilian Regional E-Commerce Disparity: (a) Total Gross Merchandise Value (GMV) by macro-region, highlighting Southeast hegemony (68.4% of national sales); (b) Average freight cost ratio burden (<i>F<sub>r</sub></i>) across regions, illustrating the severe freight penalty imposed on Northern (18.53%) and Northeastern (17.20%) consumers relative to the Southeast (13.14%).</div>
   </div>
 
   <p>The Southeast region (S&atilde;o Paulo, Rio de Janeiro, Minas Gerais) accounts for <b>68.4%</b> of total national GMV and 72.1% of all order transactions. Due to localized fulfillment warehouses and dense carrier coverage, Southeast consumers face an average freight ratio of only <b>13.14%</b> and enjoy rapid order delivery averaging 8.2 business days. In stark contrast, consumers in the North experience an average freight ratio of <b>18.53%</b> and endure transit lead times averaging 26.4 business days. This geographical freight penalty creates acute customer attrition in peripheral markets, demonstrating that national e-commerce growth is strictly bottlenecked by last-mile transport infrastructure [1], [18].</p>
@@ -843,9 +822,9 @@
   <p>The portfolio analysis reveals distinct strategic quadrants:</p>
   <ul>
     <li><b>Stars (High Growth, High Share)</b>: <i>Health &amp; Beauty</i>, <i>Bed, Bath &amp; Table</i>, and <i>Sports &amp; Leisure</i> drive primary revenue expansion. Characterized by high margins and moderate shipping weights, these categories generate sustainable cash flows.</li>
-    <li><b>Cash Cows (Low Growth, High Share)</b>: <i>Computers &amp; Accessories</i> and <i>Watches &amp; Gifts</i> generate stable, high-ticket GMV with low volumetric freight overhead ($F_r < 0.08$).</li>
+    <li><b>Cash Cows (Low Growth, High Share)</b>: <i>Computers &amp; Accessories</i> and <i>Watches &amp; Gifts</i> generate stable, high-ticket GMV with low volumetric freight overhead (<i>F<sub>r</sub></i> &lt; 0.08).</li>
     <li><b>Question Marks (High Growth, Low Share)</b>: <i>Telephony</i> and <i>Fashion &amp; Apparel</i> exhibit rapid growth but suffer from aggressive seller competition and high return rates.</li>
-    <li><b>Dogs (Low Growth, Low Share) &amp; Margin Drag</b>: Bulky categories such as <i>Furniture &amp; Decor</i> and <i>Automotive</i> suffer from massive volumetric freight surcharges ($F_r > 0.25$), inducing high cart abandonment and negative unit economics when shipped interstate.</li>
+    <li><b>Dogs (Low Growth, Low Share) &amp; Margin Drag</b>: Bulky categories such as <i>Furniture &amp; Decor</i> and <i>Automotive</i> suffer from massive volumetric freight surcharges (<i>F<sub>r</sub></i> &gt; 0.25), inducing high cart abandonment and negative unit economics when shipped interstate.</li>
   </ul>
 
   <div class="sub-head">C. Multi-Touch Attribution &amp; Marketing Channel Economics</div>
@@ -865,7 +844,7 @@
   <p>International e-commerce supply chains are highly sensitive to maritime transit bottlenecks and currency purchasing power fluctuations. NEXUS.AI continuously ingests four external telemetry feeds (Fig. 9):</p>
   <ul>
     <li><b>Maritime Chokepoint Transit Volumes</b>: Tracks daily vessel passages through critical corridors including the Suez Canal, Bab-el-Mandeb Strait, Panama Canal, and Strait of Malacca. The ongoing Red Sea maritime security crisis has caused a <b>58.3% drop</b> in Suez transits, forcing container carriers to reroute around the Cape of Good Hope (+128.4% volume increase). This diversion adds 10 to 14 days to international container voyages, driving up spot freight rates and delaying raw material arrivals in South American manufacturing hubs [20].</li>
-    <li><b>Cross-Market CPI Inflation Radar</b>: Monitors the Brazilian IPCA index alongside US CPI and Eurozone Harmonised Index of Consumer Prices (HICP). Econometric regression within NEXUS.AI reveals that when domestic inflation surges above 4.5%, consumer basket size exhibits an elasticity of $\epsilon = -0.74$, necessitating proactive price discounting.</li>
+    <li><b>Cross-Market CPI Inflation Radar</b>: Monitors the Brazilian IPCA index alongside US CPI and Eurozone Harmonised Index of Consumer Prices (HICP). Econometric regression within NEXUS.AI reveals that when domestic inflation surges above 4.5%, consumer basket size exhibits an elasticity of &epsilon; = &minus;0.74, necessitating proactive price discounting.</li>
     <li><b>Country Instability Index (CII)</b>: Computes real-time composite geopolitical and currency sovereign risk ratings, anticipating cross-border payment gateway failures.</li>
     <li><b>Digital Infrastructure Incident Stream</b>: Monitors global cloud provider uptime (AWS, GCP, Cloudflare), alerting operations teams to payment gateway API outages.</li>
   </ul>
@@ -1013,7 +992,7 @@
   <div class="sub-head">A. Actionable Managerial Playbook</div>
   <p>Our findings provide e-commerce executives with an empirical roadmap for resource allocation:</p>
   <ul>
-    <li><b>Targeted Freight Subsidies Over Blanket Discounts</b>: Because Model B identifies freight ratio as the single greatest churn catalyst ($F_r > 0.20$), marketing teams should reallocate underperforming top-of-funnel ad spend into targeted freight subsidies for remote customers in the North and Northeast.</li>
+    <li><b>Targeted Freight Subsidies Over Blanket Discounts</b>: Because Model B identifies freight ratio as the single greatest churn catalyst (<i>F<sub>r</sub></i> &gt; 0.20), marketing teams should reallocate underperforming top-of-funnel ad spend into targeted freight subsidies for remote customers in the North and Northeast.</li>
     <li><b>Automated Retention Interventions for At-Risk Customers</b>: Utilizing Model B probability outputs, operators can automate win-back incentives (e.g., personalized SMS/email shipping credits) immediately when a customer's review score falls below 3 stars or delivery delays exceed 5 days.</li>
     <li><b>Decentralized Fulfillment Micro-Hubs</b>: Establishing regional 3PL cross-docking facilities in Salvador or Recife eliminates long-distance interstate transport, slashing transit times from 26 to 9 days and reducing regional churn by an estimated 31%.</li>
   </ul>
@@ -1029,7 +1008,7 @@
   <p>While comprehensive, several architectural limitations should be recognized: (1) The core transactional dataset captures Brazilian e-commerce between 2016 and 2018; although macroeconomic telemetry provides modern context, historical consumer purchasing patterns may not fully reflect post-2020 mobile commerce dynamics; (2) The dataset lacks high-frequency web clickstream logs (e.g., cart additions, session durations), restricting churn features to transactional events; and (3) Global maritime feeds reflect aggregated corridor metrics rather than proprietary bill-of-lading container tracking.</p>
 
   <h2 class="section-head">IX. Conclusion and Future Research</h2>
-  <p class="no-indent">This paper presented <b>NEXUS.AI</b>, an enterprise intelligence platform unifying relational star-schema data warehousing with predictive machine learning, geospatial logistics economics, and real-time global macroeconomic telemetry. By formalizing and executing a <b>Dual-Model Comparative Ablation Study</b>, we resolved the pervasive temporal target leakage flaw in e-commerce churn prediction, demonstrating that eliminating post-hoc tenure metrics isolates genuine operational causality (freight ratio 34.20%, review scores 16.50%) while achieving a robust 84.18% accuracy and 0.8624 ROC-AUC. Our unsupervised RFM clustering ($k=4$) successfully segments customer lifetime values, while Holt-Winters multiplicative exponential smoothing delivers high-accuracy demand forecasts (7.82% MAPE) capturing extreme Black Friday surges (+240%). Empirical regional analysis quantified the stark delivery penalties suffered by peripheral markets (18.53% freight ratio in the North vs. 13.14% in the Southeast), while our global telemetry engine continuously monitors maritime chokepoints and inflation indices to drive epoch-specific strategic roadmaps.</p>
+  <p class="no-indent">This paper presented <b>NEXUS.AI</b>, an enterprise intelligence platform unifying relational star-schema data warehousing with predictive machine learning, geospatial logistics economics, and real-time global macroeconomic telemetry. By formalizing and executing a <b>Dual-Model Comparative Ablation Study</b>, we resolved the pervasive temporal target leakage flaw in e-commerce churn prediction, demonstrating that eliminating post-hoc tenure metrics isolates genuine operational causality (freight ratio 34.20%, review scores 16.50%) while achieving a robust 84.18% accuracy and 0.8624 ROC-AUC. Our unsupervised RFM clustering (<i>k</i> = 4) successfully segments customer lifetime values, while Holt-Winters multiplicative exponential smoothing delivers high-accuracy demand forecasts (7.82% MAPE) capturing extreme Black Friday surges (+240%). Empirical regional analysis quantified the stark delivery penalties suffered by peripheral markets (18.53% freight ratio in the North vs. 13.14% in the Southeast), while our global telemetry engine continuously monitors maritime chokepoints and inflation indices to drive epoch-specific strategic roadmaps.</p>
 
   <p>Future research trajectories include: (1) Integrating distributed streaming pipelines utilizing Apache Kafka and Apache Flink for real-time clickstream ingestion and sub-second dynamic churn scoring; (2) Deploying fine-tuned transformer language models (e.g., Portuguese BERT) to extract nuanced seller defect signals from raw customer review texts; and (3) Formulating multi-agent reinforcement learning algorithms to optimize dynamic freight subsidy allocation across complex multi-carrier fulfillment networks.</p>
 
@@ -1072,7 +1051,7 @@
     <li>[21] D. Chicco and G. Jurman, "The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation," <i>BMC Genomics</i>, vol. 21, no. 1, pp. 1&ndash;13, 2020.</li>
     <li>[22] C. M. Bishop, <i>Pattern Recognition and Machine Learning</i>. New York, NY: Springer, 2006.</li>
     <li>[23] M. Stonebraker et al., "C-store: A column-oriented DBMS," in <i>Proc. 31st Int. Conf. Very Large Data Bases (VLDB)</i>, 2005, pp. 553&ndash;564.</li>
-    <li>[24] J. D. C. Little, "A proof for the queuing formula: $L = \lambda W$," <i>Operations Research</i>, vol. 9, no. 3, pp. 383&ndash;387, 1961.</li>
+    <li>[24] J. D. C. Little, "A proof for the queuing formula: <i>L</i> = &lambda;<i>W</i>," <i>Operations Research</i>, vol. 9, no. 3, pp. 383&ndash;387, 1961.</li>
     <li>[25] A. G. de Kok et al., "Supply chain management: Design, coordination and operation," in <i>Handbooks in Operations Research and Management Science</i>, vol. 11, Elsevier, 2003, pp. 1&ndash;768.</li>
   </ul>
 
