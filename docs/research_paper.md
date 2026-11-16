@@ -226,3 +226,20 @@ Future research extensions include:
 18. J. Zhang, Y. Wei, and H. Tan, "Cross-border e-commerce logistics risk assessment and maritime corridor resilience during macroeconomic shocks," *Transportation Research Part E: Logistics and Transportation Review*, vol. 164, p. 102812, 2022.
 19. E. Brynjolfsson, A. Collis, and F. Eggers, "Using massive online choice experiments to measure changes in well-being," *Proceedings of the National Academy of Sciences (PNAS)*, vol. 116, no. 15, pp. 7250–7255, 2019.
 20. UNCTAD, *Review of Maritime Transport 2023: Towards a green and just transition for maritime freight*, United Nations Publications, Geneva, Switzerland, 2023.
+21. D. Chicco and G. Jurman, "The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation," *BMC Genomics*, vol. 21, no. 1, pp. 1–13, 2020.
+22. C. M. Bishop, *Pattern Recognition and Machine Learning*. New York, NY: Springer, 2006.
+23. M. Stonebraker et al., "C-store: A column-oriented DBMS," in *Proc. 31st Int. Conf. Very Large Data Bases (VLDB)*, 2005, pp. 553–564.
+24. J. D. C. Little, "A proof for the queuing formula: $L = \lambda W$," *Operations Research*, vol. 9, no. 3, pp. 383–387, 1961.
+25. A. G. de Kok et al., "Supply chain management: Design, coordination and operation," in *Handbooks in Operations Research and Management Science*, vol. 11, Elsevier, 2003, pp. 1–768.
+
+---
+
+## Acknowledgment
+The authors express their sincere gratitude to the School of Computer Science and Engineering (SCOPE) and the Center of Excellence in Artificial Intelligence and Machine Learning at Vellore Institute of Technology, AP (VIT-AP University) for providing computational infrastructure, high-performance workstation clusters, and institutional support for this B.Tech Capstone research project. Special thanks are extended to the Olist operational data science team and Kaggle open-source research contributors for releasing anonymized commercial records to the academic community.
+
+---
+
+## Authors' Biographies
+**Makshay Sharma** is currently pursuing his Bachelor of Technology (B.Tech) degree in Computer Science and Engineering at the School of Computer Science and Engineering (SCOPE), Vellore Institute of Technology, AP University, Amaravati, India. His primary research interests encompass distributed dimensional data warehousing, applied machine learning for customer lifecycle optimization, time-series econometric forecasting, and spatial data science in emerging retail logistics. He served as the primary architect and lead developer of the NEXUS.AI enterprise intelligence platform.
+
+**Dr. Deepa B** received her Ph.D. degree in Computer Science and Engineering and currently serves as an Associate Professor in the School of Computer Science and Engineering (SCOPE) at Vellore Institute of Technology, AP University, Amaravati, India. Her specialized research domains include intelligent distributed systems, data analytics, predictive machine learning algorithms, and enterprise cloud architectures. She has authored numerous research publications in peer-reviewed international journals and conferences and served as the faculty supervisor and project guide for this work.
