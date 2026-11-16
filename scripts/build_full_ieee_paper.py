@@ -27,6 +27,7 @@ with sync_playwright() as p:
     page.pdf(
         path=pdf_output_path,
         format="Letter",
+        scale=0.86,
         print_background=True,
         margin={"top": "0.70in", "bottom": "0.70in", "left": "0.55in", "right": "0.55in"},
         display_header_footer=True,

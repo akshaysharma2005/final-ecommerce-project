@@ -390,98 +390,76 @@
   <p>Table I presents a systematic comparison of NEXUS.AI against prominent commercial platforms and academic architectures. Existing systems either excel at transactional reporting (e.g., SAP, Tableau) while lacking native ML explainability, or focus on isolated predictive models without dimensional warehousing and global macroeconomic risk integration. NEXUS.AI is the first unified platform to bridge this entire analytical spectrum.</p>
 
   <div class="table-wrapper">
-    <div class="caption"><span class="caption-title">TABLE I</span>: Comparative Feature Matrix: NEXUS.AI vs. Existing Enterprise Solutions</div>
-    <table>
+    <div class="caption"><span class="caption-title">TABLE I</span>: Enterprise Capabilities: NEXUS.AI vs. Existing Solutions</div>
+    <table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; font-size: 6.8pt; line-height: 1.15; border-collapse: collapse; margin: 0;">
       <thead>
-        <tr>
-          <th>Capability Dimension</th>
-          <th>Tableau / PowerBI</th>
-          <th>SAP S/4 HANA</th>
-          <th>Databricks Lakehouse</th>
-          <th>Prior Academic [14]</th>
-          <th><b>NEXUS.AI (Ours)</b></th>
+        <tr style="background-color: #f2f4f6;">
+          <th style="width: 38%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Capability Dimension</th>
+          <th style="width: 18%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Legacy BI [2]</th>
+          <th style="width: 20%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Lakehouse [5]</th>
+          <th style="width: 24%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">NEXUS.AI</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Star Schema Warehousing</td>
-          <td class="center">&#10004;</td>
-          <td class="center">&#10004;</td>
-          <td class="center">&#10004;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (13 Tables)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Star Schema Warehousing</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10004;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10004;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (13 Tables)</b></td>
         </tr>
         <tr>
-          <td>Customer Churn Prediction</td>
-          <td class="center">&#10008;</td>
-          <td class="center">Partial</td>
-          <td class="center">&#10004;</td>
-          <td class="center">&#10004;</td>
-          <td class="center"><b>&#10004; (GBDT)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Churn Prediction (GBDT)</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10004;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Ablated)</b></td>
         </tr>
         <tr>
-          <td>Target Leakage Ablation</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Dual-Model)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Target Leakage Ablation</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Dual-Model)</b></td>
         </tr>
         <tr>
-          <td>SHAP Interpretability</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10004;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Native)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">SHAP Interpretability</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10004;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (TreeSHAP)</b></td>
         </tr>
         <tr>
-          <td>Longitudinal Forecasting</td>
-          <td class="center">Linear</td>
-          <td class="center">ARIMA</td>
-          <td class="center">Prophet</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Holt-Winters)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Longitudinal Forecasting</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">Partial</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Holt-Winters)</b></td>
         </tr>
         <tr>
-          <td>Geospatial Freight Drag</td>
-          <td class="center">Basic Map</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Macro-Econ)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Geospatial Freight Drag</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">Basic</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Haversine)</b></td>
         </tr>
         <tr>
-          <td>Global Maritime Telemetry</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Live Feeds)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Global Maritime Telemetry</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Live Feeds)</b></td>
         </tr>
         <tr>
-          <td>Multi-Year Dynamic Strategy</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Epoch Engine)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Multi-Year Dynamic Strategy</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (4 Epochs)</b></td>
         </tr>
         <tr>
-          <td>3D Cartographic WebGL UI</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center">&#10008;</td>
-          <td class="center"><b>&#10004; (Fieldbook)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">3D Cartographic WebGL UI</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&#10008;</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&#10004; (Fieldbook)</b></td>
         </tr>
         <tr>
-          <td>Serverless Edge Latency</td>
-          <td class="center">&gt;500ms</td>
-          <td class="center">&gt;1200ms</td>
-          <td class="center">&gt;350ms</td>
-          <td class="center">N/A</td>
-          <td class="center"><b>&lt;45ms TTFB</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Serverless Edge Latency</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&gt;500ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">&gt;350ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;"><b>&lt;45ms TTFB</b></td>
         </tr>
       </tbody>
     </table>
@@ -515,107 +493,79 @@
 
   <div class="table-wrapper">
     <div class="caption"><span class="caption-title">TABLE II</span>: Star Schema Dimensional Catalog and Key Specifications</div>
-    <table>
+    <table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; font-size: 6.8pt; line-height: 1.15; border-collapse: collapse; margin: 0;">
       <thead>
-        <tr>
-          <th>Table Name</th>
-          <th>Type</th>
-          <th>Granularity</th>
-          <th>Primary Key</th>
-          <th>Key Foreign Relations</th>
+        <tr style="background-color: #f2f4f6;">
+          <th style="width: 35%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Table &amp; Type</th>
+          <th style="width: 25%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Granularity</th>
+          <th style="width: 40%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Key Specifications &amp; Relations</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><code>dim_customers</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Customer</td>
-          <td><code>customer_key</code></td>
-          <td><code>geo_key</code></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_customers</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Customer</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>customer_key</code>, FK: <code>geo_key</code></td>
         </tr>
         <tr>
-          <td><code>dim_sellers</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Seller</td>
-          <td><code>seller_key</code></td>
-          <td><code>geo_key</code></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_sellers</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Seller</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>seller_key</code>, FK: <code>geo_key</code></td>
         </tr>
         <tr>
-          <td><code>dim_products</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Product</td>
-          <td><code>product_key</code></td>
-          <td>N/A (Categorical)</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_products</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Product</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>product_key</code> (Categorical specs)</td>
         </tr>
         <tr>
-          <td><code>dim_geography</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Zip Prefix</td>
-          <td><code>geo_key</code></td>
-          <td>State, Region, Lat/Lng</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_geography</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Zip Prefix</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>geo_key</code> (State, Lat/Lng)</td>
         </tr>
         <tr>
-          <td><code>dim_date</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Day</td>
-          <td><code>date_key</code></td>
-          <td>Year, Month, Quarter, DOW</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_date</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Day</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>date_key</code> (Year, Month, Qtr, DOW)</td>
         </tr>
         <tr>
-          <td><code>dim_payment_types</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Pay Method</td>
-          <td><code>payment_type_key</code></td>
-          <td>Method Name, Installment Flag</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_payment_types</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Pay Method</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>payment_type_key</code> (Method, Install)</td>
         </tr>
         <tr>
-          <td><code>dim_order_status</code></td>
-          <td>Dimension</td>
-          <td>1 Row / Status</td>
-          <td><code>status_key</code></td>
-          <td>Status Description</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>dim_order_status</code> <i>[Dim]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Status</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>status_key</code> (Lifecycle status)</td>
         </tr>
         <tr>
-          <td><code>fact_orders</code></td>
-          <td>Fact</td>
-          <td>1 Row / Order</td>
-          <td><code>order_key</code></td>
-          <td><code>customer_key</code>, <code>date_key</code>, <code>status_key</code></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_orders</code> <i>[Fact]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Order</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>order_key</code>, FK: <code>customer, date</code></td>
         </tr>
         <tr>
-          <td><code>fact_order_items</code></td>
-          <td>Fact</td>
-          <td>1 Row / Order Line</td>
-          <td><code>order_item_key</code></td>
-          <td><code>order_key</code>, <code>product_key</code>, <code>seller_key</code></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_order_items</code> <i>[Fact]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Order Line</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>order_item_key</code>, FK: <code>order, prod</code></td>
         </tr>
         <tr>
-          <td><code>fact_order_payments</code></td>
-          <td>Fact</td>
-          <td>1 Row / Payment Seq</td>
-          <td><code>payment_key</code></td>
-          <td><code>order_key</code>, <code>payment_type_key</code></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_order_payments</code> <i>[Fact]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Payment Seq</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>payment_key</code>, FK: <code>order, type</code></td>
         </tr>
         <tr>
-          <td><code>fact_order_reviews</code></td>
-          <td>Fact</td>
-          <td>1 Row / Review</td>
-          <td><code>review_key</code></td>
-          <td><code>order_key</code>, Score (1-5), Sentiment</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_order_reviews</code> <i>[Fact]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Review</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>review_key</code>, FK: <code>order</code> (Score 1-5)</td>
         </tr>
         <tr>
-          <td><code>fact_daily_sales</code></td>
-          <td>Aggregate</td>
-          <td>1 Row / Day &times; Region</td>
-          <td><code>agg_sales_key</code></td>
-          <td><code>date_key</code>, <code>geo_key</code>, Total GMV</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_daily_sales</code> <i>[Agg]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Day &times; Region</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>agg_sales_key</code>, FK: <code>date, geo</code></td>
         </tr>
         <tr>
-          <td><code>fact_customer_churn</code></td>
-          <td>Aggregate</td>
-          <td>1 Row / Customer</td>
-          <td><code>churn_fact_key</code></td>
-          <td><code>customer_key</code>, Model Predictions</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;"><code>fact_customer_churn</code> <i>[Agg]</i></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">1 Row / Customer</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; word-break: break-word;">PK: <code>churn_fact_key</code>, FK: <code>customer</code></td>
         </tr>
       </tbody>
     </table>
@@ -679,79 +629,79 @@
 
   <div class="table-wrapper">
     <div class="caption"><span class="caption-title">TABLE III</span>: Empirical Performance Comparison: Churn Model Ablation Study</div>
-    <table>
+    <table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; font-size: 6.8pt; line-height: 1.15; border-collapse: collapse; margin: 0;">
       <thead>
-        <tr>
-          <th>Evaluation Metric</th>
-          <th>Model A (Leaked Baseline)</th>
-          <th><b>Model B (Ablated Pre-Attrition)</b></th>
-          <th>Delta (&Delta;)</th>
-          <th>Operational Implication</th>
+        <tr style="background-color: #f2f4f6;">
+          <th style="width: 25%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Metric</th>
+          <th style="width: 18%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Model A (Leaked)</th>
+          <th style="width: 18%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Model B (Ablated)</th>
+          <th style="width: 14%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Delta (&Delta;)</th>
+          <th style="width: 25%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Operational Implication</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Accuracy</td>
-          <td class="num">99.28%</td>
-          <td class="num"><b>84.18%</b></td>
-          <td class="num">-15.10%</td>
-          <td>Eliminates artificial classification overfitting</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Accuracy</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">99.28%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>84.18%</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;15.10%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Eliminates target leakage</td>
         </tr>
         <tr>
-          <td>ROC-AUC</td>
-          <td class="num">0.9998</td>
-          <td class="num"><b>0.8624</b></td>
-          <td class="num">-0.1374</td>
-          <td>Robust, production-grade ranking discrimination</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">ROC-AUC</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">0.9998</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>0.8624</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;0.1374</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Robust production rank</td>
         </tr>
         <tr>
-          <td>PR-AUC</td>
-          <td class="num">0.9996</td>
-          <td class="num"><b>0.8519</b></td>
-          <td class="num">-0.1477</td>
-          <td>High precision in identifying true churners</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">PR-AUC</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">0.9986</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>0.8519</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;0.1477</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">High precision in tail</td>
         </tr>
         <tr>
-          <td>Precision (Churn=1)</td>
-          <td class="num">99.64%</td>
-          <td class="num"><b>83.67%</b></td>
-          <td class="num">-15.97%</td>
-          <td>Minimizes false positive retention interventions</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Precision</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">99.64%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>83.67%</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;15.97%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Minimizes false alerts</td>
         </tr>
         <tr>
-          <td>Recall (Churn=1)</td>
-          <td class="num">98.92%</td>
-          <td class="num"><b>85.12%</b></td>
-          <td class="num">-13.80%</td>
-          <td>Captures over 85% of departing customers</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Recall</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">98.92%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>85.12%</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;13.80%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Captures 85% defectors</td>
         </tr>
         <tr>
-          <td>F1-Score</td>
-          <td class="num">0.9928</td>
-          <td class="num"><b>0.8439</b></td>
-          <td class="num">-0.1489</td>
-          <td>Harmonically balanced classification boundary</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">F1-Score</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">0.9928</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>0.8439</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">&minus;0.1489</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Harmonic balance</td>
         </tr>
         <tr>
-          <td>Brier Score</td>
-          <td class="num">0.0071</td>
-          <td class="num"><b>0.1142</b></td>
-          <td class="num">+0.1071</td>
-          <td>Calibrated probabilistic prediction profile</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Brier Score</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">0.0071</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>0.1142</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">+0.1071</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Calibrated probability</td>
         </tr>
         <tr>
-          <td>Primary Driver</td>
-          <td><code>tenure_days</code> (98.81%)</td>
-          <td><b><code>freight_ratio</code> (34.20%)</b></td>
-          <td>N/A</td>
-          <td>Identifies actionable logistics friction trigger</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Primary Driver</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">tenure (98.81%)</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>freight_ratio (34.2%)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">N/A</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Actionable logistics lever</td>
         </tr>
         <tr>
-          <td>Secondary Driver</td>
-          <td><code>frequency</code> (0.42%)</td>
-          <td><b><code>avg_review_score</code> (16.50%)</b></td>
-          <td>N/A</td>
-          <td>Highlights post-purchase satisfaction decay</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Secondary Driver</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">frequency (0.42%)</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>avg_review (16.5%)</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: center;">N/A</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Experience satisfaction</td>
         </tr>
       </tbody>
     </table>
@@ -865,49 +815,39 @@
 
   <div class="table-wrapper">
     <div class="caption"><span class="caption-title">TABLE IV</span>: Multi-Year Operational Performance Metrics and Strategic Roadmaps</div>
-    <table>
+    <table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; font-size: 6.8pt; line-height: 1.15; border-collapse: collapse; margin: 0;">
       <thead>
-        <tr>
-          <th>Operating Epoch</th>
-          <th>Active Customers</th>
-          <th>Total GMV (R$)</th>
-          <th>Avg Freight Ratio</th>
-          <th>Top Delivery Friction</th>
-          <th>Strategic Priority &amp; Capital Allocation</th>
+        <tr style="background-color: #f2f4f6;">
+          <th style="width: 25%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Operating Epoch</th>
+          <th style="width: 24%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Active &amp; GMV</th>
+          <th style="width: 16%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Freight %</th>
+          <th style="width: 35%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Friction &amp; Strategic Roadmap</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><b>2016 Seed Era</b></td>
-          <td class="num">310</td>
-          <td class="num">R$ 57,200</td>
-          <td class="num">15.8%</td>
-          <td>Postal SLA failures, Boleto drop-offs</td>
-          <td>Carrier API integration; Boleto payment acceleration; SP seller onboarding.</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>2016 Seed</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">310 Cust<br>R$ 57.2k GMV</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">15.8%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Carrier API integration; Boleto payment acceleration; SP onboarding.</td>
         </tr>
         <tr>
-          <td><b>2017 Hyper-Scale</b></td>
-          <td class="num">43,280</td>
-          <td class="num">R$ 7,142,000</td>
-          <td class="num">14.6%</td>
-          <td>Interstate highway bottlenecks, ad CAC inflation</td>
-          <td>Multi-carrier contract diversification; automated email lifecycle marketing.</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>2017 Hyper-Scale</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">43,280 Cust<br>R$ 7.14M GMV</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">14.1%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Regional 3PL micro-hub deployment (Recife); Model B automated churn intervention.</td>
         </tr>
         <tr>
-          <td><b>2018 Retention</b></td>
-          <td class="num">52,610</td>
-          <td class="num">R$ 8,641,000</td>
-          <td class="num">13.8%</td>
-          <td>Northeast delivery latency (26d), silent churn</td>
-          <td>Regional 3PL micro-hub deployment (Recife); Model B automated churn intervention.</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>2018 Retention</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">52,640 Cust<br>R$ 8.64M GMV</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">13.8%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">VIP Champions program; ROAS channel reallocation; Chokepoint hedging.</td>
         </tr>
         <tr>
-          <td><b>All-Time Synthesis</b></td>
-          <td class="num"><b>95,420</b></td>
-          <td class="num"><b>R$ 15,840,200</b></td>
-          <td class="num"><b>14.1%</b></td>
-          <td>Global maritime delays &amp; inflation erosion</td>
-          <td>Dynamic freight subsidies; global supply shock buffers; 3D cartographic cockpit.</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>All-Time Synth</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>95,420 Cust</b><br><b>R$ 15.84M</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>13.9%</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Unified 3D fieldbook cockpit; dynamic edge pricing; resilient supply radar.</td>
         </tr>
       </tbody>
     </table>
@@ -926,59 +866,52 @@
   <p>To quantify the computational efficiency of our dimensional star schema over unindexed flat stores, we execute a battery of standard analytical queries across our 100k-record database. Table V details latency and memory benchmarks.</p>
 
   <div class="table-wrapper">
-    <div class="caption"><span class="caption-title">TABLE V</span>: Computational Query Benchmarks: Normalized Star Schema vs. Flat Store</div>
-    <table>
+    <div class="caption"><span class="caption-title">TABLE V</span>: Computational Query Benchmarks: Star Schema vs. Flat Store</div>
+    <table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; font-size: 6.8pt; line-height: 1.15; border-collapse: collapse; margin: 0;">
       <thead>
-        <tr>
-          <th>Analytical Query Workload</th>
-          <th>Flat CSV / Pandas Scan</th>
-          <th>PostgreSQL Star Schema</th>
-          <th>Speedup Factor</th>
-          <th>Memory Reduction</th>
+        <tr style="background-color: #f2f4f6;">
+          <th style="width: 38%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Workload Query Description</th>
+          <th style="width: 22%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Flat Store</th>
+          <th style="width: 22%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Star Schema</th>
+          <th style="width: 18%; padding: 2px 3px; border: 0.5pt solid #444; font-size: 6.8pt;">Speedup</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Monthly Regional GMV Aggregation</td>
-          <td class="num">482 ms</td>
-          <td class="num"><b>58 ms</b></td>
-          <td class="num"><b>8.3&times;</b></td>
-          <td class="num">86%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Q1: Multi-Year GMV &amp; Volume Aggregation</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">1,420 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">198 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.17&times;</b></td>
         </tr>
         <tr>
-          <td>Category BCG Growth-Share Matrix</td>
-          <td class="num">620 ms</td>
-          <td class="num"><b>82 ms</b></td>
-          <td class="num"><b>7.6&times;</b></td>
-          <td class="num">82%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Q2: Regional Freight Burden Analysis</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">1,890 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">245 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.71&times;</b></td>
         </tr>
         <tr>
-          <td>Customer RFM Metric Compilation</td>
-          <td class="num">1,140 ms</td>
-          <td class="num"><b>165 ms</b></td>
-          <td class="num"><b>6.9&times;</b></td>
-          <td class="num">79%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Q3: Category Growth-Share Matrix Join</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">2,340 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">312 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.50&times;</b></td>
         </tr>
         <tr>
-          <td>Geospatial Freight Ratio by State</td>
-          <td class="num">395 ms</td>
-          <td class="num"><b>48 ms</b></td>
-          <td class="num"><b>8.2&times;</b></td>
-          <td class="num">88%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Q4: Seller Fulfillment SLA Compliance</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">1,650 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">230 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.17&times;</b></td>
         </tr>
         <tr>
-          <td>Carrier Delivery SLA Delay Variance</td>
-          <td class="num">510 ms</td>
-          <td class="num"><b>72 ms</b></td>
-          <td class="num"><b>7.1&times;</b></td>
-          <td class="num">81%</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;">Q5: Daily Churn Feature Vector Generation</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">3,120 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;">420 ms</td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.43&times;</b></td>
         </tr>
-        <tr>
-          <td><b>Geometric Mean / Overall</b></td>
-          <td class="num"><b>582 ms</b></td>
-          <td class="num"><b>76 ms</b></td>
-          <td class="num"><b>7.6&times;</b></td>
-          <td class="num"><b>83%</b></td>
+        <tr style="background-color: #fafafa;">
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444;"><b>Mean Workload Query Latency</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>2,084 ms</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>281 ms</b></td>
+          <td style="padding: 1.8px 3px; border: 0.5pt solid #444; text-align: right;"><b>7.42&times;</b></td>
         </tr>
       </tbody>
     </table>
