@@ -240,6 +240,12 @@ The authors express their sincere gratitude to the School of Computer Science an
 ---
 
 ## Authors' Biographies
-**Makshay Sharma** is currently pursuing his Bachelor of Technology (B.Tech) degree in Computer Science and Engineering at the School of Computer Science and Engineering (SCOPE), Vellore Institute of Technology, AP University, Amaravati, India. His primary research interests encompass distributed dimensional data warehousing, applied machine learning for customer lifecycle optimization, time-series econometric forecasting, and spatial data science in emerging retail logistics. He served as the primary architect and lead developer of the NEXUS.AI enterprise intelligence platform.
+**Gajjala Srithika** (Reg. No: 23BCE7911) is an undergraduate student at the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, India. Her research interests center on enterprise dimensional data warehousing, star-schema optimization, and database performance engineering.
 
-**Dr. Deepa B** received her Ph.D. degree in Computer Science and Engineering and currently serves as an Associate Professor in the School of Computer Science and Engineering (SCOPE) at Vellore Institute of Technology, AP University, Amaravati, India. Her specialized research domains include intelligent distributed systems, data analytics, predictive machine learning algorithms, and enterprise cloud architectures. She has authored numerous research publications in peer-reviewed international journals and conferences and served as the faculty supervisor and project guide for this work.
+**Papasani Suhitha** (Reg. No: 23BCE7826) is an undergraduate student at the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, India. Her research focuses on customer behavioral segmentation, unsupervised clustering algorithms, and customer lifetime value (CLV) analytics.
+
+**Ala Venkata Veera Ritwik** (Reg. No: 23BCE9633) is an undergraduate student at the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, India. His primary research domain includes geospatial logistics economics, regional freight friction modeling, and multi-touch marketing attribution.
+
+**Akshay Sharma** (Reg. No: 23BCE9668) is an undergraduate student at the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, India. His research interests encompass gradient boosted decision trees, behavioral feature ablation for leakage mitigation, time-series forecasting, and cloud edge architectures.
+
+**Prof. N. Lakshmipathi Anantha** is a faculty member in the School of Computer Science and Engineering (SCOPE) at VIT-AP University, Amaravati, India. He served as the Faculty Capstone Guide, supervising the architectural design, predictive model validation, and academic formulation of the NEXUS.AI research platform.
