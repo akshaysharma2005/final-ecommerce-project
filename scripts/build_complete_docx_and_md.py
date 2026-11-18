@@ -86,6 +86,17 @@ def build_docx():
         section.right_margin = Inches(0.8)
         section.different_first_page_header_footer = True
         
+        # Native Word Page Borders (Double Maroon Border)
+        pgBorders = parse_xml(
+            f'<w:pgBorders {nsdecls("w")} w:offsetFrom="page">'
+            f'<w:top w:val="double" w:sz="12" w:space="24" w:color="7A0019"/>'
+            f'<w:left w:val="double" w:sz="12" w:space="24" w:color="7A0019"/>'
+            f'<w:bottom w:val="double" w:sz="12" w:space="24" w:color="7A0019"/>'
+            f'<w:right w:val="double" w:sz="12" w:space="24" w:color="7A0019"/>'
+            f'</w:pgBorders>'
+        )
+        section._sectPr.append(pgBorders)
+
         # Header
         header = section.header
         hp = header.paragraphs[0]
@@ -153,10 +164,10 @@ def build_docx():
     run_sby.font.size = Pt(10.5)
 
     students_data = [
-        ("1", "Gajjala Srithika", "23BCE7911"),
-        ("2", "Papasani Suhitha", "23BCE7826"),
+        ("1", "Papasani Suhitha", "23BCE7826"),
+        ("2", "Gajjala Srithika", "23BCE7911"),
         ("3", "Ala Venkata Veera Ritwik", "23BCE9633"),
-        ("4", "Akshay Sharma", "23BCE9668")
+        ("4", "M Akshay Sharma", "23BCE9668")
     ]
     add_styled_table(doc, ["S. No.", "Student Name", "Registration Number"], students_data)
 
@@ -189,7 +200,7 @@ def build_docx():
     r_ct.font.color.rgb = MAROON
 
     doc.add_paragraph(
-        'This is to certify that the Capstone Project work titled "E-COMMERCE BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS PLATFORM" that is being submitted by GAJJALA SRITHIKA (23BCE7911), PAPASANI SUHITHA (23BCE7826), ALA VENKATA VEERA RITWIK (23BCE9633), and AKSHAY SHARMA (23BCE9668) is in partial fulfillment of the requirements for the award of Bachelor of Technology, is a record of bonafide work done under my guidance. The contents of this Project work, in full or in parts, have neither been taken from any other source nor have been submitted to any other Institute or University for award of any degree or diploma and the same is certified.'
+        'This is to certify that the Capstone Project work titled "E-COMMERCE BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS PLATFORM" that is being submitted by PAPASANI SUHITHA (23BCE7826), GAJJALA SRITHIKA (23BCE7911), ALA VENKATA VEERA RITWIK (23BCE9633), and M AKSHAY SHARMA (23BCE9668) is in partial fulfillment of the requirements for the award of Bachelor of Technology, is a record of bonafide work done under my guidance. The contents of this Project work, in full or in parts, have neither been taken from any other source nor have been submitted to any other Institute or University for award of any degree or diploma and the same is certified.'
     )
 
     p_sig1 = doc.add_paragraph()
@@ -230,10 +241,10 @@ def build_docx():
     p_tm.paragraph_format.space_before = Pt(20)
     p_tm.add_run("Project Team Members:\n").font.bold = True
     ack_members = [
-        ("1", "Gajjala Srithika", "23BCE7911"),
-        ("2", "Papasani Suhitha", "23BCE7826"),
+        ("1", "Papasani Suhitha", "23BCE7826"),
+        ("2", "Gajjala Srithika", "23BCE7911"),
         ("3", "Ala Venkata Veera Ritwik", "23BCE9633"),
-        ("4", "Akshay Sharma", "23BCE9668")
+        ("4", "M Akshay Sharma", "23BCE9668")
     ]
     add_styled_table(doc, ["S. No.", "Student Name", "Registration Number"], ack_members)
 
@@ -871,10 +882,10 @@ print("Orders with unknown customer IDs:", len(orphan_orders))""")
 
     doc.add_heading("APPENDIX C – TEAM RESPONSIBILITIES", level=2)
     team_data = [
-        ("Member 1 (Papasani Suhitha)", "23BCE7826", "Data engineering and PostgreSQL", "Source profiling, cleaning and validation scripts, staging tables, dimensional schema and database documentation."),
-        ("Member 2 (Gajjala Srithika)", "23BCE7911", "Customer intelligence", "RFM features, customer segmentation support, cohort retention and historical customer value analysis."),
-        ("Member 3 (M Akshay Sharma)", "23BCE9668", "Product, revenue and operational analytics", "SQL analysis for item sales, categories, payment methods, freight, delivery and review metrics; optional seller-funnel analysis if adopted."),
-        ("Member 4 (Ala Venkata Veera Ritwik)", "23BCE9633", "Machine learning, forecasting and visualization integration", "K-Means experiment, churn-risk feasibility and evaluation, sales forecasting, Power BI integration and dashboard documentation.")
+        ("Member 1 (Papasani Suhitha)", "23BCE7826", "Data Engineering & PostgreSQL Star Schema Warehousing", "Source profiling, cleaning and validation scripts, staging tables, dimensional schema and database documentation."),
+        ("Member 2 (Gajjala Srithika)", "23BCE7911", "Customer Intelligence & RFM Feature Engineering", "RFM features, customer segmentation support, cohort retention and historical customer value analysis."),
+        ("Member 3 (Ala Venkata Veera Ritwik)", "23BCE9633", "Machine Learning Engine & Time-Series Forecasting", "Dual-model churn ablation study, XGBoost pre-attrition classifier, K-Means RFM segmentation, and Holt-Winters sales forecasting."),
+        ("Member 4 (M Akshay Sharma)", "23BCE9668", "Product Analytics, Revenue Modeling & Visualization Dashboards", "SQL analysis for item sales, freight economics, logistics friction, multi-touch attribution, and Power BI / WebGL executive dashboards.")
     ]
     add_styled_table(doc, ["Member", "Registration number", "Primary responsibility", "Expected deliverables"], team_data)
     doc.add_paragraph("All team members will work from the shared PostgreSQL database and use the same definitions for customer identity, eligible orders, item sales, freight, dates and model observation periods. Each member should document their assigned work and check its outputs before they are added to the final report.")
@@ -920,24 +931,62 @@ print("Orders with unknown customer IDs:", len(orphan_orders))""")
     doc.add_paragraph("The academic and contact details for all four team members are recorded below:")
     
     biodata_rows = [
-        ("Member 1", "Gajjala Srithika", "23BCE7911", "Srithika.23bce7911@vitapstudent.ac.in", "+91 9985327089", "Plot 42, H.No. 4-12/1, Revenue Colony, Vijayawada, Andhra Pradesh - 520008", "Customer Intelligence & RFM Feature Engineering"),
-        ("Member 2", "Papasani Suhitha", "23BCE7826", "Suhitha.23bce7826@vitapstudent.ac.in", "+91 9391832898", "Flat 302, Sri Sai Residency, Tadigadapa, Vijayawada, Andhra Pradesh - 521137", "Data Engineering & PostgreSQL Star Schema Warehousing"),
-        ("Member 3", "Ala Venkata Veera Ritwik", "23BCE9633", "ritwik.23bce9633@vitapstudent.ac.in", "+91 7032499365", "D.No. 7-19, Main Road, Kankipadu, Krishna District, Andhra Pradesh - 521151", "Machine Learning Engine & Time-Series Forecasting"),
-        ("Member 4", "Akshay Sharma", "23BCE9668", "akshaysharma200508@gmail.com", "+91 6304698235", "Flat 504, Fortune Heights, Tadepalli, Guntur District, Andhra Pradesh - 522501", "Product Analytics, Revenue Modeling & Visualization Dashboards")
+        ("Member 1", "Papasani Suhitha", "23BCE7826", "suhitha.23bce7826@vitapstudent.ac.in", "+91 9391832898", "Flat 302, Sri Sai Residency, Tadigadapa, Vijayawada, Andhra Pradesh - 521137", "Data Engineering & PostgreSQL Star Schema Warehousing", ASSETS_DIR / "photo_suhitha.jpg"),
+        ("Member 2", "Gajjala Srithika", "23BCE7911", "srithika.23bce7911@vitapstudent.ac.in", "+91 9985327089", "1/71-1, yerramukka palli, Kadapa, Andhrapradesh - 516001", "Customer Intelligence & RFM Feature Engineering", ASSETS_DIR / "photo_srithika.jpg"),
+        ("Member 3", "Ala Venkata Veera Ritwik", "23BCE9633", "ritwik.23bce9633@vitapstudent.ac.in", "+91 7032499365", "10-10-3B, Kavali, Nellore, Andhrapradesh - 524201", "Machine Learning Engine & Time-Series Forecasting", ASSETS_DIR / "photo_ritwik.jpg"),
+        ("Member 4", "M Akshay Sharma", "23BCE9668", "akshaysharma200508@gmail.com", "+91 6304698235", "C/O M. Maheshwar Swamy, D No. 5-120, Gudikal, Kurnool, Andhra Pradesh – 518360", "Product Analytics, Revenue Modeling & Visualization Dashboards", ASSETS_DIR / "photo_akshay.jpg")
     ]
-    for m, name, reg, email, mob, addr, role in biodata_rows:
+    for m, name, reg, email, mob, addr, role, photo_p in biodata_rows:
         doc.add_heading(f"{m}: {name}", level=3)
-        b_data = [
+        table = doc.add_table(rows=8, cols=3)
+        table.alignment = WD_TABLE_ALIGNMENT.CENTER
+        fields = [
             ("Registration Number", reg),
-            ("Degree & School", "B.Tech in Computer Science and Engineering, SCOPE"),
+            ("Degree & School", "B.Tech (Computer Science & Engineering), SCOPE"),
             ("Institution", "VIT-AP University, Amaravati - 522237"),
             ("Student Email", email),
             ("Mobile Number", mob),
             ("Permanent Address", addr),
             ("Project Role", role),
-            ("Passport Photo", "[ Affix Passport Size Photograph Here ]")
+            ("Affiliation Status", "Full-Time Bonafide Student")
         ]
-        add_styled_table(doc, ["Field", "Details"], b_data)
+        for row_idx, (f_lbl, f_val) in enumerate(fields):
+            c0 = table.cell(row_idx, 0)
+            c0.text = f_lbl
+            if c0.paragraphs[0].runs:
+                c0.paragraphs[0].runs[0].font.bold = True
+                c0.paragraphs[0].runs[0].font.size = Pt(8.5)
+                c0.paragraphs[0].runs[0].font.color.rgb = RGBColor(100, 116, 139)
+            set_cell_background(c0, "F8FAFC")
+            set_cell_margins(c0, top=40, bottom=40, left=80, right=80)
+            
+            c1 = table.cell(row_idx, 1)
+            c1.text = f_val
+            if c1.paragraphs[0].runs:
+                c1.paragraphs[0].runs[0].font.size = Pt(8.5)
+                c1.paragraphs[0].runs[0].font.color.rgb = RGBColor(30, 41, 59)
+            set_cell_margins(c1, top=40, bottom=40, left=80, right=80)
+        
+        # Merge photo column
+        c_top = table.cell(0, 2)
+        c_bot = table.cell(7, 2)
+        c_top.merge(c_bot)
+        set_cell_background(c_top, "FAFAFA")
+        set_cell_margins(c_top, top=60, bottom=60, left=60, right=60)
+        p_ph = c_top.paragraphs[0]
+        p_ph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        if photo_p.exists():
+            r = p_ph.add_run()
+            r.add_picture(str(photo_p), width=Inches(1.05))
+        else:
+            r = p_ph.add_run("[ Photo ]")
+            r.font.size = Pt(8.5)
+            
+        for row in table.rows:
+            row.cells[0].width = Inches(1.8)
+            row.cells[1].width = Inches(3.6)
+            row.cells[2].width = Inches(1.3)
+        doc.add_paragraph()
 
     # CD ATTACHMENT SECTION & MANDATORY NOTE
     doc.add_page_break()
