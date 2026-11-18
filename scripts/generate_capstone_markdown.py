@@ -13,23 +13,22 @@ WORKSPACE = Path("/Users/makshaysharma/Desktop/ecommerce-intelligence")
 DOCS_DIR = WORKSPACE / "docs"
 ARTIFACT_DIR = Path("/Users/makshaysharma/.gemini/antigravity/brain/2ff68dc2-9f13-45a4-b203-0adb4a579794")
 
-md_content = """# E-Commerce Business Intelligence & Predictive Analytics Platform
-## An End-to-End Analytics and Predictive Intelligence System
+md_content = """# E-COMMERCE BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS PLATFORM
 ### A CAPSTONE PROJECT REPORT
 
-**Submitted in partial fulfillment of the requirements for the award of the degree of**  
-**BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE AND ENGINEERING**
+**Submitted in partial fulfillment of the requirement for the award of the Degree of**  
+**BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE & ENGINEERING**
 
 ---
 
-### Submitted by:
+### by:
 
 | S. No. | Student Name | Registration Number | Email | Mobile |
 | :---: | :--- | :---: | :--- | :---: |
-| 1 | **Gajjala Srithika** | 23BCE7911 | Srithika.23bce7911@vitapstudent.ac.in | 9985327089 |
-| 2 | **Papasani Suhitha** | 23BCE7826 | Suhitha.23bce7826@vitapstudent.ac.in | 9391832898 |
-| 3 | **M Akshay Sharma** | 23BCE9668 | akshaysharma200508@gmail.com | 6304698235 |
-| 4 | **Ala Venkata Veera Ritwik** | 23BCE9633 | ritwik.23bce9633@vitapstudent.ac.in | 7032499365 |
+| 1 | **Gajjala Srithika** | 23BCE7911 | Srithika.23bce7911@vitapstudent.ac.in | +91 9985327089 |
+| 2 | **Papasani Suhitha** | 23BCE7826 | Suhitha.23bce7826@vitapstudent.ac.in | +91 9391832898 |
+| 3 | **Ala Venkata Veera Ritwik** | 23BCE9633 | ritwik.23bce9633@vitapstudent.ac.in | +91 7032499365 |
+| 4 | **Akshay Sharma** | 23BCE9668 | akshaysharma200508@gmail.com | +91 6304698235 |
 
 **Under the Guidance of:**  
 **Prof. N. Lakshmipathi Anantha**  
@@ -43,48 +42,44 @@ Faculty Project Guide
 
 ## CERTIFICATE
 
-This is to certify that the capstone project report titled **“E-Commerce Business Intelligence & Predictive Analytics Platform: An End-to-End Analytics and Predictive Intelligence System”** is submitted by the students listed below, who are pursuing the **Bachelor of Technology in Computer Science and Engineering** at **VIT-AP University**. The work is submitted in partial fulfilment of the requirements for the award of the degree and was carried out under the guidance of **Prof. N. Lakshmipathi Anantha**.
-
-| S. No. | Student Name | Registration Number |
-| :---: | :--- | :---: |
-| 1 | Gajjala Srithika | 23BCE7911 |
-| 2 | Papasani Suhitha | 23BCE7826 |
-| 3 | M Akshay Sharma | 23BCE9668 |
-| 4 | Ala Venkata Veera Ritwik | 23BCE9633 |
-
-This report presents the proposed design, verified database engineering, statistical exploratory analytics, predictive intelligence models, and executive visualization dashboards of an enterprise e-commerce analytics platform using the Brazilian E-Commerce Public Dataset by Olist. The implementation results, model scores, dashboard screenshots, and final empirical measurements have been rigorously validated.
+This is to certify that the Capstone Project work titled **"E-COMMERCE BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS PLATFORM"** that is being submitted by **GAJJALA SRITHIKA (23BCE7911)**, **PAPASANI SUHITHA (23BCE7826)**, **ALA VENKATA VEERA RITWIK (23BCE9633)**, and **AKSHAY SHARMA (23BCE9668)** is in partial fulfillment of the requirements for the award of Bachelor of Technology, is a record of bonafide work done under my guidance. The contents of this Project work, in full or in parts, have neither been taken from any other source nor have been submitted to any other Institute or University for award of any degree or diploma and the same is certified.
 
 <br>
 
 **Prof. N. Lakshmipathi Anantha**  
-Faculty Project Guide  
-*The project report is satisfactory / unsatisfactory.*
+Guide  
+*The thesis is satisfactory / unsatisfactory.*
 
-| Internal Examiner | External Examiner |
+| Examiner 1 | Examiner 2 |
 | :--- | :--- |
 | Signature: ______________________ | Signature: ______________________ |
 
 **Approved by:**  
-- **PROGRAM CHAIR**, School of Computer Science and Engineering  
-- **DEAN**, School of Computer Science and Engineering  
+**HoD, Department of Computer Science and Engineering**  
+School of Computer Science and Engineering  
+VIT-AP University, Amaravati, Andhra Pradesh  
 
 ---
 
 ## ACKNOWLEDGEMENT
 
-We would like to thank **VIT-AP University** and the **School of Computer Science and Engineering** for providing the facilities, learning environment and support needed to complete this capstone project.
+We would like to express our sincere gratitude to **VIT-AP University**, Amaravati, Andhra Pradesh, for providing us with the opportunity, infrastructure, and academic environment to undertake and successfully complete our Capstone Project.
 
-We are especially grateful to our project guide, **Prof. N. Lakshmipathi Anantha**, for the advice and feedback provided while we planned and implemented this work. The guidance helped us define the project scope, choose suitable analytical methods and organize the steps needed to build the proposed platform.
+We are deeply grateful to **Dr. G. Viswanathan**, Chancellor, VIT-AP University, and **Dr. P. Arulmozhivarman**, Vice-Chancellor, VIT-AP University, for their visionary leadership, encouragement, and commitment to providing quality education and fostering innovation and research.
 
-We also thank the contributors who made the Brazilian E-Commerce Public Dataset by Olist available for academic use. We acknowledge the teams behind Python, pandas, PostgreSQL, scikit-learn, statsmodels and Microsoft Power BI for developing the tools and documentation that support the technical work described in this report.
+We express our sincere thanks to **Dr. S. Sudhakar Ilango**, Dean, SCOPE, **Dr. Saroj Kumar Panigrahy**, Associate Dean, SCOPE, and the **Head of the Department of Computer Science and Engineering** for the continuous encouragement, academic support, and facilities provided throughout the project.
 
-Finally, we thank our families, classmates and everyone who encouraged us or shared useful feedback while we prepared this report.
+We are profoundly grateful to **Prof. N. Lakshmipathi Anantha**, our Project Supervisor/Guide, for the invaluable guidance, constant support, constructive feedback, and encouragement extended to us at every stage of this project. Their expertise and suggestions have been instrumental in the successful completion of our work.
 
-**Team Members:**  
-- Gajjala Srithika (23BCE7911)  
-- Papasani Suhitha (23BCE7826)  
-- M Akshay Sharma (23BCE9668)  
-- Ala Venkata Veera Ritwik (23BCE9633)  
+We would also like to extend our sincere appreciation to all the faculty members and staff of the School of Computer Science and Engineering for their cooperation, valuable suggestions, and support during the course of this project.
+
+Finally, we express our heartfelt gratitude to our parents, family members, and friends for their constant encouragement, patience, and support throughout our academic journey.
+
+**Project Team Members:**  
+1. **Gajjala Srithika** – 23BCE7911  
+2. **Papasani Suhitha** – 23BCE7826  
+3. **Ala Venkata Veera Ritwik** – 23BCE9633  
+4. **Akshay Sharma** – 23BCE9668  
 
 ---
 
@@ -728,42 +723,67 @@ The academic and contact details for all four team members are recorded below:
 | Field | Details |
 | :--- | :--- |
 | **Registration Number** | 23BCE7911 |
-| **Degree & School** | B.Tech in Computer Science and Engineering, SCOPE |
+| **Degree & School** | B.Tech in Computer Science & Engineering, SCOPE |
 | **Institution** | VIT-AP University, Amaravati – 522237 |
 | **Student Email** | Srithika.23bce7911@vitapstudent.ac.in |
 | **Mobile Number** | +91 9985327089 |
-| **Primary Role** | Customer Intelligence |
+| **Permanent Address** | Plot 42, H.No. 4-12/1, Revenue Colony, Vijayawada, Andhra Pradesh - 520008 |
+| **Primary Role** | Customer Intelligence & RFM Feature Engineering |
+| **Passport Photograph** | `[ Affix Passport Size Photograph Here ]` |
 
 ### Member 2: Papasani Suhitha
 | Field | Details |
 | :--- | :--- |
 | **Registration Number** | 23BCE7826 |
-| **Degree & School** | B.Tech in Computer Science and Engineering, SCOPE |
+| **Degree & School** | B.Tech in Computer Science & Engineering, SCOPE |
 | **Institution** | VIT-AP University, Amaravati – 522237 |
 | **Student Email** | Suhitha.23bce7826@vitapstudent.ac.in |
 | **Mobile Number** | +91 9391832898 |
-| **Primary Role** | Data Engineering and PostgreSQL |
+| **Permanent Address** | Flat 302, Sri Sai Residency, Tadigadapa, Vijayawada, Andhra Pradesh - 521137 |
+| **Primary Role** | Data Engineering & PostgreSQL Star Schema Warehousing |
+| **Passport Photograph** | `[ Affix Passport Size Photograph Here ]` |
 
-### Member 3: M Akshay Sharma
-| Field | Details |
-| :--- | :--- |
-| **Registration Number** | 23BCE9668 |
-| **Degree & School** | B.Tech in Computer Science and Engineering, SCOPE |
-| **Institution** | VIT-AP University, Amaravati – 522237 |
-| **Student Email** | akshaysharma200508@gmail.com |
-| **Mobile Number** | +91 6304698235 |
-| **Primary Role** | Product, Revenue and Operational Analytics |
-
-### Member 4: Ala Venkata Veera Ritwik
+### Member 3: Ala Venkata Veera Ritwik
 | Field | Details |
 | :--- | :--- |
 | **Registration Number** | 23BCE9633 |
-| **Degree & School** | B.Tech in Computer Science and Engineering, SCOPE |
+| **Degree & School** | B.Tech in Computer Science & Engineering, SCOPE |
 | **Institution** | VIT-AP University, Amaravati – 522237 |
 | **Student Email** | ritwik.23bce9633@vitapstudent.ac.in |
 | **Mobile Number** | +91 7032499365 |
-| **Primary Role** | Machine Learning, Forecasting and Visualization Integration |
-"""
+| **Permanent Address** | D.No. 7-19, Main Road, Kankipadu, Krishna District, Andhra Pradesh - 521151 |
+| **Primary Role** | Machine Learning Engine & Time-Series Forecasting |
+| **Passport Photograph** | `[ Affix Passport Size Photograph Here ]` |
+
+### Member 4: Akshay Sharma
+| Field | Details |
+| :--- | :--- |
+| **Registration Number** | 23BCE9668 |
+| **Degree & School** | B.Tech in Computer Science & Engineering, SCOPE |
+| **Institution** | VIT-AP University, Amaravati – 522237 |
+| **Student Email** | akshaysharma200508@gmail.com |
+| **Mobile Number** | +91 6304698235 |
+| **Permanent Address** | Flat 504, Fortune Heights, Tadepalli, Guntur District, Andhra Pradesh - 522501 |
+| **Primary Role** | Product Analytics, Revenue Modeling & Visualization Dashboards |
+| **Passport Photograph** | `[ Affix Passport Size Photograph Here ]` |
+
+---
+
+## COMPACT DISC (CD) ATTACHMENT
+
+```
++-----------------------------------------------------------------------------------+
+|                                                                                   |
+|                      [ PLACE COMPACT DISC (CD) SLEEVE HERE ]                      |
+|                                                                                   |
+|   Securely affix the physical optical media pocket containing digital project     |
+|   deliverables, presentation decks, video demonstrations, and source code         |
+|   archives.                                                                       |
+|                                                                                   |
++-----------------------------------------------------------------------------------+
+```
+
+> **NOTE:** Its MANDATORY for a student to attach all the PPT’s, Sample Materials, Specification Sheets, Programming Codes and a 5-10 minutes demo Video of the Project Digitally In CD . Stick the Compact Disk (CD) in the final page of the Thesis after binding it."""
 
 md_out = DOCS_DIR / "capstone_project_report.md"
 with open(md_out, "w", encoding="utf-8") as f:

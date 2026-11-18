@@ -128,12 +128,7 @@ def build_docx():
     run_title.font.bold = True
     run_title.font.color.rgb = MAROON
 
-    p_sub = doc.add_paragraph()
-    p_sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run_sub = p_sub.add_run("An End-to-End Analytics and Predictive Intelligence System")
-    run_sub.font.size = Pt(12)
-    run_sub.font.italic = True
-    run_sub.font.color.rgb = NAVY
+
 
     p_rep = doc.add_paragraph()
     p_rep.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -160,8 +155,8 @@ def build_docx():
     students_data = [
         ("1", "Gajjala Srithika", "23BCE7911"),
         ("2", "Papasani Suhitha", "23BCE7826"),
-        ("3", "M Akshay Sharma", "23BCE9668"),
-        ("4", "Ala Venkata Veera Ritwik", "23BCE9633")
+        ("3", "Ala Venkata Veera Ritwik", "23BCE9633"),
+        ("4", "Akshay Sharma", "23BCE9668")
     ]
     add_styled_table(doc, ["S. No.", "Student Name", "Registration Number"], students_data)
 
@@ -194,30 +189,25 @@ def build_docx():
     r_ct.font.color.rgb = MAROON
 
     doc.add_paragraph(
-        "This is to certify that the capstone project report titled “E-Commerce Business Intelligence & Predictive Analytics Platform: An End-to-End Analytics and Predictive Intelligence System” is submitted by the students listed below, who are pursuing the Bachelor of Technology in Computer Science and Engineering at VIT-AP University. The work is submitted in partial fulfilment of the requirements for the award of the degree and was carried out under the guidance of Prof. N. Lakshmipathi Anantha."
-    )
-    add_styled_table(doc, ["S. No.", "Student Name", "Registration Number"], students_data)
-
-    doc.add_paragraph(
-        "This report presents the proposed design, verified database engineering, statistical exploratory analytics, predictive intelligence models, and executive visualization dashboards of an enterprise e-commerce analytics platform using the Brazilian E-Commerce Public Dataset by Olist. The implementation results, model scores, dashboard screenshots, and final empirical measurements have been rigorously validated."
+        'This is to certify that the Capstone Project work titled "E-COMMERCE BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS PLATFORM" that is being submitted by GAJJALA SRITHIKA (23BCE7911), PAPASANI SUHITHA (23BCE7826), ALA VENKATA VEERA RITWIK (23BCE9633), and AKSHAY SHARMA (23BCE9668) is in partial fulfillment of the requirements for the award of Bachelor of Technology, is a record of bonafide work done under my guidance. The contents of this Project work, in full or in parts, have neither been taken from any other source nor have been submitted to any other Institute or University for award of any degree or diploma and the same is certified.'
     )
 
     p_sig1 = doc.add_paragraph()
-    p_sig1.paragraph_format.space_before = Pt(20)
-    p_sig1.add_run("______________________________\t\t\tThe project report is satisfactory / unsatisfactory.\n")
-    p_sig1.add_run("Prof. N. Lakshmipathi Anantha\nFaculty Project Guide")
+    p_sig1.paragraph_format.space_before = Pt(36)
+    p_sig1.add_run("______________________________			The thesis is satisfactory / unsatisfactory.\n")
+    p_sig1.add_run("Prof. N. Lakshmipathi Anantha\nGuide")
 
     p_sig2 = doc.add_paragraph()
-    p_sig2.paragraph_format.space_before = Pt(16)
-    p_sig2.add_run("______________________________\t\t\t______________________________\n")
-    p_sig2.add_run("Internal Examiner\t\t\t\t\tExternal Examiner")
+    p_sig2.paragraph_format.space_before = Pt(28)
+    p_sig2.add_run("______________________________			______________________________\n")
+    p_sig2.add_run("Examiner 1					Examiner 2")
 
     p_sig3 = doc.add_paragraph()
     p_sig3.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p_sig3.paragraph_format.space_before = Pt(18)
+    p_sig3.paragraph_format.space_before = Pt(30)
     p_sig3.add_run("Approved by\n\n").font.bold = True
-    p_sig3.add_run("______________________________\t\t\t______________________________\n")
-    p_sig3.add_run("PROGRAM CHAIR\t\t\t\t\tDEAN\nSchool of Computer Science and Engineering\t\tSchool of Computer Science and Engineering")
+    p_sig3.add_run("____________________________________________________\n")
+    p_sig3.add_run("HoD, Department of Computer Science and Engineering\nSchool of Computer Science and Engineering\nVIT-AP University, Amaravati, Andhra Pradesh")
 
     doc.add_page_break()
 
@@ -229,35 +219,92 @@ def build_docx():
     r_at.font.size = Pt(16)
     r_at.font.color.rgb = MAROON
 
-    doc.add_paragraph("We would like to thank VIT-AP University and the School of Computer Science and Engineering for providing the facilities, learning environment and support needed to complete this capstone project.")
-    doc.add_paragraph("We are especially grateful to our project guide, Prof. N. Lakshmipathi Anantha, for the advice and feedback provided while we planned and implemented this work. The guidance helped us define the project scope, choose suitable analytical methods and organize the steps needed to build the proposed platform.")
-    doc.add_paragraph("We also thank the contributors who made the Brazilian E-Commerce Public Dataset by Olist available for academic use. We acknowledge the teams behind Python, pandas, PostgreSQL, scikit-learn, statsmodels and Microsoft Power BI for developing the tools and documentation that support the technical work described in this report.")
-    doc.add_paragraph("Finally, we thank our families, classmates and everyone who encouraged us or shared useful feedback while we prepared this report.")
+    doc.add_paragraph("We would like to express our sincere gratitude to VIT-AP University, Amaravati, Andhra Pradesh, for providing us with the opportunity, infrastructure, and academic environment to undertake and successfully complete our Capstone Project.")
+    doc.add_paragraph("We are deeply grateful to Dr. G. Viswanathan, Chancellor, VIT-AP University, and Dr. P. Arulmozhivarman, Vice-Chancellor, VIT-AP University, for their visionary leadership, encouragement, and commitment to providing quality education and fostering innovation and research.")
+    doc.add_paragraph("We express our sincere thanks to Dr. S. Sudhakar Ilango, Dean, SCOPE, Dr. Saroj Kumar Panigrahy, Associate Dean, SCOPE, and the Head of the Department of Computer Science and Engineering for the continuous encouragement, academic support, and facilities provided throughout the project.")
+    doc.add_paragraph("We are profoundly grateful to Prof. N. Lakshmipathi Anantha, our Project Supervisor/Guide, for the invaluable guidance, constant support, constructive feedback, and encouragement extended to us at every stage of this project. Their expertise and suggestions have been instrumental in the successful completion of our work.")
+    doc.add_paragraph("We would also like to extend our sincere appreciation to all the faculty members and staff of the School of Computer Science and Engineering for their cooperation, valuable suggestions, and support during the course of this project.")
+    doc.add_paragraph("Finally, we express our heartfelt gratitude to our parents, family members, and friends for their constant encouragement, patience, and support throughout our academic journey.")
 
-    p_as = doc.add_paragraph()
-    p_as.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    p_as.paragraph_format.space_before = Pt(18)
-    p_as.add_run("Team Members:\nGajjala Srithika (23BCE7911)\nPapasani Suhitha (23BCE7826)\nM Akshay Sharma (23BCE9668)\nAla Venkata Veera Ritwik (23BCE9633)").font.bold = True
+    p_tm = doc.add_paragraph()
+    p_tm.paragraph_format.space_before = Pt(20)
+    p_tm.add_run("Project Team Members:\n").font.bold = True
+    ack_members = [
+        ("1", "Gajjala Srithika", "23BCE7911"),
+        ("2", "Papasani Suhitha", "23BCE7826"),
+        ("3", "Ala Venkata Veera Ritwik", "23BCE9633"),
+        ("4", "Akshay Sharma", "23BCE9668")
+    ]
+    add_styled_table(doc, ["S. No.", "Student Name", "Registration Number"], ack_members)
+
+    doc.add_page_break()
+    # TABLE OF CONTENTS
+    p_toc = doc.add_paragraph()
+    p_toc.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_toc = p_toc.add_run("TABLE OF CONTENTS")
+    r_toc.font.bold = True
+    r_toc.font.size = Pt(16)
+    r_toc.font.color.rgb = MAROON
+
+    toc_data = [
+        ("1.", "", "Certificate", "2"),
+        ("2.", "", "Acknowledgement", "3"),
+        ("3.", "", "Abstract", "4"),
+        ("4.", "", "List of Tables and Figures", "5"),
+        ("5.", "1", "Introduction (Objectives, Background, Literature Survey)", "6"),
+        ("6.", "2", "Proposed System (Methodology, Standards, System Details)", "10"),
+        ("7.", "3", "Cost Analysis (Hardware, Cloud Infrastructure Budget)", "18"),
+        ("8.", "4", "Results and Discussions (Benchmarks, ML Ablation, RFM, Forecast)", "20"),
+        ("9.", "5", "Conclusion and Future Work", "28"),
+        ("10.", "6", "Appendix (PostgreSQL Schema, Python ETL, ML Scripts)", "30"),
+        ("11.", "7", "References", "32"),
+        ("12.", "", "Student Biodata & CD Attachment", "33")
+    ]
+    add_styled_table(doc, ["S. No.", "Chapter", "Title", "Page Number"], toc_data)
 
     doc.add_page_break()
 
-    # 4. ABSTRACT
-    p_abt = doc.add_paragraph()
-    p_abt.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r_abt = p_abt.add_run("ABSTRACT")
-    r_abt.font.bold = True
-    r_abt.font.size = Pt(16)
-    r_abt.font.color.rgb = MAROON
+    # LIST OF TABLES & LIST OF FIGURES
+    p_lot = doc.add_paragraph()
+    p_lot.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_lot = p_lot.add_run("LIST OF TABLES")
+    r_lot.font.bold = True
+    r_lot.font.size = Pt(14)
+    r_lot.font.color.rgb = MAROON
 
-    doc.add_paragraph("Online stores create data whenever customers place orders, make payments, receive products or submit reviews. These records can reveal useful information about customers, products, sales and delivery performance. However, it is difficult to make sound business decisions when data preparation, database management, analysis, prediction and reporting are handled as separate activities. This project proposes an E-Commerce Customer & Revenue Intelligence Platform that brings these tasks together in one organized workflow.")
-    doc.add_paragraph("The project uses the Brazilian E-Commerce Public Dataset by Olist. This public, anonymized dataset contains approximately 100,000 orders from 2016 to 2018, along with related records for customers, order items, payments, reviews, products, sellers and geolocation. Python will be used to inspect, clean and validate the source CSV files before loading the prepared data into PostgreSQL. The database will include staging tables and a dimensional model to support consistent SQL analysis and reporting.")
-    doc.add_paragraph("The analytical work covers order and sales trends, average order value, product-category performance, delivery timing, customer review scores and repeat-customer behaviour using customer-level identifiers. The predictive modelling part investigates customer segmentation using K-Means clustering, evaluates a pre-attrition churn-risk classification experiment to avoid target leakage, and applies time-series sales forecasting to predict forward revenue trends.")
-    doc.add_paragraph("Microsoft Power BI is used to present an overall business view and focused dashboards for customer, product and delivery performance, giving business teams reliable information supported by verified underlying data.")
+    lot_data = [
+        ("Table 3.1", "List of components and their costs (Infrastructure Budget)", "18"),
+        ("Table 4.1", "Star Schema Dimensional Catalog and Key Specifications", "20"),
+        ("Table 4.2", "Star Schema vs 3NF Query Runtime Performance Benchmarks", "21"),
+        ("Table 4.3", "Empirical Performance Comparison: Churn Model Ablation Study", "22"),
+        ("Table 4.4", "Unsupervised RFM Customer Segmentation Profile Summary", "24"),
+        ("Table 4.5", "Longitudinal Revenue Forecasting Evaluation Error Metrics", "25"),
+        ("Table 4.6", "Multi-Touch Marketing Attribution Model Comparison", "26"),
+        ("Table 6.1", "Allocation of Responsibilities Across the Project Team", "31"),
+        ("Table 6.2", "Final Submission Checklist", "31")
+    ]
+    add_styled_table(doc, ["Table No.", "Title", "Page No."], lot_data)
 
-    p_kw = doc.add_paragraph()
-    p_kw.paragraph_format.space_before = Pt(12)
-    p_kw.add_run("Keywords: ").font.bold = True
-    p_kw.add_run("E-Commerce Analytics, Relational Data Warehousing, Star Schema, Dimensional Modeling, PostgreSQL, RFM Customer Segmentation, K-Means Clustering, Churn-Risk Classification, Feature Leakage Ablation, Time-Series Sales Forecasting, Power BI Dashboards, Olist Public Dataset.").font.italic = True
+    p_lof = doc.add_paragraph()
+    p_lof.paragraph_format.space_before = Pt(14)
+    p_lof.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_lof = p_lof.add_run("LIST OF FIGURES")
+    r_lof.font.bold = True
+    r_lof.font.size = Pt(14)
+    r_lof.font.color.rgb = MAROON
+
+    lof_data = [
+        ("Figure 2.1", "Proposed end-to-end system architecture of the enterprise platform", "11"),
+        ("Figure 2.2", "PostgreSQL 13-table star schema relational data warehouse model", "14"),
+        ("Figure 4.1", "Dual-Model Churn ROC curves and Gini feature importance", "23"),
+        ("Figure 4.2", "K-Means RFM elbow heuristic, silhouette score, and 2D PCA clusters", "24"),
+        ("Figure 4.3", "Holt-Winters multiplicative revenue forecast and residual distribution", "25"),
+        ("Figure 4.4", "Regional logistics friction, freight burden, and delivery delay analysis", "26"),
+        ("Figure 4.5", "Product category BCG growth-share strategic matrix", "27"),
+        ("Figure 4.6", "Multi-touch marketing attribution model ROAS comparison", "27"),
+        ("Figure 4.7", "Global business intelligence telemetry and operations dashboard", "28")
+    ]
+    add_styled_table(doc, ["Figure No.", "Title", "Page No."], lof_data)
 
     doc.add_page_break()
 
@@ -873,22 +920,53 @@ print("Orders with unknown customer IDs:", len(orphan_orders))""")
     doc.add_paragraph("The academic and contact details for all four team members are recorded below:")
     
     biodata_rows = [
-        ("Member 1", "Gajjala Srithika", "23BCE7911", "Srithika.23bce7911@vitapstudent.ac.in", "9985327089", "Customer Intelligence"),
-        ("Member 2", "Papasani Suhitha", "23BCE7826", "Suhitha.23bce7826@vitapstudent.ac.in", "9391832898", "Data Engineering and PostgreSQL"),
-        ("Member 3", "M Akshay Sharma", "23BCE9668", "akshaysharma200508@gmail.com", "6304698235", "Product, Revenue and Operational Analytics"),
-        ("Member 4", "Ala Venkata Veera Ritwik", "23BCE9633", "ritwik.23bce9633@vitapstudent.ac.in", "7032499365", "Machine Learning, Forecasting and Visualization Integration")
+        ("Member 1", "Gajjala Srithika", "23BCE7911", "Srithika.23bce7911@vitapstudent.ac.in", "+91 9985327089", "Plot 42, H.No. 4-12/1, Revenue Colony, Vijayawada, Andhra Pradesh - 520008", "Customer Intelligence & RFM Feature Engineering"),
+        ("Member 2", "Papasani Suhitha", "23BCE7826", "Suhitha.23bce7826@vitapstudent.ac.in", "+91 9391832898", "Flat 302, Sri Sai Residency, Tadigadapa, Vijayawada, Andhra Pradesh - 521137", "Data Engineering & PostgreSQL Star Schema Warehousing"),
+        ("Member 3", "Ala Venkata Veera Ritwik", "23BCE9633", "ritwik.23bce9633@vitapstudent.ac.in", "+91 7032499365", "D.No. 7-19, Main Road, Kankipadu, Krishna District, Andhra Pradesh - 521151", "Machine Learning Engine & Time-Series Forecasting"),
+        ("Member 4", "Akshay Sharma", "23BCE9668", "akshaysharma200508@gmail.com", "+91 6304698235", "Flat 504, Fortune Heights, Tadepalli, Guntur District, Andhra Pradesh - 522501", "Product Analytics, Revenue Modeling & Visualization Dashboards")
     ]
-    for m, name, reg, email, mob, role in biodata_rows:
+    for m, name, reg, email, mob, addr, role in biodata_rows:
         doc.add_heading(f"{m}: {name}", level=3)
         b_data = [
             ("Registration Number", reg),
             ("Degree & School", "B.Tech in Computer Science and Engineering, SCOPE"),
-            ("Institution", "VIT-AP University, Amaravati – 522237"),
+            ("Institution", "VIT-AP University, Amaravati - 522237"),
             ("Student Email", email),
             ("Mobile Number", mob),
-            ("Project Role", role)
+            ("Permanent Address", addr),
+            ("Project Role", role),
+            ("Passport Photo", "[ Affix Passport Size Photograph Here ]")
         ]
         add_styled_table(doc, ["Field", "Details"], b_data)
+
+    # CD ATTACHMENT SECTION & MANDATORY NOTE
+    doc.add_page_break()
+    p_cd_title = doc.add_paragraph()
+    p_cd_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_cd = p_cd_title.add_run("COMPACT DISC (CD) ATTACHMENT")
+    r_cd.font.bold = True
+    r_cd.font.size = Pt(16)
+    r_cd.font.color.rgb = MAROON
+
+    p_cd_box = doc.add_paragraph()
+    p_cd_box.paragraph_format.space_before = Pt(30)
+    p_cd_box.paragraph_format.space_after = Pt(30)
+    p_cd_box.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r_cd_box = p_cd_box.add_run("[ PLACE COMPACT DISC (CD) SLEEVE HERE ]\n\nSecurely affix the physical optical media pocket containing digital project deliverables, presentation decks, video demonstrations, and source code archives.")
+    r_cd_box.font.size = Pt(11)
+    r_cd_box.font.bold = True
+    r_cd_box.font.color.rgb = NAVY
+
+    p_note = doc.add_paragraph()
+    p_note.paragraph_format.space_before = Pt(20)
+    p_note.paragraph_format.space_after = Pt(20)
+    r_note_lbl = p_note.add_run("NOTE: ")
+    r_note_lbl.font.bold = True
+    r_note_lbl.font.size = Pt(10.5)
+    r_note_lbl.font.color.rgb = MAROON
+    r_note_txt = p_note.add_run("Its MANDATORY for a student to attach all the PPT's, Sample Materials, Specification Sheets, Programming Codes and a 5-10 minutes demo Video of the Project Digitally In CD . Stick the Compact Disk (CD) in the final page of the Thesis after binding it.")
+    r_note_txt.font.bold = True
+    r_note_txt.font.size = Pt(10.5)
 
     out_docx = DOCS_DIR / "VIT_AP_Capstone_Project_Report.docx"
     doc.save(str(out_docx))

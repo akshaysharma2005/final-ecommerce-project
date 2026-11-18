@@ -53,7 +53,7 @@ COMMON_CSS = """
   }
 
   body {
-    font-family: 'Times New Roman', Times, Georgia, serif;
+    font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 10.5pt;
     line-height: 1.5;
     color: #1E293B;
@@ -73,7 +73,7 @@ COMMON_CSS = """
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Times New Roman', Georgia, serif;
+    font-family: "Times New Roman", Georgia, serif;
     color: #7A0019; /* VIT Maroon */
     margin-top: 1.1em;
     margin-bottom: 0.35em;
@@ -466,7 +466,7 @@ cover_html = f"""<!DOCTYPE html>
   <div class="cover-header">
     <img src="{img_logo}" alt="VIT-AP University Logo" class="cover-logo"><br>
     <div class="cover-title">E-COMMERCE BUSINESS INTELLIGENCE &amp; PREDICTIVE ANALYTICS PLATFORM</div>
-    <div class="cover-subtitle">An End-to-End Analytics and Predictive Intelligence System</div>
+    
     <div class="cover-report-type">A CAPSTONE PROJECT REPORT</div>
     <div class="cover-submission-text">Submitted in partial fulfillment of the requirements for the award of the degree of</div>
     <div class="cover-degree">BACHELOR OF TECHNOLOGY</div>
@@ -497,13 +497,13 @@ cover_html = f"""<!DOCTYPE html>
         </tr>
         <tr>
           <td style="text-align: center;">3</td>
-          <td><strong>M Akshay Sharma</strong></td>
-          <td style="text-align: center;">23BCE9668</td>
+          <td><strong>Ala Venkata Veera Ritwik</strong></td>
+          <td style="text-align: center;">23BCE9633</td>
         </tr>
         <tr>
           <td style="text-align: center;">4</td>
-          <td><strong>Ala Venkata Veera Ritwik</strong></td>
-          <td style="text-align: center;">23BCE9633</td>
+          <td><strong>Akshay Sharma</strong></td>
+          <td style="text-align: center;">23BCE9668</td>
         </tr>
       </tbody>
     </table>
@@ -546,86 +546,41 @@ body_html = f"""<!DOCTYPE html>
 <div class="certificate-box">
   <div>
     <div class="certificate-title">CERTIFICATE</div>
-    <div class="certificate-body">
-      This is to certify that the capstone project report titled <strong>“E-Commerce Business Intelligence &amp; Predictive Analytics Platform: An End-to-End Analytics and Predictive Intelligence System”</strong> is submitted by the students listed below, who are pursuing the <strong>Bachelor of Technology in Computer Science and Engineering</strong> at <strong>VIT-AP University</strong>. The work is submitted in partial fulfilment of the requirements for the award of the degree and was carried out under the guidance of <strong>Prof. N. Lakshmipathi Anantha</strong>.
+    <div class="certificate-body" style="font-size: 10.5pt; line-height: 1.6; text-align: justify; margin-bottom: 24px;">
+      This is to certify that the Capstone Project work titled <strong>&ldquo;E-COMMERCE BUSINESS INTELLIGENCE &amp; PREDICTIVE ANALYTICS PLATFORM&rdquo;</strong> that is being submitted by <strong>GAJJALA SRITHIKA (23BCE7911)</strong>, <strong>PAPASANI SUHITHA (23BCE7826)</strong>, <strong>ALA VENKATA VEERA RITWIK (23BCE9633)</strong>, and <strong>AKSHAY SHARMA (23BCE9668)</strong> is in partial fulfillment of the requirements for the award of Bachelor of Technology, is a record of bonafide work done under my guidance. The contents of this Project work, in full or in parts, have neither been taken from any other source nor have been submitted to any other Institute or University for award of any degree or diploma and the same is certified.
     </div>
-    <div style="margin: 10px auto; width: 95%;">
-      <table class="report-table" style="margin: 0 auto; width: 100%;">
-        <thead>
-          <tr>
-            <th style="width: 12%; text-align: center;">S. No.</th>
-            <th style="width: 53%;">Student Name</th>
-            <th style="width: 35%; text-align: center;">Registration Number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: center;">1</td>
-            <td>Gajjala Srithika</td>
-            <td style="text-align: center;">23BCE7911</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">2</td>
-            <td>Papasani Suhitha</td>
-            <td style="text-align: center;">23BCE7826</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">3</td>
-            <td>M Akshay Sharma</td>
-            <td style="text-align: center;">23BCE9668</td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">4</td>
-            <td>Ala Venkata Veera Ritwik</td>
-            <td style="text-align: center;">23BCE9633</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="certificate-body" style="margin-top: 10px;">
-      This report presents the proposed design, verified database engineering, statistical exploratory analytics, predictive intelligence models, and executive visualization dashboards of an enterprise e-commerce analytics platform using the Brazilian E-Commerce Public Dataset by Olist. The implementation results, model scores, dashboard screenshots, and final empirical measurements have been rigorously validated.
-    </div>
-  </div>
 
-  <div>
-    <table class="sig-table">
+    <table class="sig-table" style="width: 100%; margin-top: 36px; border-collapse: collapse;">
       <tr>
-        <td style="width: 50%;">
-          <div class="sig-line"></div>
+        <td style="width: 50%; vertical-align: top;">
+          <div style="height: 45px;"></div>
+          <div class="sig-line" style="border-top: 1px solid #1E293B; width: 75%; margin-bottom: 4px;"></div>
           <strong>Prof. N. Lakshmipathi Anantha</strong><br>
-          Faculty Project Guide
+          <span style="color: #475569;">Guide</span>
         </td>
-        <td style="width: 50%; text-align: right;">
-          <div style="font-size: 9.5pt; color: #475569; margin-bottom: 20px;">The project report is <strong>satisfactory</strong> / unsatisfactory.</div>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding-top: 22px;">
-          <div class="sig-line"></div>
-          <strong>Internal Examiner</strong>
-        </td>
-        <td style="padding-top: 22px; text-align: right;">
-          <div class="sig-line" style="margin-left: auto;"></div>
-          <strong>External Examiner</strong>
+        <td style="width: 50%; vertical-align: top; text-align: right;">
+          <div style="font-size: 10pt; color: #1E293B; margin-top: 40px;">
+            The thesis is <strong>satisfactory</strong> / unsatisfactory.
+          </div>
         </td>
       </tr>
       <tr>
-        <td colspan="2" style="padding-top: 26px; text-align: center;">
-          <div style="font-weight: bold; color: #0F243E; margin-bottom: 20px;">Approved by</div>
-          <table style="width: 100%;">
-            <tr>
-              <td style="width: 50%; text-align: left;">
-                <div class="sig-line"></div>
-                <strong>PROGRAM CHAIR</strong><br>
-                School of Computer Science and Engineering
-              </td>
-              <td style="width: 50%; text-align: right;">
-                <div class="sig-line" style="margin-left: auto;"></div>
-                <strong>DEAN</strong><br>
-                School of Computer Science and Engineering
-              </td>
-            </tr>
-          </table>
+        <td style="padding-top: 45px; vertical-align: bottom;">
+          <div class="sig-line" style="border-top: 1px solid #1E293B; width: 75%; margin-bottom: 4px;"></div>
+          <strong>Examiner 1</strong>
+        </td>
+        <td style="padding-top: 45px; vertical-align: bottom; text-align: right;">
+          <div class="sig-line" style="border-top: 1px solid #1E293B; width: 75%; margin-left: auto; margin-bottom: 4px;"></div>
+          <strong>Examiner 2</strong>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding-top: 45px; text-align: center;">
+          <div style="font-weight: bold; color: #0F243E; margin-bottom: 25px;">Approved by</div>
+          <div class="sig-line" style="border-top: 1px solid #1E293B; width: 50%; margin: 0 auto 4px auto;"></div>
+          <strong>HoD, Department of Computer Science and Engineering</strong><br>
+          <span style="font-size: 9.5pt; color: #475569;">School of Computer Science and Engineering</span><br>
+          <span style="font-size: 9pt; color: #64748B;">VIT-AP University, Amaravati, Andhra Pradesh</span>
         </td>
       </tr>
     </table>
@@ -636,20 +591,26 @@ body_html = f"""<!DOCTYPE html>
 <div class="page-break"></div>
 <h1 class="chapter-title">ACKNOWLEDGEMENT</h1>
 
-<p>We would like to thank <strong>VIT-AP University</strong> and the <strong>School of Computer Science and Engineering</strong> for providing the facilities, learning environment and support needed to complete this capstone project.</p>
+<p>We would like to express our sincere gratitude to <strong>VIT-AP University</strong>, Amaravati, Andhra Pradesh, for providing us with the opportunity, infrastructure, and academic environment to undertake and successfully complete our Capstone Project.</p>
 
-<p>We are especially grateful to our project guide, <strong>Prof. N. Lakshmipathi Anantha</strong>, for the advice and feedback provided while we planned and implemented this work. The guidance helped us define the project scope, choose suitable analytical methods and organize the steps needed to build the proposed platform.</p>
+<p>We are deeply grateful to <strong>Dr. G. Viswanathan</strong>, Chancellor, VIT-AP University, and <strong>Dr. P. Arulmozhivarman</strong>, Vice-Chancellor, VIT-AP University, for their visionary leadership, encouragement, and commitment to providing quality education and fostering innovation and research.</p>
 
-<p>We also thank the contributors who made the Brazilian E-Commerce Public Dataset by Olist available for academic use. We acknowledge the teams behind Python, pandas, PostgreSQL, scikit-learn, statsmodels and Microsoft Power BI for developing the tools and documentation that support the technical work described in this report.</p>
+<p>We express our sincere thanks to <strong>Dr. S. Sudhakar Ilango</strong>, Dean, SCOPE, <strong>Dr. Saroj Kumar Panigrahy</strong>, Associate Dean, SCOPE, and the <strong>Head of the Department of Computer Science and Engineering</strong> for the continuous encouragement, academic support, and facilities provided throughout the project.</p>
 
-<p>Finally, we thank our families, classmates and everyone who encouraged us or shared useful feedback while we prepared this report.</p>
+<p>We are profoundly grateful to <strong>Prof. N. Lakshmipathi Anantha</strong>, our Project Supervisor/Guide, for the invaluable guidance, constant support, constructive feedback, and encouragement extended to us at every stage of this project. Their expertise and suggestions have been instrumental in the successful completion of our work.</p>
 
-<div style="margin-top: 28px; text-align: right;">
-  <p><strong>Team Members:</strong></p>
-  <p style="margin-bottom: 2px;">Gajjala Srithika (23BCE7911)</p>
-  <p style="margin-bottom: 2px;">Papasani Suhitha (23BCE7826)</p>
-  <p style="margin-bottom: 2px;">M Akshay Sharma (23BCE9668)</p>
-  <p style="margin-bottom: 2px;">Ala Venkata Veera Ritwik (23BCE9633)</p>
+<p>We would also like to extend our sincere appreciation to all the faculty members and staff of the School of Computer Science and Engineering for their cooperation, valuable suggestions, and support during the course of this project.</p>
+
+<p>Finally, we express our heartfelt gratitude to our parents, family members, and friends for their constant encouragement, patience, and support throughout our academic journey.</p>
+
+<div style="margin-top: 36px; padding: 16px 20px; border-left: 3px solid #7A0019; background-color: #F8FAFC;">
+  <p style="margin-bottom: 8px; font-weight: bold; color: #0F243E;">Project Team Members:</p>
+  <table style="width: 100%; font-size: 9.5pt; border-collapse: collapse;">
+    <tr><td style="width: 45%; padding: 3px 0;"><strong>1. Gajjala Srithika</strong></td><td style="color: #475569;">Reg. No: <strong>23BCE7911</strong></td></tr>
+    <tr><td style="width: 45%; padding: 3px 0;"><strong>2. Papasani Suhitha</strong></td><td style="color: #475569;">Reg. No: <strong>23BCE7826</strong></td></tr>
+    <tr><td style="width: 45%; padding: 3px 0;"><strong>3. Ala Venkata Veera Ritwik</strong></td><td style="color: #475569;">Reg. No: <strong>23BCE9633</strong></td></tr>
+    <tr><td style="width: 45%; padding: 3px 0;"><strong>4. Akshay Sharma</strong></td><td style="color: #475569;">Reg. No: <strong>23BCE9668</strong></td></tr>
+  </table>
 </div>
 
 <!-- ================= ABSTRACT ================= -->
@@ -1917,45 +1878,109 @@ print("Orders with unknown customer IDs:", len(orphan_orders))</code></pre>
 
 <p>The academic and contact details for all four team members are recorded below:</p>
 
-<div class="biodata-grid">
-  <div class="biodata-card">
-    <div class="biodata-name">Member 1: Gajjala Srithika</div>
-    <div class="biodata-row"><span class="biodata-label">Registration No:</span><span class="biodata-val"><strong>23BCE7911</strong></span></div>
-    <div class="biodata-row"><span class="biodata-label">Degree:</span><span class="biodata-val">B.Tech (CSE)</span></div>
-    <div class="biodata-row"><span class="biodata-label">Institution:</span><span class="biodata-val">VIT-AP University</span></div>
-    <div class="biodata-row"><span class="biodata-label">Student Email:</span><span class="biodata-val">Srithika.23bce7911@vitapstudent.ac.in</span></div>
-    <div class="biodata-row"><span class="biodata-label">Mobile Number:</span><span class="biodata-val">+91 9985327089</span></div>
-    <div class="biodata-row" style="margin-top: 5px; padding-top: 3px; border-top: 1px dashed #E2E8F0;"><span class="biodata-label">Role:</span><span class="biodata-val">Customer Intelligence</span></div>
+<div class="biodata-container" style="display: flex; flex-direction: column; gap: 14px;">
+  <!-- Member 1 -->
+  <div class="biodata-card" style="border: 1px solid #CBD5E1; border-left: 4px solid #7A0019; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px; page-break-inside: avoid;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="flex-grow: 1;">
+        <div style="font-size: 11.5pt; font-weight: bold; color: #0F243E; margin-bottom: 6px;">Member 1: Gajjala Srithika</div>
+        <table style="width: 100%; font-size: 9pt; border-collapse: collapse;">
+          <tr><td style="width: 140px; color: #64748B; font-weight: bold; padding: 2px 0;">Registration No.</td><td>: <strong>23BCE7911</strong></td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Degree &amp; School</td><td>: B.Tech (Computer Science &amp; Engineering), SCOPE</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Institution</td><td>: VIT-AP University, Amaravati &ndash; 522237</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">E-mail</td><td>: Srithika.23bce7911@vitapstudent.ac.in</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Mobile Number</td><td>: +91 9985327089</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Permanent Address</td><td>: Plot 42, H.No. 4-12/1, Revenue Colony, Vijayawada, Andhra Pradesh - 520008</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Project Role</td><td>: Customer Intelligence &amp; RFM Feature Engineering</td></tr>
+        </table>
+      </div>
+      <div style="width: 65px; height: 80px; border: 1px dashed #64748B; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 7.5pt; color: #64748B; background-color: #F8FAFC; text-align: center; margin-left: 12px; flex-shrink: 0;">
+        Photo
+      </div>
+    </div>
   </div>
 
-  <div class="biodata-card">
-    <div class="biodata-name">Member 2: Papasani Suhitha</div>
-    <div class="biodata-row"><span class="biodata-label">Registration No:</span><span class="biodata-val"><strong>23BCE7826</strong></span></div>
-    <div class="biodata-row"><span class="biodata-label">Degree:</span><span class="biodata-val">B.Tech (CSE)</span></div>
-    <div class="biodata-row"><span class="biodata-label">Institution:</span><span class="biodata-val">VIT-AP University</span></div>
-    <div class="biodata-row"><span class="biodata-label">Student Email:</span><span class="biodata-val">Suhitha.23bce7826@vitapstudent.ac.in</span></div>
-    <div class="biodata-row"><span class="biodata-label">Mobile Number:</span><span class="biodata-val">+91 9391832898</span></div>
-    <div class="biodata-row" style="margin-top: 5px; padding-top: 3px; border-top: 1px dashed #E2E8F0;"><span class="biodata-label">Role:</span><span class="biodata-val">Data Engineering &amp; PostgreSQL</span></div>
+  <!-- Member 2 -->
+  <div class="biodata-card" style="border: 1px solid #CBD5E1; border-left: 4px solid #7A0019; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px; page-break-inside: avoid;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="flex-grow: 1;">
+        <div style="font-size: 11.5pt; font-weight: bold; color: #0F243E; margin-bottom: 6px;">Member 2: Papasani Suhitha</div>
+        <table style="width: 100%; font-size: 9pt; border-collapse: collapse;">
+          <tr><td style="width: 140px; color: #64748B; font-weight: bold; padding: 2px 0;">Registration No.</td><td>: <strong>23BCE7826</strong></td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Degree &amp; School</td><td>: B.Tech (Computer Science &amp; Engineering), SCOPE</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Institution</td><td>: VIT-AP University, Amaravati &ndash; 522237</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">E-mail</td><td>: Suhitha.23bce7826@vitapstudent.ac.in</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Mobile Number</td><td>: +91 9391832898</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Permanent Address</td><td>: Flat 302, Sri Sai Residency, Tadigadapa, Vijayawada, Andhra Pradesh - 521137</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Project Role</td><td>: Data Engineering &amp; PostgreSQL Star Schema Warehousing</td></tr>
+        </table>
+      </div>
+      <div style="width: 65px; height: 80px; border: 1px dashed #64748B; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 7.5pt; color: #64748B; background-color: #F8FAFC; text-align: center; margin-left: 12px; flex-shrink: 0;">
+        Photo
+      </div>
+    </div>
   </div>
 
-  <div class="biodata-card">
-    <div class="biodata-name">Member 3: M Akshay Sharma</div>
-    <div class="biodata-row"><span class="biodata-label">Registration No:</span><span class="biodata-val"><strong>23BCE9668</strong></span></div>
-    <div class="biodata-row"><span class="biodata-label">Degree:</span><span class="biodata-val">B.Tech (CSE)</span></div>
-    <div class="biodata-row"><span class="biodata-label">Institution:</span><span class="biodata-val">VIT-AP University</span></div>
-    <div class="biodata-row"><span class="biodata-label">Student Email:</span><span class="biodata-val">akshaysharma200508@gmail.com</span></div>
-    <div class="biodata-row"><span class="biodata-label">Mobile Number:</span><span class="biodata-val">+91 6304698235</span></div>
-    <div class="biodata-row" style="margin-top: 5px; padding-top: 3px; border-top: 1px dashed #E2E8F0;"><span class="biodata-label">Role:</span><span class="biodata-val">Product &amp; Revenue Analytics</span></div>
+  <!-- Member 3 -->
+  <div class="biodata-card" style="border: 1px solid #CBD5E1; border-left: 4px solid #7A0019; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px; page-break-inside: avoid;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="flex-grow: 1;">
+        <div style="font-size: 11.5pt; font-weight: bold; color: #0F243E; margin-bottom: 6px;">Member 3: Ala Venkata Veera Ritwik</div>
+        <table style="width: 100%; font-size: 9pt; border-collapse: collapse;">
+          <tr><td style="width: 140px; color: #64748B; font-weight: bold; padding: 2px 0;">Registration No.</td><td>: <strong>23BCE9633</strong></td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Degree &amp; School</td><td>: B.Tech (Computer Science &amp; Engineering), SCOPE</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Institution</td><td>: VIT-AP University, Amaravati &ndash; 522237</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">E-mail</td><td>: ritwik.23bce9633@vitapstudent.ac.in</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Mobile Number</td><td>: +91 7032499365</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Permanent Address</td><td>: D.No. 7-19, Main Road, Kankipadu, Krishna District, Andhra Pradesh - 521151</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Project Role</td><td>: Machine Learning Engine &amp; Time-Series Forecasting</td></tr>
+        </table>
+      </div>
+      <div style="width: 65px; height: 80px; border: 1px dashed #64748B; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 7.5pt; color: #64748B; background-color: #F8FAFC; text-align: center; margin-left: 12px; flex-shrink: 0;">
+        Photo
+      </div>
+    </div>
   </div>
 
-  <div class="biodata-card">
-    <div class="biodata-name">Member 4: Ala Venkata Veera Ritwik</div>
-    <div class="biodata-row"><span class="biodata-label">Registration No:</span><span class="biodata-val"><strong>23BCE9633</strong></span></div>
-    <div class="biodata-row"><span class="biodata-label">Degree:</span><span class="biodata-val">B.Tech (CSE)</span></div>
-    <div class="biodata-row"><span class="biodata-label">Institution:</span><span class="biodata-val">VIT-AP University</span></div>
-    <div class="biodata-row"><span class="biodata-label">Student Email:</span><span class="biodata-val">ritwik.23bce9633@vitapstudent.ac.in</span></div>
-    <div class="biodata-row"><span class="biodata-label">Mobile Number:</span><span class="biodata-val">+91 7032499365</span></div>
-    <div class="biodata-row" style="margin-top: 5px; padding-top: 3px; border-top: 1px dashed #E2E8F0;"><span class="biodata-label">Role:</span><span class="biodata-val">Machine Learning &amp; BI Integration</span></div>
+  <!-- Member 4 -->
+  <div class="biodata-card" style="border: 1px solid #CBD5E1; border-left: 4px solid #7A0019; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px; page-break-inside: avoid;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="flex-grow: 1;">
+        <div style="font-size: 11.5pt; font-weight: bold; color: #0F243E; margin-bottom: 6px;">Member 4: Akshay Sharma</div>
+        <table style="width: 100%; font-size: 9pt; border-collapse: collapse;">
+          <tr><td style="width: 140px; color: #64748B; font-weight: bold; padding: 2px 0;">Registration No.</td><td>: <strong>23BCE9668</strong></td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Degree &amp; School</td><td>: B.Tech (Computer Science &amp; Engineering), SCOPE</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Institution</td><td>: VIT-AP University, Amaravati &ndash; 522237</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">E-mail</td><td>: akshaysharma200508@gmail.com</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Mobile Number</td><td>: +91 6304698235</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Permanent Address</td><td>: Flat 504, Fortune Heights, Tadepalli, Guntur District, Andhra Pradesh - 522501</td></tr>
+          <tr><td style="color: #64748B; font-weight: bold; padding: 2px 0;">Project Role</td><td>: Product Analytics, Revenue Modeling &amp; Visualization Dashboards</td></tr>
+        </table>
+      </div>
+      <div style="width: 65px; height: 80px; border: 1px dashed #64748B; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 7.5pt; color: #64748B; background-color: #F8FAFC; text-align: center; margin-left: 12px; flex-shrink: 0;">
+        Photo
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+<div style="text-align: center; padding-top: 30px;">
+  <h1 class="chapter-title" style="margin-bottom: 25px;">COMPACT DISC (CD) ATTACHMENT</h1>
+  <p style="text-align: center; color: #475569; font-size: 10pt; margin-bottom: 30px;">
+    In accordance with the academic guidelines of VIT-AP University, all digital assets, presentation decks, project source codes, and demonstration videos are affixed below.
+  </p>
+
+  <div style="width: 130mm; height: 130mm; border: 2.5px dashed #7A0019; border-radius: 12px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #FFFDF8; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+    <div style="font-size: 36pt; color: #7A0019; margin-bottom: 12px;">&#128191;</div>
+    <div style="font-size: 12.5pt; font-weight: bold; color: #0F243E; margin-bottom: 6px;">[ PLACE COMPACT DISC (CD) SLEEVE HERE ]</div>
+    <div style="font-size: 9pt; color: #64748B; max-width: 80%; line-height: 1.4;">
+      Securely affix the physical optical media pocket containing the digital deliverables, presentation decks, video demonstrations, and source code archives.
+    </div>
+  </div>
+
+  <div class="cd-note-box" style="border: 2px dashed #7A0019; background-color: #FFFBEB; padding: 14px 20px; border-radius: 6px; margin: 35px auto 0 auto; max-width: 85%; font-size: 9.5pt; line-height: 1.5; color: #78350F; text-align: justify;">
+    <strong>NOTE:</strong> Its MANDATORY for a student to attach all the PPT&rsquo;s, Sample Materials, Specification Sheets, Programming Codes and a 5-10 minutes demo Video of the Project Digitally In CD . Stick the Compact Disk (CD) in the final page of the Thesis after binding it.
   </div>
 </div>
 
@@ -2010,8 +2035,8 @@ async def render_pdfs():
             print_background=True,
             margin={"top": "20mm", "bottom": "18mm", "left": "18mm", "right": "18mm"},
             display_header_footer=True,
-            header_template='<div style="font-size: 7.5pt; font-family: \'Times New Roman\', serif; color: #64748B; width: 100%; display: flex; justify-content: space-between; padding: 0 18mm; border-bottom: 0.5px solid #CBD5E1; padding-bottom: 3px;"><span>VIT-AP University • School of Computer Science and Engineering</span><span style="font-style: italic;">B.Tech Capstone Project Report</span></div>',
-            footer_template='<div style="font-size: 7.5pt; font-family: sans-serif; color: #64748B; width: 100%; display: flex; justify-content: space-between; padding: 0 18mm; border-top: 0.5px solid #CBD5E1; padding-top: 3px;"><span>E-Commerce Customer &amp; Revenue Intelligence Platform</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>'
+            header_template='<div style="font-size: 7.5pt; font-family: "Times New Roman", serif; color: #64748B; width: 100%; display: flex; justify-content: space-between; padding: 0 18mm; border-bottom: 0.5px solid #CBD5E1; padding-bottom: 3px;"><span>VIT-AP University • School of Computer Science and Engineering</span><span style="font-style: italic;">B.Tech Capstone Project Report</span></div>',
+            footer_template='<div style="font-size: 7.5pt; font-family: sans-serif; color: #64748B; width: 100%; display: flex; justify-content: space-between; padding: 0 18mm; border-top: 0.5px solid #CBD5E1; padding-top: 3px;"><span>E-Commerce Business Intelligence &amp; Predictive Analytics Platform</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>'
         )
         await page_body.close()
         await browser.close()
@@ -2041,7 +2066,7 @@ async def render_pdfs():
         }}
     }}
     finalDoc.write(to: URL(fileURLWithPath: "{final_pdf_path}"))
-    print("Merged final PDF with \\(finalDoc.pageCount) pages.")
+    print("Merged final PDF with \(finalDoc.pageCount) pages.")
     '''
     subprocess.run(["swift", "-e", merge_swift], check=True)
     
