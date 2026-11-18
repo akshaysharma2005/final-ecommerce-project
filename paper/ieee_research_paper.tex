@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\title{NEXUS.AI: An End-to-End Enterprise E-Commerce Customer and Revenue Intelligence Platform with Multi-Dimensional Star-Schema Analytics, Predictive Machine Learning, and Global Risk Telemetry\\
+\title{E-Commerce Business Intelligence & Predictive Analytics Platform\\
 \thanks{Capstone Project submitted to the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, Andhra Pradesh, India, Academic Session Fall 2026--27.}
 }
 
@@ -64,15 +64,15 @@ E-Commerce Analytics, Star Schema Data Warehousing, Customer Churn Prediction, F
 \end{IEEEkeywords}
 
 \section{Introduction}
-Digital commerce marketplaces operate in complex, volatile environments characterized by multi-party interactions, fluctuating supplier catalogs, and heterogeneous consumer behavior. While conventional Online Transaction Processing (OLTP) engines successfully enforce ACID transaction guarantees for individual checkouts, their normalized Third Normal Form (3NF) relational topologies suffer severe performance degradation when executing multi-table joins across millions of rows for longitudinal analysis \cite{kimball2013data, stonebraker2005onesize}. As a result, operational leadership often relies on stale spreadsheet extracts that fail to surface customer attrition indicators, geographic freight penalties, or cross-border shipping shocks \cite{verhoef2003crm, armbrust2021lakehouse}.
+Digital commerce marketplaces operate in complex, volatile environments characterized by multi-party interactions, fluctuating supplier catalogs, and heterogeneous consumer behavior. While conventional Online Transaction Processing (OLTP) engines successfully enforce ACID transaction guarantees for individual checkouts, their normalized Third Normal Form (3NF) relational topologies suffer severe performance degradation when executing multi-table joins across millions of rows for longitudinal analysis . As a result, operational leadership often relies on stale spreadsheet extracts that fail to surface customer attrition indicators, geographic freight penalties, or cross-border shipping shocks .
 
-In non-contractual retail ecosystems, customer churn is uniquely challenging because buyers rarely submit cancellation notices; instead, they lapse silently into dormancy \cite{fader2005rfm}. When machine learning models attempt to detect this phenomenon, naive implementations frequently fall prey to target leakage by incorporating post-hoc observation window durations (such as customer tenure), resulting in misleadingly perfect validation metrics that fail in real-time scoring. Concurrently, top-line revenue projections routinely overlook holiday demand surges (e.g., Black Friday) and external supply-chain shocks, such as maritime corridor congestion and regional currency swings \cite{gardner1985forecasting, zhang2022logistics, unctad2023maritime}.
+In non-contractual retail ecosystems, customer churn is uniquely challenging because buyers rarely submit cancellation notices; instead, they lapse silently into dormancy . When machine learning models attempt to detect this phenomenon, naive implementations frequently fall prey to target leakage by incorporating post-hoc observation window durations (such as customer tenure), resulting in misleadingly perfect validation metrics that fail in real-time scoring. Concurrently, top-line revenue projections routinely overlook holiday demand surges (e.g., Black Friday) and external supply-chain shocks, such as maritime corridor congestion and regional currency swings .
 
 To address these architectural and operational limitations, this research designs, develops, and evaluates \textbf{NEXUS.AI}, an end-to-end enterprise customer, revenue, and global risk intelligence platform. Engineered collaboratively across four computer science disciplines (Data Warehousing, Customer Analytics, Unit Economics, and Applied Machine Learning/Cloud Systems), NEXUS.AI bridges transactional data ingestion, high-precision predictive modeling, and strategic executive execution.
 
 The core technical contributions of this research are:
 \begin{itemize}
-    \item \textbf{Production Star Schema Data Warehouse}: Implementation of a PostgreSQL OLAP dimensional warehouse comprising 7 dimension tables, 6 fact tables, and 12 materialized views, consolidating R\$ 15.84M in Gross Merchandise Value (GMV) across 98,666 orders from the official Olist dataset \cite{sionek2018olist}.
+    \item \textbf{Production Star Schema Data Warehouse}: Implementation of a PostgreSQL OLAP dimensional warehouse comprising 7 dimension tables, 6 fact tables, and 12 materialized views, consolidating R\$ 15.84M in Gross Merchandise Value (GMV) across 98,666 orders from the official Olist dataset .
     \item \textbf{Leakage-Free Churn Classifier with Feature Ablation}: Formulation of a 13-feature Gradient Boosted Decision Tree (GBDT) ensemble. We provide a rigorous ablation study contrasting a temporal baseline (ROC-AUC 0.9998, 99.28\% accuracy) with a strict pre-attrition behavioral model (ROC-AUC 0.8624, 84.18\% accuracy), isolating freight burden and customer review dissatisfaction as true causal attrition drivers.
     \item \textbf{Unsupervised Customer Segmentation}: Identification and validation of 4 distinct behavioral customer archetypes via within-cluster sum of squares (WCSS) inflection and 3D Principal Component Analysis (PCA).
     \item \textbf{Calibrated Seasonal Revenue Forecaster}: An additive damped Holt-Winters exponential smoothing model integrating Brazilian national holiday indices (November Black Friday +38\% demand spike), achieving an empirical MAPE of 13.84\%.
@@ -93,7 +93,7 @@ NEXUS.AI operates as a continuous analytical pipeline spanning raw transactional
 \end{figure}
 
 \subsection{Data Hygiene, Entity Resolution, and Dimensional Modeling}
-The system was validated on the public Brazilian Olist E-Commerce dataset \cite{sionek2018olist}, encompassing 98,666 completed transactions from September 2016 through September 2018 across 95,458 individual customers. Data preprocessing enforced three critical constraints:
+The system was validated on the public Brazilian Olist E-Commerce dataset , encompassing 98,666 completed transactions from September 2016 through September 2018 across 95,458 individual customers. Data preprocessing enforced three critical constraints:
 \begin{enumerate}
     \item \textit{Chronological Monotonicity}: Timestamps were verified to maintain strict operational causality: $\text{order purchase} \le \text{payment approval} \le \text{carrier dispatch} \le \text{final delivery}$. Inconsistent records were logged for returns tracking.
     \item \textit{Entity Resolution}: Olist issues a new \texttt{customer\_id} for every checkout session. We linked sessions to \texttt{customer\_unique\_id}, resolving identity fragmentation and consolidating repeat purchase histories.
@@ -117,7 +117,7 @@ Twelve materialized SQL views were deployed to accelerate Online Analytical Proc
 \subsection{Predictive Machine Learning Pipelines}
 
 \subsubsection{Customer Churn Prediction and Leakage-Free Feature Ablation}
-In non-contractual commerce, churn occurs when a customer permanently halts purchasing \cite{fader2005rfm, vafeiadis2015comparison}. Using an observation window of 180 days post-initial purchase, customers with zero repeat activity were labeled as churned ($y=1$).
+In non-contractual commerce, churn occurs when a customer permanently halts purchasing . Using an observation window of 180 days post-initial purchase, customers with zero repeat activity were labeled as churned ($y=1$).
 
 To address target leakage, we designed an experimental ablation framework evaluating two distinct model formulations:
 \begin{itemize}
@@ -125,7 +125,7 @@ To address target leakage, we designed an experimental ablation framework evalua
     \item \textbf{Model B (Pre-Attrition Behavioral Ablation)}: Excludes all temporal tenure signals ($\mathbf{x}_i \in \mathbb{R}^{7}$), restricting the feature space strictly to pre-churn behavioral attributes: lifetime orders, total items, monetary spend, freight ratio, installment count, average review score, and return/defect flags.
 \end{itemize}
 
-A Gradient Boosted Decision Tree (GBDT) ensemble \cite{chen2016xgboost, ke2017lightgbm} was trained using binomial deviance loss:
+A Gradient Boosted Decision Tree (GBDT) ensemble  was trained using binomial deviance loss:
 \begin{equation}
 \mathcal{L}(y, p) = - [y \ln(p) + (1 - y) \ln(1 - p)]
 \end{equation}
@@ -136,14 +136,14 @@ r_{im} = -\left[\frac{\partial \mathcal{L}(y_i, F_{m-1}(\mathbf{x}_i))}{\partial
 Hyperparameters were set to learning rate $\nu = 0.1$, max depth 3, and 100 estimators over a stratified 75/25 split ($N_{\text{test}} = 23,865$).
 
 \subsubsection{Customer Segmentation via Unsupervised Clustering}
-Continuous customer attributes were standardized via z-score normalization. The $k$-Means algorithm \cite{hartigan1979algorithm} minimizes within-cluster sum of squares (WCSS):
+Continuous customer attributes were standardized via z-score normalization. The $k$-Means algorithm  minimizes within-cluster sum of squares (WCSS):
 \begin{equation}
 \mathcal{J} = \sum_{j=1}^{k} \sum_{\mathbf{x} \in S_j} \|\mathbf{x} - \boldsymbol{\mu}_j\|^2
 \end{equation}
 Testing $k \in [2, 7]$ confirmed an optimal elbow at $k=4$. Principal Component Analysis (PCA) projected the feature space into three orthogonal axes, explaining 63.73\% of cumulative variance ($\lambda_1 = 34.55\%$, $\lambda_2 = 14.90\%$, $\lambda_3 = 14.28\%$).
 
 \subsubsection{Seasonal Time-Series Revenue Forecasting}
-An Additive Damped Holt-Winters model \cite{gardner1985forecasting, hyndman2021forecasting} was implemented with monthly seasonality ($m=12$):
+An Additive Damped Holt-Winters model  was implemented with monthly seasonality ($m=12$):
 \begin{align}
 l_t &= \alpha(y_t - s_{t-m}) + (1 - \alpha)(l_{t-1} + \phi b_{t-1}) \\
 b_t &= \beta(l_t - l_{t-1}) + (1 - \beta)\phi b_{t-1} \\
@@ -157,7 +157,7 @@ where $\phi \in (0, 1]$ damps trend projections. Multi-step forecasts are comput
 \subsection{Global Telemetry and Risk Intelligence Engine}
 To contextualize domestic marketplace economics within international supply chains, NEXUS.AI incorporates four macro telemetry pipelines:
 \begin{enumerate}
-    \item \textit{Maritime Chokepoint & Port Telemetry}: Monitors daily vessel transits and delays across 13 strategic corridors (Suez Canal, Bab el-Mandeb, Strait of Malacca, Strait of Hormuz, Panama Canal, Dover Strait) alongside container dwell times at major mega-ports (Shanghai, Singapore, Rotterdam, Santos) \cite{unctad2023maritime}.
+    \item \textit{Maritime Chokepoint & Port Telemetry}: Monitors daily vessel transits and delays across 13 strategic corridors (Suez Canal, Bab el-Mandeb, Strait of Malacca, Strait of Hormuz, Panama Canal, Dover Strait) alongside container dwell times at major mega-ports (Shanghai, Singapore, Rotterdam, Santos) .
     \item \textit{Consumer Prices & Inflation Radar}: Tracks cross-market retail CPI across 7 benchmark economies (US, EU, UK, Brazil, India, Japan, China), category price dispersion, and purchasing power parity (PPP).
     \item \textit{Country Instability Index (CII)}: Computes geopolitical and supply risk scores (0--100), active bilateral tariffs, and foreign exchange volatility drag.
     \item \textit{Digital Infrastructure Telemetry}: Tracks subsea fiber-optic cable availability, regional cloud data center latency, and logistics disruption alerts.
@@ -319,28 +319,6 @@ Future research directions include:
     \item \textbf{Reinforcement Learning Pricing}: Formulating contextual multi-armed bandits to optimize regional freight subsidies dynamically.
 \end{itemize}
 
-\balance
-\begin{thebibliography}{00}
-\bibitem{sionek2018olist} A. Sionek, ``Brazilian E-Commerce Public Dataset by Olist,'' \textit{Kaggle}, 2018. [Online]. DOI: 10.34740/KAGGLE/DSV/195147.
-\bibitem{kimball2013data} R. Kimball and M. Ross, \textit{The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling}, 3rd ed. Hoboken, NJ: John Wiley \& Sons, 2013.
-\bibitem{stonebraker2005onesize} M. Stonebraker and U. Cetintemel, ```One size fits all': An idea whose time has come and gone,'' in \textit{Proc. 21st Int. Conf. Data Engineering (ICDE)}, 2005, pp. 2--11.
-\bibitem{verhoef2003crm} P. C. Verhoef, ``Understanding the effect of customer relationship management efforts on customer retention and customer share development,'' \textit{Journal of Marketing}, vol. 67, no. 4, pp. 30--45, 2003.
-\bibitem{armbrust2021lakehouse} M. Armbrust et al., ``Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics,'' in \textit{Proc. 11th Conf. Innovative Data Systems Research (CIDR)}, 2021.
-\bibitem{fader2005rfm} P. S. Fader, B. G. Hardie, and K. L. Lee, ``Counting your customers the easy way: An alternative to the Pareto/NBD model,'' \textit{Marketing Science}, vol. 24, no. 2, pp. 275--284, 2005.
-\bibitem{chen2016xgboost} T. Chen and C. Guestrin, ``XGBoost: A scalable tree boosting system,'' in \textit{Proc. 22nd ACM SIGKDD Int. Conf. Knowl. Discovery Data Mining}, 2016, pp. 785--794.
-\bibitem{ke2017lightgbm} G. Ke et al., ``LightGBM: A highly efficient gradient boosting decision tree,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 30, 2017, pp. 3146--3154.
-\bibitem{gardner1985forecasting} E. S. Gardner Jr, ``Exponential smoothing: The state of the art,'' \textit{Journal of Forecasting}, vol. 4, no. 1, pp. 1--28, 1985.
-\bibitem{hyndman2021forecasting} R. J. Hyndman and G. Athanasopoulos, \textit{Forecasting: Principles and Practice}, 3rd ed. Melbourne, Australia: OTexts, 2021.
-\bibitem{vafeiadis2015comparison} T. Vafeiadis, K. I. Diamantaras, G. Sarigiannidis, and K. C. Chatzisavvas, ``A comparison of machine learning techniques for customer churn prediction,'' \textit{Simulation Modelling Practice and Theory}, vol. 55, pp. 1--9, 2015.
-\bibitem{hartigan1979algorithm} J. A. Hartigan and M. A. Wong, ``Algorithm AS 136: A k-means clustering algorithm,'' \textit{Journal of the Royal Statistical Society. Series C (Applied Statistics)}, vol. 28, no. 1, pp. 100--108, 1979.
-\bibitem{decaigny2018churn} A. De Caigny, K. Coussement, and K. W. De Bock, ``A new hybrid classification algorithm for customer churn prediction based on logistic regression and decision trees,'' \textit{European Journal of Operational Research}, vol. 269, no. 2, pp. 760--772, 2018.
-\bibitem{lalwani2022churn} Y. Lalwani, M. K. Mishra, N. K. Patel, and R. Sakalle, ``Customer churn prediction system: A machine learning approach,'' in \textit{Computing and Network Sustainability}, Singapore: Springer, 2022, pp. 177--187.
-\bibitem{lundberg2017shap} S. M. Lundberg and S.-I. Lee, ``A unified approach to interpreting model predictions,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 30, 2017, pp. 4765--4774.
-\bibitem{maldonado2020credit} S. Maldonado, J. P\'erez, and R. Weber, ``Credit scoring using support vector machines with feature selection based on kernel penalization,'' \textit{Expert Systems with Applications}, vol. 140, p. 112886, 2020.
-\bibitem{berman2022cloud} F. Berman et al., ``Real-time stream processing and edge caching architectures for distributed enterprise analytics,'' \textit{IEEE Transactions on Cloud Computing}, vol. 10, no. 3, pp. 1892--1906, 2022.
-\bibitem{zhang2022logistics} J. Zhang, Y. Wei, and H. Tan, ``Cross-border e-commerce logistics risk assessment and maritime corridor resilience during macroeconomic shocks,'' \textit{Transportation Research Part E: Logistics and Transportation Review}, vol. 164, p. 102812, 2022.
-\bibitem{brynjolfsson2019digital} E. Brynjolfsson, A. Collis, and F. Eggers, ``Using massive online choice experiments to measure changes in well-being,'' \textit{Proceedings of the National Academy of Sciences (PNAS)}, vol. 116, no. 15, pp. 7250--7255, 2019.
-\bibitem{unctad2023maritime} UNCTAD, \textit{Review of Maritime Transport 2023: Towards a green and just transition for maritime freight}, United Nations Publications, Geneva, Switzerland, 2023.
-\end{thebibliography}
+
 
 \end{document}

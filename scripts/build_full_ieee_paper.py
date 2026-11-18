@@ -32,7 +32,7 @@ with sync_playwright() as p:
         margin={"top": "0.70in", "bottom": "0.70in", "left": "0.55in", "right": "0.55in"},
         display_header_footer=True,
         header_template='<div style="font-size: 8pt; font-family: Times New Roman, serif; width: 100%; text-align: center; color: #555; padding-top: 5px;">IEEE B.Tech Capstone Conference Paper &mdash; SCOPE, VIT-AP University, Fall 2026&ndash;27</div>',
-        footer_template='<div style="font-size: 8pt; font-family: Times New Roman, serif; width: 100%; display: flex; justify-content: space-between; padding-left: 0.55in; padding-right: 0.55in; color: #444; padding-bottom: 5px;"><span style="color: #666;">NEXUS.AI: Enterprise E-Commerce Customer &amp; Revenue Intelligence Platform</span><span style="font-weight: bold;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>'
+        footer_template='<div style="font-size: 8pt; font-family: Times New Roman, serif; width: 100%; display: flex; justify-content: space-between; padding-left: 0.55in; padding-right: 0.55in; color: #444; padding-bottom: 5px;"><span style="color: #666;">E-Commerce Business Intelligence &amp; Predictive Analytics Platform</span><span style="font-weight: bold;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>'
     )
     browser.close()
 

@@ -1,4 +1,4 @@
-# NEXUS.AI: An End-to-End Enterprise E-Commerce Customer and Revenue Intelligence Platform with Multi-Dimensional Star-Schema Analytics, Predictive Machine Learning, and Global Risk Telemetry
+# E-Commerce Business Intelligence & Predictive Analytics Platform
 
 **Academic Session:** FALL 2026–27  
 **Department / School:** School of Computer Science and Engineering (SCOPE)  
@@ -201,36 +201,6 @@ Future research extensions include:
 1. Real-time stream processing via Apache Kafka and Apache Flink for sub-second churn scoring.
 2. Multilingual transformer sentiment mining (BERT/RoBERTa) on Portuguese review texts.
 3. Contextual multi-armed bandits for real-time algorithmic freight subsidy optimization.
-
----
-
-## References
-
-1. A. Sionek, "Brazilian E-Commerce Public Dataset by Olist," *Kaggle*, 2018. DOI: 10.34740/KAGGLE/DSV/195147.
-2. R. Kimball and M. Ross, *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling*, 3rd ed. Hoboken, NJ: John Wiley & Sons, 2013.
-3. M. Stonebraker and U. Cetintemel, ""One size fits all": An idea whose time has come and gone," in *Proc. 21st Int. Conf. Data Engineering (ICDE)*, 2005, pp. 2–11.
-4. P. C. Verhoef, "Understanding the effect of customer relationship management efforts on customer retention and customer share development," *Journal of Marketing*, vol. 67, no. 4, pp. 30–45, 2003.
-5. M. Armbrust et al., "Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics," in *Proc. 11th Conf. Innovative Data Systems Research (CIDR)*, 2021.
-6. P. S. Fader, B. G. Hardie, and K. L. Lee, "Counting your customers the easy way: An alternative to the Pareto/NBD model," *Marketing Science*, vol. 24, no. 2, pp. 275–284, 2005.
-7. T. Chen and C. Guestrin, "XGBoost: A scalable tree boosting system," in *Proc. 22nd ACM SIGKDD Int. Conf. Knowl. Discovery Data Mining*, 2016, pp. 785–794.
-8. G. Ke et al., "LightGBM: A highly efficient gradient boosting decision tree," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 30, 2017, pp. 3146–3154.
-9. E. S. Gardner Jr, "Exponential smoothing: The state of the art," *Journal of Forecasting*, vol. 4, no. 1, pp. 1–28, 1985.
-10. R. J. Hyndman and G. Athanasopoulos, *Forecasting: Principles and Practice*, 3rd ed. Melbourne, Australia: OTexts, 2021.
-11. T. Vafeiadis, K. I. Diamantaras, G. Sarigiannidis, and K. C. Chatzisavvas, "A comparison of machine learning techniques for customer churn prediction," *Simulation Modelling Practice and Theory*, vol. 55, pp. 1–9, 2015.
-12. J. A. Hartigan and M. A. Wong, "Algorithm AS 136: A k-means clustering algorithm," *Journal of the Royal Statistical Society. Series C (Applied Statistics)*, vol. 28, no. 1, pp. 100–108, 1979.
-13. A. De Caigny, K. Coussement, and K. W. De Bock, "A new hybrid classification algorithm for customer churn prediction based on logistic regression and decision trees," *European Journal of Operational Research*, vol. 269, no. 2, pp. 760–772, 2018.
-14. Y. Lalwani, M. K. Mishra, N. K. Patel, and R. Sakalle, "Customer churn prediction system: A machine learning approach," in *Computing and Network Sustainability*, Singapore: Springer, 2022, pp. 177–187.
-15. S. M. Lundberg and S.-I. Lee, "A unified approach to interpreting model predictions," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 30, 2017, pp. 4765–4774.
-16. S. Maldonado, J. Pérez, and R. Weber, "Credit scoring using support vector machines with feature selection based on kernel penalization," *Expert Systems with Applications*, vol. 140, p. 112886, 2020.
-17. F. Berman et al., "Real-time stream processing and edge caching architectures for distributed enterprise analytics," *IEEE Transactions on Cloud Computing*, vol. 10, no. 3, pp. 1892–1906, 2022.
-18. J. Zhang, Y. Wei, and H. Tan, "Cross-border e-commerce logistics risk assessment and maritime corridor resilience during macroeconomic shocks," *Transportation Research Part E: Logistics and Transportation Review*, vol. 164, p. 102812, 2022.
-19. E. Brynjolfsson, A. Collis, and F. Eggers, "Using massive online choice experiments to measure changes in well-being," *Proceedings of the National Academy of Sciences (PNAS)*, vol. 116, no. 15, pp. 7250–7255, 2019.
-20. UNCTAD, *Review of Maritime Transport 2023: Towards a green and just transition for maritime freight*, United Nations Publications, Geneva, Switzerland, 2023.
-21. D. Chicco and G. Jurman, "The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation," *BMC Genomics*, vol. 21, no. 1, pp. 1–13, 2020.
-22. C. M. Bishop, *Pattern Recognition and Machine Learning*. New York, NY: Springer, 2006.
-23. M. Stonebraker et al., "C-store: A column-oriented DBMS," in *Proc. 31st Int. Conf. Very Large Data Bases (VLDB)*, 2005, pp. 553–564.
-24. J. D. C. Little, "A proof for the queuing formula: $L = \lambda W$," *Operations Research*, vol. 9, no. 3, pp. 383–387, 1961.
-25. A. G. de Kok et al., "Supply chain management: Design, coordination and operation," in *Handbooks in Operations Research and Management Science*, vol. 11, Elsevier, 2003, pp. 1–768.
 
 ---
 

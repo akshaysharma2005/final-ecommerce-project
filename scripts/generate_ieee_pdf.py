@@ -10,7 +10,7 @@ html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NEXUS.AI: An End-to-End Enterprise E-Commerce Customer and Revenue Intelligence Platform</title>
+<title>E-Commerce Business Intelligence &amp; Predictive Analytics Platform</title>
 <style>
   @page {{
     size: letter;
@@ -263,7 +263,7 @@ html_content = f"""<!DOCTYPE html>
 <body>
 
 <div class="title-block">
-  <div class="paper-title">NEXUS.AI: An End-to-End Enterprise E-Commerce Customer and Revenue Intelligence Platform with Multi-Dimensional Star-Schema Analytics and Predictive Machine Learning</div>
+  <div class="paper-title">E-Commerce Business Intelligence &amp; Predictive Analytics Platform</div>
   <div class="paper-subtitle">B.Tech Capstone Project Research Paper &mdash; Academic Session: Fall 2026&ndash;27</div>
 
   <div class="authors-grid">
