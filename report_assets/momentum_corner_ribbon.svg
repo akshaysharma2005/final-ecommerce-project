@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="cornerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.95" />
+      <stop offset="30%" stop-color="#2563EB" stop-opacity="1.0" />
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="cornerHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#BFDBFE" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="cornerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="6" stdDeviation="10" flood-color="#1E3A8A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#cornerShadow)">
+    <path d="M 120 -20 
+             C 180 80, 260 140, 350 170 
+             C 420 190, 480 180, 520 220 
+             L 520 -20 Z" 
+          fill="url(#cornerGrad)" />
+    <path d="M 160 -20 
+             C 210 70, 290 125, 370 150 
+             C 435 170, 490 160, 520 200" 
+          fill="none" stroke="url(#cornerHighlight)" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

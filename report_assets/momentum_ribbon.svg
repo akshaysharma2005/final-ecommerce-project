@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1000" width="400" height="1000">
+  <defs>
+    <!-- Deep royal blue gradient for the main body -->
+    <linearGradient id="blueRibbonMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.95" />
+      <stop offset="25%" stop-color="#2563EB" stop-opacity="1.0" />
+      <stop offset="50%" stop-color="#1D4ED8" stop-opacity="1.0" />
+      <stop offset="75%" stop-color="#3B82F6" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#1E40AF" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Shadowed back-fold gradient -->
+    <linearGradient id="blueRibbonFold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#1E3A8A" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Specular highlight edge -->
+    <linearGradient id="specularEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#BFDBFE" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#60A5FA" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.4" />
+    </linearGradient>
+
+    <filter id="ribbonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="#1E3A8A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ribbonShadow)">
+    <!-- Back fold under-layer -->
+    <path d="M 280 -20 
+             C 210 120, 140 220, 160 340 
+             C 175 420, 240 480, 260 560 
+             C 280 640, 240 740, 180 840 
+             C 140 910, 190 980, 220 1020 
+             L 260 1020
+             C 220 960, 180 900, 220 830
+             C 280 730, 320 630, 290 550
+             C 270 470, 210 410, 190 330
+             C 170 230, 240 130, 310 -20 Z" 
+          fill="url(#blueRibbonFold)" />
+
+    <!-- Main ribbon body with dynamic sweeping curvature -->
+    <path d="M 320 -20
+             C 250 140, 180 240, 195 350
+             C 210 440, 290 500, 305 580
+             C 320 660, 270 760, 205 860
+             C 165 920, 210 980, 240 1020
+             L 290 1020
+             C 260 970, 210 910, 255 840
+             C 330 730, 370 630, 345 550
+             C 320 460, 250 410, 230 330
+             C 210 220, 290 120, 360 -20 Z"
+          fill="url(#blueRibbonMain)" />
+
+    <!-- Silk highlight crest -->
+    <path d="M 325 -20
+             C 255 140, 185 240, 200 350
+             C 215 440, 295 500, 310 580
+             C 325 660, 275 760, 210 860
+             C 170 920, 215 980, 245 1020"
+          fill="none" stroke="url(#specularEdge)" stroke-width="3" stroke-linecap="round" opacity="0.85" />
+  </g>
+</svg>
