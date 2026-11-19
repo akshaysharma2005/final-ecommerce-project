@@ -46,19 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 "tab-churn": "Churn Classification (ML)",
                 "tab-clustering": "Customer Segmentation",
                 "tab-forecasting": "Sales Forecasting (12M)",
-                "tab-strategy": "Strategic Roadmap",
-                "tab-world-supply": "Global Maritime & Ports Telemetry",
-                "tab-world-prices": "Consumer Prices & Inflation Radar",
-                "tab-world-cii": "Country Instability Index (CII)",
-                "tab-world-infra": "Digital Infrastructure & Incident Feed"
+                "tab-strategy": "Strategic Roadmap"
             };
             document.getElementById("page-title").textContent = titleMap[tabId] || "Executive Cockpit";
 
-            // Trigger World Monitor and Strategy loaders if switching to those tabs
-            if (tabId === "tab-world-supply") loadWorldSupplyChain();
-            if (tabId === "tab-world-prices") loadWorldConsumerPrices();
-            if (tabId === "tab-world-cii") loadWorldCIIRisk();
-            if (tabId === "tab-world-infra") loadWorldInfrastructure();
+            // Trigger Strategy loader if switching to strategy tab
             if (tabId === "tab-strategy") loadExecutiveStrategy();
 
             // Trigger chart reflow on tab change
@@ -121,10 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
         loadChurnMetrics();
         loadClusterSummary();
         loadSalesForecast();
-        loadWorldSupplyChain();
-        loadWorldConsumerPrices();
-        loadWorldCIIRisk();
-        loadWorldInfrastructure();
         loadExecutiveStrategy();
     }
 
@@ -1738,7 +1726,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             "all": {
                 title: "Comprehensive Multi-Year Transformation & 12-Month Executive Implementation Roadmap",
-                desc: "Synthesizing full 3-year performance (99,441 orders, R$ 15.84M GMV) across Data Engineering (M1), Customer Analytics (M2), Product & Revenue Analytics (M3), Machine Learning (M4), and World Monitor Telemetry.",
+                desc: "Synthesizing full 3-year performance (99,441 orders, R$ 15.84M GMV) across Data Engineering (M1), Customer Analytics (M2), Product & Revenue Analytics (M3), Machine Learning (M4), and Executive Strategy.",
                 phasePill: "All-Time Multi-Year Synthesis (2016–2018)",
                 kpis: [
                     { label: "Overall Transformation", val: "Enterprise Multi-Year", note: "99,441 Orders / R$ 15.84M GMV", badge: "Full Portfolio", badgeClass: "positive", icon: "fa-solid fa-chess-knight" },
